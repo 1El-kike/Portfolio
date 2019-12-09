@@ -51,6 +51,8 @@ export const Menu = () => {
                     to={"/"}
                     id="nav-dropdown"
                     className="align-items-center gap-2 d-flex naver"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvas"
                   >
                     <FontAwesomeIcon className="" icon={faHomeAlt} />
                     {nombre}

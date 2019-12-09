@@ -342,7 +342,7 @@ export const Firstsession = () => {
         {port2.set1?.map((e, i) => {
           return (
             <CardGroup
-              style={{ paddingRight: ancho > 350 ? 20 : "" }}
+              style={{ paddingRight: ancho > 350 ? 20 : 0 }}
               className="col-lg-4 col-md-6 col-sm-12 pb-4"
             >
               <Card bg="dark">
