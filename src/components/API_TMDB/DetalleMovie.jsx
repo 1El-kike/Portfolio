@@ -109,7 +109,7 @@ export const DetalleMovie = ({
               background: `linear-gradient(to right  ,#000,transparent),url(${imagen})`,
             }}
           >
-            <span className="fondo"></span>
+            <span className="fondo2"></span>
             <div
               style={{
                 zIndex: 20,
@@ -134,7 +134,7 @@ export const DetalleMovie = ({
                 ></img>
                 <div className="col-lg-7  col-md-5 col-xs-12 col-12 ">
                   <h1 className="text-white title display-5">{title}</h1>
-                  <div className="d-flex flex'wrap text gap-2 ">
+                  <div className="d-flex flex'wrap text2 gap-2 ">
                     <p></p>
                     <p>{data}</p>
                     <p>({pais}) -</p>
