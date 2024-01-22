@@ -1,0 +1,16 @@
+git add - para añadir archivos primer paso
+git status - para ver los estados
+git commit -m "Aqui va un mensaje para confirmar lo que esta comprometido"
+git diff - muestra todos los cambios no confirmados desde la última confirmación
+git --staged
+git log te muestra los nombre de commit y la fecha que lo subiste
+git log --oneline
+git branch : te muestra en que rama estas actualmente
+git checkout -b : sirve para crear una nueva rama
+git checkout tambien sirve para cambiar de rama  
+git merge "" dentro va el nombre de la rama que desea agregar para eso debe estar paradp en la rama principal o en la que desea escribir git shortlog -s -n - muestra todos los autores en  tu proyecto y te dice la cantidad de commits que a hecho.
+git config --global user.name - para crear tu usuario pones "Tu nombre" entre corchete
+git config --global user.email  - pones tu direccion de correo ejem : tuemail@example.com
+git merge branch --allow-unrelated-histories - combinar las ramas a pesar de su falta de relación.  
+git remote add origin https://github.com/NOMBRE_USUARIO/NOMBRE_PROYECTO.git : para conectar con github
+git push -u origin master : donde esta escrito master va el nombre de la rama que quieras subir

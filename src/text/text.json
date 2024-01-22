@@ -1,0 +1,94 @@
+[
+    {
+        "Adultos": [
+            {
+                "economica": [
+                    "300usd",
+                    "5000usd",
+                    "12000usd",
+                    "2000usd"
+                ],
+                "vuelo": "Planta C",
+                "id": "23"
+            },
+            {
+                "economica": [
+                    "200usd",
+                    "5000usd",
+                    "12000usd",
+                    "2000usd"
+                ],
+                "vuelo": "Planta B",
+                "id": "24"
+            },
+            {
+                "economica": [
+                    "400usd",
+                    "5000usd",
+                    "12000usd",
+                    "2000usd"
+                ],
+                "vuelo": "planta A",
+                "id": "26"
+            },
+            {
+                "economica": [
+                    "600usd",
+                    "5000usd",
+                    "12000usd",
+                    "2000usd"
+                ],
+                "vuelo": "planta S",
+                "id": 26
+            },
+            {
+                "economica": [
+                    "600usd",
+                    "5000usd",
+                    "12000usd",
+                    "2000usd"
+                ],
+                "vuelo": "planta S",
+                "id": 26
+            }
+        ],
+        "Pasajes": [
+            {
+                "nota1": "2000usd",
+                "vuelo": "planta S",
+                "id": 26
+            },
+            {
+                "nota2": "3300usd",
+                "vuelo": "planta S",
+                "id": 26
+            },
+            {
+                "economica": "4300usd",
+                "vuelo": "planta S",
+                "id": 26
+            }
+        ]
+    },
+    {
+        "colores": {
+            "coloresborder": "rgb(129, 20, 20)",
+            "colorfondo": "rgb(6, 57, 112)",
+            "colorfondo2": "rgb(12,138,160)",
+            "colorfondo3": "rgb(6, 70, 81)",
+            "colorletra": "rgb(0, 0, 0)",
+            "imagenfondo1": "radial-gradient(ellipse at top,rgb(12,138,160),transparent)"
+        }
+    },
+    {
+        "pagina_principal": {
+            "name_image": {
+                "name": [
+                    "Html",
+                    "Css",
+                    "javascript"
+                ]
+            }
+        }
+    }
+]

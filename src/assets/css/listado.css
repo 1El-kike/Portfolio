@@ -1,0 +1,10 @@
+* {
+    box-sizing: border-box;
+
+}
+
+main {
+    max-width: 800px;
+    width: 90%;
+    margin-top: 40px;
+}
