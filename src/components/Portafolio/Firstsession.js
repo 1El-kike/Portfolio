@@ -7,6 +7,7 @@ import image4 from '../../assets/images/beautiful-15728_640.jpg'
 import image5 from '../../assets/images/hq720.jpg'
 import image6 from '../../assets/images/thumb-1920-1162236.jpg'
 import imagex from '../../assets/images/HD-wallpaper-technology-msi.jpg'
+import image8 from '../../assets/images/developpement-web-featured.jpg'
 import { MDBIcon, MDBBtn} from 'mdb-react-ui-kit';
 import {Link} from 'react-router-dom'
 import './style.css'
@@ -657,8 +658,20 @@ useEffect(() => {
 </ul>
     </nav>
 </div>
+
+{
+   
+}
+
+
     </div >
     
+    </div>
+    <div className='fons'>
+
+    <div className='imgfondo'>
+
+    </div>
     </div>
     </>
   )

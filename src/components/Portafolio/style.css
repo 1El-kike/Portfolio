@@ -12,6 +12,24 @@
     --i:59;
 }
 
+
+
+.imgfondo{
+    z-index: -100;
+    display: flex;
+   justify-content: end;
+  height: 400px;
+  margin-left: auto;
+  margin-bottom: 10px;
+    width: 50%;
+    background: radial-gradient(ellipse at right ,transparent,transparent,rgb(2, 36, 53)),
+    linear-gradient(0deg,transparent, transparent,rgb(2,36,53)),
+    linear-gradient(280deg,transparent, transparent,rgb(2, 36, 53)),
+    linear-gradient(to right ,transparent, transparent,rgb(48, 6, 186))    
+    ,url('../../assets/images/developpement-web-featured.jpg');   
+
+}
+
 .img1::before{
     content: '';
     position: absolute;
@@ -88,6 +106,7 @@
 }
 
 .fixed-navbar{
+    z-index: 1000;
     position: fixed;
     top: 20px;
     right: 110px;
