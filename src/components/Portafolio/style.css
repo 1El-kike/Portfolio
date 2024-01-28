@@ -138,7 +138,7 @@
     color: #111210;
     opacity: 0.8;
     border-radius: 8px;
-    background: radial-gradient(ellipse at center,rgb(247, 246, 251),rgb(150, 150, 165),rgb(54, 50, 53));
+    background: radial-gradient(ellipse at center,rgb(247, 246, 251),rgb(150, 150, 165),rgb(2, 36, 53));
     box-shadow: -14px 13px 10px rgb(36, 27, 27);
     padding: 20px 6px 40px 10px;
 }
