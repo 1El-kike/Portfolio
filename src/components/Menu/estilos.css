@@ -1,0 +1,81 @@
+.navbar-custom {
+    background: radial-gradient(ellipse at top, rgb(12, 138, 160), transparent) !important;
+}
+
+.naver {
+    border-top: 2px solid transparent !important;
+    
+}
+
+.color {
+    background: radial-gradient(ellipse at top, rgb(12, 138, 160), rgb(12, 138, 160)) !important;
+}
+
+.naver:hover {
+    border-top: 2px solid rgb(111, 2, 2) !important;
+}
+
+#nav-dropdown {
+    color: #fff;
+    
+}
+.navbar-toggler{
+    width: 40px !important;
+    height: 20px !important;
+    position: relative;
+    margin: 10px 10px !important;
+    cursor: pointer;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    
+}
+.navbar-toggler::before,
+.navbar-toggler::after,
+.navbar-toggler span
+{
+    content: '';
+   
+    display: block;
+    background: #f2f0f0;
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    transition: all 0.25s linear;
+}
+
+.navbar-toggler::before{
+    top: -5px;
+    outline: 3px solid rgb(29, 132, 228);
+}
+.navbar-toggler::after{
+    bottom: -5px;
+    outline: 3px solid rgb(29, 42, 228);
+}
+
+.navbar-toggler span {
+    top: 7px;
+    outline: 3px solid rgb(59, 29, 228);
+}
+
+
+
+.mycustom{
+    background: linear-gradient(to top,rgba(6, 110, 207, 0.5),rgba(83, 97, 123, 0.5));
+}
+.tit{
+    color: #fff;
+    font-weight: 600;
+}
+
+ @media ( max-width:982px){
+
+    #offcanvas:focus,
+    #offcanvas:focus-within
+    {
+        background: radial-gradient(ellipse at left,rgb(12,138,160),rgb(4, 69, 77)) !important;
+        
+    }
+   
+} 
+
