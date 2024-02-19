@@ -28,9 +28,11 @@ export const Menu = () => {
           className="mt-2 rounded navbar-custom "
         >
           <Container fluid>
-            <Title href="/portfolio">
-              <span className="text-success">Folio</span>
-              <span className="text-light">G</span>
+            <Title href="">
+              <Link to={"/portfolio"}>
+                <span className="text-success">Folio</span>
+                <span className="text-light">G</span>
+              </Link>
             </Title>
             <Navbar.Toggle aria-controls="offcanvas" />
             <Navbar.Offcanvas
@@ -67,14 +69,28 @@ export const Menu = () => {
                     data-bs-theme="dark"
                     id="nav-dropdown"
                     menuVariant=""
-                    className="naver "
+                    className="naver"
                   >
-                    <NavDropdown.Item href="/formulario">
-                      Formulario
+                    <NavDropdown.Item href="">
+                      <Link to={"/formulario"} className="dropdown-item ">
+                        Formulario
+                      </Link>
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="/table">Tabla</NavDropdown.Item>
-                    <NavDropdown.Item href="/prueba">Negocio</NavDropdown.Item>
-                    <NavDropdown.Item href="/props">Vuelos</NavDropdown.Item>
+                    <NavDropdown.Item href="">
+                      <Link to={"/table"} className="dropdown-item">
+                        Tabla
+                      </Link>
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="">
+                      <Link to={"/prueba"} className="dropdown-item">
+                        Negocio
+                      </Link>
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="">
+                      <Link to={"/props"} className="dropdown-item">
+                        Vuelos
+                      </Link>
+                    </NavDropdown.Item>
                   </NavDropdown>
 
                   <NavDropdown
@@ -82,12 +98,26 @@ export const Menu = () => {
                     id="nav-dropdown"
                     className="naver"
                   >
-                    <NavDropdown.Item href="/registro">
-                      Registrarse
+                    <NavDropdown.Item href="">
+                      <Link to={"/registro"} className="dropdown-item">
+                        Registrarse
+                      </Link>
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="">Autentificarse</NavDropdown.Item>
-                    <NavDropdown.Item href="#">Configuracion</NavDropdown.Item>
-                    <NavDropdown.Item href="#">Salir</NavDropdown.Item>
+                    <NavDropdown.Item href="">
+                      <Link to={"#"} className="dropdown-item">
+                        Autentificarse
+                      </Link>
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#">
+                      <Link to={"#"} className="dropdown-item">
+                        Configuracion
+                      </Link>
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#">
+                      <Link to={"/"} className="dropdown-item">
+                        Salir
+                      </Link>
+                    </NavDropdown.Item>
                   </NavDropdown>
                 </Nav>
                 <Form className="d-flex">
