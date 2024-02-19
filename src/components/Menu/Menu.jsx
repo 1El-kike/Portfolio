@@ -46,7 +46,7 @@ export const Menu = () => {
               <Offcanvas.Body>
                 <Nav className="justify-content-start ms-5 flex-grow-1 pe-3 gap-4">
                   <Link
-                    to="/"
+                    to={"/"}
                     id="nav-dropdown"
                     className="align-items-center gap-2 d-flex naver"
                   >
@@ -54,7 +54,7 @@ export const Menu = () => {
                     {nombre}
                   </Link>
                   <Link
-                    href="/about"
+                    to={"/about"}
                     id="nav-dropdown"
                     className="align-items-center gap-2 d-flex naver"
                   >
