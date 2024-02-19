@@ -1,6 +1,7 @@
 import "../../assets/css/practica.css";
 import { faUnlock, faHomeAlt } from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from "react-router-dom";
 import {
   Button,
   Form,
@@ -44,22 +45,22 @@ export const Menu = () => {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-start ms-5 flex-grow-1 pe-3 gap-4">
-                  <Nav.Link
-                    href="/"
+                  <Link
+                    to="/"
                     id="nav-dropdown"
                     className="align-items-center gap-2 d-flex naver"
                   >
                     <FontAwesomeIcon className="" icon={faHomeAlt} />
                     {nombre}
-                  </Nav.Link>
-                  <Nav.Link
+                  </Link>
+                  <Link
                     href="/about"
                     id="nav-dropdown"
                     className="align-items-center gap-2 d-flex naver"
                   >
                     <FontAwesomeIcon icon={faUnlock} />
                     <span>API</span>
-                  </Nav.Link>
+                  </Link>
 
                   <NavDropdown
                     title="Ejemplos Web"
