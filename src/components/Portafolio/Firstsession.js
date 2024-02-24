@@ -434,17 +434,17 @@ export const Firstsession = () => {
           <div className="col-lg-6 mt-3 col-md-12 col-sm-12 d-flex flex-wrap gap-4 mt-2">
             <Cuadro num="2" text="YEARS OF EXPERENCE" />
             <Cuadro
-              num="81"
+              num="8"
               text="HAPPY 
       CUSTOMERS"
             />
             <Cuadro
-              num="97"
+              num="6"
               text="COMPLETED 
       PROJECTS"
             />
             <Cuadro
-              num="53"
+              num="3"
               text="AWARDS
       WOW"
             />
