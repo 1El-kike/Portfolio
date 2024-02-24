@@ -53,7 +53,7 @@ export const Firstsession = () => {
     return (
       <>
         <div
-          className="col-md-12 d-flex mt-5 mb-5 flex-column text-light"
+          className="col-12  d-flex mt-5 mb-5 flex-column text-light"
           id={id}
         >
           {childrend}
@@ -180,12 +180,12 @@ export const Firstsession = () => {
                 <ul className="nav mb-3" key={item}>
                   <li className="" key={item}>
                     <div className="d-flex">
-                      <div className="d-flex flex-column">
+                      <div className="d-flex flex-column ">
                         <i className="fas fa-briefcase rounded-pill bg-warning p-3 m-1"></i>
                         <span className="borders"></span>
                       </div>
 
-                      <div className="d-flex flex-column justify-content-start ">
+                      <div className="d-flex  flex-column justify-content-start ">
                         <div className="d-flex w-auto">
                           <p
                             className="m-2 ms-3 mt-1 p-1 ps-3 px-3 rounded w-2"
@@ -194,7 +194,7 @@ export const Firstsession = () => {
                             {ele[3]}
                           </p>
                         </div>
-                        <div className="d-flex align-items-center gap-1">
+                        <div className="d-flex flex-wrap align-items-center gap-1">
                           <h3 className="m-2 ms-3">{ele[0]}</h3>
                           <span className="raya"></span>
                           <h6 className="m-2 ms-3">{ele[1]}</h6>
@@ -381,12 +381,15 @@ export const Firstsession = () => {
   const Web2 = () => {
     return (
       <>
-        <div className="d-flex  flex-wrap justify-content-center col-md-12 col-lg-12 col-lg-11 col-sm-12">
-          <div className="col-md-12 col-lg-6">
-            <div className="ms-4  col-lg-12 d-flex flex-column ">
+        <div className="d-flex  flex-wrap  justify-content-center col-12">
+          <div className="col-md-12 col-lg-6 col-12 ">
+            <div className="col-12 d-flex flex-column justify-content-end">
               <h2 className="text-light">PERSONAL INFOS</h2>
-              <div className="d-flex justify-content-around">
-                <div className="col-lg-6 d-flex flex-column gap-1  mt-4">
+              <div className="d-flex flex-wrap justify-content-around">
+                <div
+                  style={{ minWidth: "200px" }}
+                  className="col-lg-6 col-md-12 col-sm-12 col-12  d-flex flex-column gap-1  mt-4"
+                >
                   <p className="text-secondary">
                     First Name: <b className="text-light">Enrique</b>{" "}
                   </p>
@@ -404,7 +407,7 @@ export const Firstsession = () => {
                     Langages: <b className="text-light">English,Españoñ</b>{" "}
                   </p>
                 </div>
-                <div className="col-lg-6 d-flex flex-column gap-1 mt-4">
+                <div className=" col-lg-6 col-md-12 col-sm-12 col-12  d-flex flex-column gap-1 mt-4">
                   <p className="text-secondary">
                     Last Name: <b className="text-light">Grass</b>{" "}
                   </p>
@@ -427,11 +430,8 @@ export const Firstsession = () => {
               </div>
             </div>
           </div>
-          <div className="position-relative">
-            <div className="image2-fondo"></div>
-          </div>
 
-          <div className="col-md-6 d-flex flex-wrap gap-4 mt-2">
+          <div className="col-lg-6 mt-3 col-md-12 col-sm-12 d-flex flex-wrap gap-4 mt-2">
             <Cuadro num="2" text="YEARS OF EXPERENCE" />
             <Cuadro
               num="81"
@@ -456,7 +456,7 @@ export const Firstsession = () => {
   const Web3 = () => {
     return (
       <>
-        <div className="col-md-11 col-sm-12">
+        <div className="col-md-11  col-sm-12">
           <div className="col-md-12 justify-content-center d-flex">
             <h3>MY SKILLS</h3>
           </div>
@@ -475,7 +475,7 @@ export const Firstsession = () => {
     return (
       <>
         <div className="col-lg-11 col-md-12">
-          <div className="col-md-12 justify-content-center d-flex">
+          <div className="col-md-12  justify-content-center d-flex">
             <h3>EXPERIENCE & EDUCATION</h3>
           </div>
           <div
