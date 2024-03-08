@@ -5,8 +5,8 @@ import image2 from "../../assets/images/mejora-tu-presencia-online-768x432.jpg";
 import image3 from "../../assets/images/imagen-destacada_diseno-web.jpg";
 import image4 from "../../assets/images/beautiful-15728_640.jpg";
 import image5 from "../../assets/images/hq720.jpg";
-import image6 from "../../assets/images/thumb-1920-1162236.jpg";
-import imagex from "../../assets/images/HD-wallpaper-technology-msi.jpg";
+import image6 from "../../assets/images/image2.png";
+import imagex from "../../assets/images/image1.png";
 import { MDBIcon, MDBBtn } from "mdb-react-ui-kit";
 import { Link } from "react-router-dom";
 import "./style.css";
@@ -91,7 +91,7 @@ export const Firstsession = () => {
           ["NODE JS", 60, "fff"],
           ["MYSQL", 78, "ab24ec"],
           ["BOOTSTRAP", 80, "f16428"],
-          ["PYTHON", 55, "f82c14"],
+          ["ReacT.Native", 55, "f82c14"],
         ],
       },
     });
@@ -257,10 +257,15 @@ export const Firstsession = () => {
             <>
               <div
                 style={{ overflow: "hidden", width: "400px", height: "300px" }}
-                className="bg-info d-flex rounded justify-content-center align-items-center col-lg-3 col-md-6 hover"
+                className="bg-dark d-flex rounded justify-content-center align-items-center col-lg-3 col-md-6 hover"
               >
                 <Link to={"/ima:" + id}>
-                  <img className="image" src={e} alt=""></img>
+                  <img
+                    style={{ width: "400px", height: "280px" }}
+                    className="image"
+                    src={e}
+                    alt=""
+                  ></img>
                 </Link>
               </div>
             </>
@@ -360,13 +365,12 @@ export const Firstsession = () => {
                   </h2>
                 </div>
                 <p className=" inline ps-3  mt-4 col-md-10 text-fondo h-4">
-                  Graduado de Ingeniero Informatico, un apasionado al desarrollo
-                  & diseño web, expecializado como desarrollador Front-End
-                  Junior .Me gustaria contribuir y ganar experiencia en todo lo
-                  que pueda para ser de este gran mundo digital una mejor
-                  opcion. Espero ser de buena ayuda y lograr cumplir con las
-                  expectativas para asi ganar una mejor superación
-                  profecionalmente.
+                  Graduate in Computer Engineering, passionate about web
+                  development and design, specialized as a Front-End developer.
+                  I would like to contribute and gain experience in everything I
+                  can to be a better option in this great digital world. I hope
+                  to be of great help and manage to meet expectations to achieve
+                  better professional development.
                 </p>
                 <div></div>
               </div>

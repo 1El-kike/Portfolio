@@ -363,6 +363,13 @@ color: #159157;
     border-top: 3px solid #b8c407;
 }
 
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
 @media (max-width:1150px) {
     .dnone{
         display: none;
