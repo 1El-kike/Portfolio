@@ -256,9 +256,9 @@ export const Firstsession = () => {
   const [linkFolios] = useState([
     "//link1/one",
     "//link2/two",
-    "https://1el-kike.github.io/Portfolio/registro",
+    "https://1el-kike.github.io/registro",
     "//link4/four",
-    "https://1el-kike.github.io/Portfolio/formulario",
+    "https://1el-kike.github.io/formulario",
     "//link6/six",
   ]);
 
