@@ -363,11 +363,33 @@ color: #159157;
     border-top: 3px solid #b8c407;
 }
 
-.image{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.list-items{
+    position: relative;
     overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.list-items:hover{
+transform: scale(1.1);
+z-index: 1;
+}
+
+.image{
+    width: 100%;
+    height: auto;
+}
+
+.list-items-info{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.list-items:hover .list-items-info{
+    opacity: 1;
 }
 
 @media (max-width:1150px) {

@@ -2,9 +2,9 @@
 import React, { useEffect, useState } from "react";
 import image from "../../assets/images/portafolio.jpg";
 import image2 from "../../assets/images/mejora-tu-presencia-online-768x432.jpg";
-import image3 from "../../assets/images/imagen-destacada_diseno-web.jpg";
-import image4 from "../../assets/images/beautiful-15728_640.jpg";
-import image5 from "../../assets/images/hq720.jpg";
+import image3 from "../../assets/images/image3.png";
+import image4 from "../../assets/images/image4.png";
+import image5 from "../../assets/images/image5.png";
 import image6 from "../../assets/images/image2.png";
 import imagex from "../../assets/images/image1.png";
 import { MDBIcon, MDBBtn } from "mdb-react-ui-kit";
@@ -241,14 +241,28 @@ export const Firstsession = () => {
 
   const [images, setimage] = useState("set1");
   const [port] = useState({
-    set1: [imagex, image6, image5, image4, imagex, image2],
-    set2: [image6, image2, image4, imagex, image5, image3],
-    set3: [image3, image4, image2, imagex, image5, image6],
-    set4: [image6, image4, imagex, image2, image3, image5],
-    set5: [image4, image6, image3, image5, image2, imagex],
+    /* imagenes de todos */
+    set1: [imagex, image6, image5, image4, image3, image2],
+    /* imagenes de formularios */
+    set2: [image3, image4, image5],
+    /* imagenes de video */
+    set3: [image4],
+    /* imagenes de tablas */
+    set4: [image6],
+    /* imagenes de negocios */
+    set5: [imagex],
   });
 
-  const Portafolio = () => {
+  const [linkFolios] = useState([
+    "//link1/one",
+    "//link2/two",
+    "https://1el-kike.github.io/Portfolio/registro",
+    "//link4/four",
+    "https://1el-kike.github.io/Portfolio/formulario",
+    "//link6/six",
+  ]);
+
+  const Portafolio = ({ link }) => {
     return (
       <>
         {port[images]?.map((e, i) => {
@@ -259,13 +273,20 @@ export const Firstsession = () => {
                 style={{ overflow: "hidden", width: "400px", height: "300px" }}
                 className="bg-dark d-flex rounded justify-content-center align-items-center col-lg-3 col-md-6 hover"
               >
-                <Link to={"/ima:" + id}>
-                  <img
-                    style={{ width: "400px", height: "280px" }}
-                    className="image"
-                    src={e}
-                    alt=""
-                  ></img>
+                <Link to={`${[link[0][i]]}`}>
+                  <div className="list-items">
+                    <img
+                      style={{ width: "400px", height: "280px" }}
+                      className="image"
+                      src={e}
+                      alt=""
+                    ></img>
+                    <div className="list-items-info">
+                      <div className="d-flex m-3 justify-content-around ">
+                        <p>Link: {[link[0][i]]}</p>
+                      </div>
+                    </div>
+                  </div>
                 </Link>
               </div>
             </>
@@ -502,22 +523,22 @@ export const Firstsession = () => {
                 ALL
               </li>
               <li className="nav-item my-li" onClick={() => setimage("set2")}>
-                LOGO
+                FORM
               </li>
               <li className="nav-item my-li " onClick={() => setimage("set3")}>
                 VIDEO
               </li>
               <li className="nav-item my-li" onClick={() => setimage("set4")}>
-                GRAPHISC
+                TABLE
               </li>
               <li className="nav-item my-li" onClick={() => setimage("set5")}>
-                MOCKUP
+                BUSINESS
               </li>
             </ul>
           </nav>
           <div style={{ marginRight: "60px" }}>
             <div className="col-lg-12 gap-3 mt-5 mb-5 d-flex flex-wrap justify-content-center align-items-center ">
-              <Portafolio />
+              <Portafolio link={[linkFolios]} />
             </div>
           </div>
         </div>
