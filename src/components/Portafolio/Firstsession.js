@@ -359,7 +359,7 @@ export const Firstsession = () => {
           className="col-md-11 col-sm-12 d-flex flex-column text-light "
           id="lista1"
         >
-          <div className=" d-flex flex-wrap flex-reverse ">
+          <div className=" d-flex flex-wrap-reverse justify-content-center  ">
             <div className="col-md-12  col-sm-12 col-lg-5 mt-5">
               <div className="img1">
                 <div className="espensy">

@@ -1,4 +1,6 @@
 .img1{
+    margin-left: auto;
+    margin-right: auto;
     width: 330px;
     position: relative;
     border-radius: 6px;
