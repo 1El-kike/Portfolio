@@ -266,7 +266,6 @@ export const Firstsession = () => {
     return (
       <>
         {port[images]?.map((e, i) => {
-          const id = parseInt(i);
           return (
             <>
               <div
@@ -359,8 +358,8 @@ export const Firstsession = () => {
           className="col-md-11 col-sm-12 d-flex flex-column text-light "
           id="lista1"
         >
-          <div className=" d-flex flex-wrap-reverse justify-content-center  ">
-            <div className="col-md-12  col-sm-12 col-lg-5 mt-5">
+          <div className=" d-flex flex-wrap-reverse justify-content-center">
+            <div className="col-md-12 col-sm-12 col-lg-5 mt-5">
               <div className="img1">
                 <div className="espensy">
                   <img
@@ -372,8 +371,8 @@ export const Firstsession = () => {
               </div>
             </div>
 
-            <div className=" col-md-12 col-sm-12 col-lg-7 flex-wrap d-flex ">
-              <div className="col-md-11 d-flex   flex-column justify-content-center align-items-start mt-5 mb-0">
+            <div className=" col-md-12 col-sm-12  col-lg-7 flex-wrap d-flex ">
+              <div className="col-md-11 d-flex flex-column justify-content-center align-items-start mt-5 mb-0">
                 <div className="d-flex flex-column ">
                   <div className="d-flex gap-4  justify-content-center ">
                     <span className="raya mt-auto ms-auto mb-auto"></span>
