@@ -1,7 +1,7 @@
 {
     "name_detalle": [
         {
-            "detalle": "Bienvenidos al manual de HTML de DesarrolloWeb."
+            "detalle": "Bienvenidos puto."
         },
         {
             "detalle": "Bienvenidos al manual de Css de DesarrolloWeb."
@@ -11,6 +11,20 @@
         },
         {
             "detalle": "Bienvenidos al manual de Typescript de DesarrolloWeb."
+        }
+    ],
+    "detalles": [
+        {
+            "detalle": "Mis primeros pasos"
+        },
+        {
+            "detalle": "Mientras más avanzas, más descubres"
+        },
+        {
+            "detalle": "Mejor Rendimiento, Optimización y Escalabilidad"
+        },
+        {
+            "detalle": "Resultados Profecional"
         }
     ],
     "name_segundo_detalles": [

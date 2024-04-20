@@ -671,6 +671,7 @@ export const Firstsession = () => {
     );
   };
 
+  // eslint-disable-next-line no-unused-vars
   const [iscroll, setiscroll] = useState(false);
 
   useEffect(() => {
@@ -759,25 +760,33 @@ export const Firstsession = () => {
                   <a
                     href="#lista2"
                     className={`nav-link fixed-navbar-item rounded-circle p-3 fas fa-user text-light`}
-                  ></a>
+                  >
+                    <span></span>
+                  </a>
                 </li>
                 <li className="">
                   <a
                     href="#lista3"
                     className={`nav-link fixed-navbar-item rounded-circle p-3  fas fa-address-card text-light`}
-                  ></a>
+                  >
+                    <span></span>
+                  </a>
                 </li>
                 <li className="">
                   <a
                     href="#lista4"
                     className={`nav-link fixed-navbar-item rounded-circle p-3  fas fa-at text-light`}
-                  ></a>
+                  >
+                    <span></span>
+                  </a>
                 </li>
                 <li className="">
                   <a
                     href="#lista5"
                     className={`nav-link fixed-navbar-item rounded-circle p-3  fas item fa-calendar-times text-light`}
-                  ></a>
+                  >
+                    <span></span>
+                  </a>
                 </li>
               </ul>
             </nav>
