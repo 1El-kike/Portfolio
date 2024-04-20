@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { styled } from "styled-components";
 import { Link } from "react-router-dom";
 
@@ -11,6 +11,7 @@ const Body = styled.body`
 
 const DivFirst = styled.div`
   position: relative;
+
   width: 480px;
   height: 520px;
   background: #1c1c1c;
@@ -65,6 +66,10 @@ const DivFirst = styled.div`
     100% {
       transform: rotate(360deg);
     }
+  }
+
+  @media (max-width: 480px) {
+    width: 300px;
   }
 `;
 const Borderline = styled.span`
@@ -184,6 +189,14 @@ const DivSubmit = styled.div`
   }
 `;
 export const RegistroUsuario = () => {
+  const [user, setuser] = useState("");
+  const [password, setpassword] = useState("");
+
+  const OperacionExito = (e) => {
+    // e.preventDefault();
+    console.log({ user, password });
+  };
+
   return (
     <Body>
       <DivFirst>
@@ -191,12 +204,22 @@ export const RegistroUsuario = () => {
         <Formulario action="">
           <H2>Sign in</H2>
           <InputBox>
-            <Input type="text" required="required"></Input>
+            <Input
+              type="text"
+              onChange={(e) => setuser(e.target.value)}
+              value={user}
+              required="required"
+            ></Input>
             <Spanuser>Username</Spanuser>
             <I></I>
           </InputBox>
           <InputBox>
-            <Input type="password" required="required"></Input>
+            <Input
+              type="password"
+              onChange={(e) => setpassword(e.target.value)}
+              value={password}
+              required="required"
+            ></Input>
             <Spanuser>Password</Spanuser>
             <I></I>
           </InputBox>
@@ -210,7 +233,11 @@ export const RegistroUsuario = () => {
             </Link>
           </Links>
           <DivSubmit>
-            <Submit type="submit" value="Login" />
+            <Submit
+              type="submit"
+              onClick={() => OperacionExito()}
+              value="Login"
+            />
             <Submit type="submit" value="Return" />
           </DivSubmit>
         </Formulario>
