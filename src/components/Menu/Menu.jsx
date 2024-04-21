@@ -65,7 +65,7 @@ export const Menu = () => {
                   </Link>
 
                   <NavDropdown
-                    title="Ejemplos Web"
+                    title="Diseños Web"
                     data-bs-theme="dark"
                     id="nav-dropdown"
                     menuVariant=""

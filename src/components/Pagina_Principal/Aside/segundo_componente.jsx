@@ -45,9 +45,13 @@ export const AsideLeft = () => {
             />
           </CarouselEdixt>
           <CardEdixts
-            link={["Formulario", "Tabla", "Prueba"]}
+            link={[
+              <i className="fas fa-user"></i>,
+              <i className="fas fa-table"></i>,
+              <i className="fas fa-file"></i>,
+            ]}
             adress={["/formulario", "/table", "/prueba"]}
-            title="After"
+            title="Nota"
             texto={text.Text}
           />
           <CarouselEdixt>
