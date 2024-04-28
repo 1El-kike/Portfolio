@@ -1,15 +1,13 @@
-import React, { useState } from "react";
 import { styled } from "styled-components";
-import { Link } from "react-router-dom";
 
-const Body = styled.body`
+export const Body = styled.body`
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 `;
 
-const DivFirst = styled.div`
+export const DivFirst = styled.div`
   position: relative;
 
   width: 480px;
@@ -72,12 +70,12 @@ const DivFirst = styled.div`
     width: 300px;
   }
 `;
-const Borderline = styled.span`
+export const Borderline = styled.span`
   position: absolute;
   top: 0;
   inset: 0;
 `;
-const Formulario = styled.form`
+export const Formulario = styled.form`
   position: absolute;
   inset: 4px;
   background: #222;
@@ -87,13 +85,13 @@ const Formulario = styled.form`
   display: flex;
   flex-direction: column;
 `;
-const H2 = styled.h2`
+export const H2 = styled.h2`
   color: #fff;
   font-weight: 500;
   text-align: center;
   letter-spacing: 0.1em;
 `;
-const InputBox = styled.div`
+export const InputBox = styled.div`
   position: relative;
   width: 95%;
   margin-top: 35px;
@@ -102,7 +100,7 @@ const InputBox = styled.div`
     width: 300px;
   }
 `;
-const Input = styled.input`
+export const Input = styled.input`
   position: relative;
   width: 100%;
   padding: 20px 0px 10px;
@@ -128,7 +126,7 @@ const Input = styled.input`
     height: 48px;
   }
 `;
-const Spanuser = styled.span`
+export const Spanuser = styled.span`
   position: absolute;
   left: 0;
   padding: 20px 10px 10px;
@@ -138,7 +136,7 @@ const Spanuser = styled.span`
   letter-spacing: 0.05em;
   transition: 0.5s;
 `;
-const Submit = styled.input`
+export const Submit = styled.input`
   border: none;
   outline: none;
   padding: 9px 25px;
@@ -156,7 +154,7 @@ const Submit = styled.input`
   }
 `;
 
-const I = styled.i`
+export const I = styled.i`
   position: absolute;
   left: 0;
   bottom: 0;
@@ -168,11 +166,11 @@ const I = styled.i`
   transition: 0.5s;
   pointer-events: none;
 `;
-const Links = styled.div`
+export const Links = styled.div`
   display: flex;
   justify-content: space-between;
 `;
-const A = styled.a`
+export const A = styled.a`
   font-size: 0.95em;
   color: #8f8f8f;
   text-decoration: none;
@@ -180,7 +178,7 @@ const A = styled.a`
     color: #fff;
   }
 `;
-const DivSubmit = styled.div`
+export const DivSubmit = styled.div`
   display: flex;
   justify-content: space-between;
 
@@ -188,60 +186,3 @@ const DivSubmit = styled.div`
     margin-left: auto;
   }
 `;
-export const RegistroUsuario = () => {
-  const [user, setuser] = useState("");
-  const [password, setpassword] = useState("");
-
-  const OperacionExito = (e) => {
-    // e.preventDefault();
-    console.log({ user, password });
-  };
-
-  return (
-    <Body>
-      <DivFirst>
-        <Borderline></Borderline>
-        <Formulario action="">
-          <H2>Sign in</H2>
-          <InputBox>
-            <Input
-              type="text"
-              onChange={(e) => setuser(e.target.value)}
-              value={user}
-              required="required"
-            ></Input>
-            <Spanuser>Username</Spanuser>
-            <I></I>
-          </InputBox>
-          <InputBox>
-            <Input
-              type="password"
-              onChange={(e) => setpassword(e.target.value)}
-              value={password}
-              required="required"
-            ></Input>
-            <Spanuser>Password</Spanuser>
-            <I></I>
-          </InputBox>
-
-          <Links class="links">
-            <Link style={{ margin: "40px 0" }} to="#">
-              <A>Forgot Password</A>
-            </Link>
-            <Link style={{ margin: "40px 0" }} to="/">
-              <A>Singnup</A>
-            </Link>
-          </Links>
-          <DivSubmit>
-            <Submit
-              type="submit"
-              onClick={() => OperacionExito()}
-              value="Login"
-            />
-            <Submit type="submit" value="Return" />
-          </DivSubmit>
-        </Formulario>
-      </DivFirst>
-    </Body>
-  );
-};

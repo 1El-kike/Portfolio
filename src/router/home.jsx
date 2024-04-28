@@ -4,7 +4,7 @@ import { PaginaDeFormulario } from "../components/Formulario/pagina_de_formulari
 import { TableGran } from "../components/tableGran";
 import { Footer } from "../components/footer";
 import { Thumbnail } from "../components/API_TMDB/Thumbnail";
-import { RegistroUsuario } from "../components/RegistroUsuario";
+import { RegistroUsuario } from "../components/RegistroUser/RegistroUsuario";
 import { Props } from "../components/Pagina_de_vuelos_comerciales/Props";
 import { EjemploMenuBootstrap } from "../components/ejemploMenuBootstrap";
 import { BlogComponent } from "../components/blog.compone";
@@ -13,6 +13,9 @@ import { Port } from "../components/Portafolio/port";
 import "bootstrap/dist/js/bootstrap.bundle";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
+import { ProtetedRouter } from "../utils/ProtetedRouter";
+import { ErrorRouter } from "../utils/errorRouter";
+import { RouterProteded } from "../components/RegistroUser/RouterProteded";
 
 export const Home = () => {
   return (
@@ -100,14 +103,13 @@ export const Home = () => {
             </>
           }
         />
+        <Route path="/registro" element={<RegistroUsuario />} />
         <Route
-          path="/registro"
-          element={
-            <>
-              <RegistroUsuario />
-            </>
-          }
-        />
+          element={<ProtetedRouter canActive={true} redirectPath="/error" />}
+        >
+          <Route path="/RouterProteded" element={<RouterProteded />} />
+        </Route>
+        <Route path="error" element={<ErrorRouter />} />
         <Route
           path="/prueba"
           element={

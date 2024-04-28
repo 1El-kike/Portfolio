@@ -105,12 +105,12 @@ export const Menu = () => {
                     </NavDropdown.Item>
                     <NavDropdown.Item href="">
                       <Link to={"#"} className="dropdown-item">
-                        Autentificarse
+                        Ruta Protegida
                       </Link>
                     </NavDropdown.Item>
                     <NavDropdown.Item href="#">
                       <Link to={"#"} className="dropdown-item">
-                        Configuracion
+                        Segunda Ruta
                       </Link>
                     </NavDropdown.Item>
                     <NavDropdown.Item href="#">
