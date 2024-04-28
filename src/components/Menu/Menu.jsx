@@ -104,7 +104,7 @@ export const Menu = () => {
                       </Link>
                     </NavDropdown.Item>
                     <NavDropdown.Item href="">
-                      <Link to={"#"} className="dropdown-item">
+                      <Link to={"/RouterProteded"} className="dropdown-item">
                         Ruta Protegida
                       </Link>
                     </NavDropdown.Item>

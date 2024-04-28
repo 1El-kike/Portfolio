@@ -16,8 +16,11 @@ import "bootstrap/dist/js/bootstrap";
 import { ProtetedRouter } from "../utils/ProtetedRouter";
 import { ErrorRouter } from "../utils/errorRouter";
 import { RouterProteded } from "../components/RegistroUser/RouterProteded";
+import { useLocalStorage } from "react-use";
 
 export const Home = () => {
+  const [user, setUser] = useLocalStorage("user");
+
   return (
     <BrowserRouter>
       <Routes>
@@ -105,7 +108,7 @@ export const Home = () => {
         />
         <Route path="/registro" element={<RegistroUsuario />} />
         <Route
-          element={<ProtetedRouter canActive={true} redirectPath="/error" />}
+          element={<ProtetedRouter canActive={user} redirectPath="/error" />}
         >
           <Route path="/RouterProteded" element={<RouterProteded />} />
         </Route>
