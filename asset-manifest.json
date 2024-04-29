@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.a84a7de3.css",
-    "main.js": "/Portfolio/static/js/main.e5728dd2.js",
+    "main.js": "/Portfolio/static/js/main.3e0e8077.js",
     "static/js/787.b98c23e5.chunk.js": "/Portfolio/static/js/787.b98c23e5.chunk.js",
     "static/media/portafolio.jpg": "/Portfolio/static/media/portafolio.f9c3afa3aa190fa0fba2.jpg",
+    "static/media/newMetas.jpg": "/Portfolio/static/media/newMetas.9152b96f4ec9693ddc16.jpg",
     "static/media/1229908.jpg": "/Portfolio/static/media/1229908.617bccd4f3cd87205bdc.jpg",
     "static/media/12-tips-every-it-guy-should-know-man-with-laptop-11562889285hwldim1kbf.png": "/Portfolio/static/media/12-tips-every-it-guy-should-know-man-with-laptop-11562889285hwldim1kbf.6c762ea068868cd043cb.png",
     "static/media/image3.png": "/Portfolio/static/media/image3.4f41f0aae97cba29f0b6.png",
@@ -25,19 +26,22 @@
     "static/media/jpg": "/Portfolio/static/media/87f2ec93e7e4d9b4a9331a8b7042fae1.7bd13be394c7cc98c634.jpg",
     "static/media/mejora-tu-presencia-online-768x432.jpg": "/Portfolio/static/media/mejora-tu-presencia-online-768x432.2c3f0f40a6205efd3cd4.jpg",
     "static/media/fa-regular-400.ttf": "/Portfolio/static/media/fa-regular-400.50701fbb8177c2dde530.ttf",
+    "static/media/primerPaso2.jpg": "/Portfolio/static/media/primerPaso2.89d3f0a4ec5e793d2f6a.jpg",
+    "static/media/resultado.jpg": "/Portfolio/static/media/resultado.715e855b038391dde077.jpg",
     "static/media/HD-wallpaper-technology-msi.jpg": "/Portfolio/static/media/HD-wallpaper-technology-msi.6940991d88f2b9d8fe13.jpg",
     "static/media/beautiful-15728_640.jpg": "/Portfolio/static/media/beautiful-15728_640.d523f1449289d58147a2.jpg",
+    "static/media/optimizar.jpg": "/Portfolio/static/media/optimizar.bbc74915919831a0bc5c.jpg",
     "static/media/fa-regular-400.woff2": "/Portfolio/static/media/fa-regular-400.b041b1fa4fe241b23445.woff2",
     "static/media/image5.png": "/Portfolio/static/media/image5.1d27c169b40db00859a0.png",
     "static/media/fa-v4compatibility.ttf": "/Portfolio/static/media/fa-v4compatibility.c6a0c95b0a95c4553700.ttf",
     "static/media/fa-v4compatibility.woff2": "/Portfolio/static/media/fa-v4compatibility.1bac2991f3dbfa237aec.woff2",
     "index.html": "/Portfolio/index.html",
     "main.a84a7de3.css.map": "/Portfolio/static/css/main.a84a7de3.css.map",
-    "main.e5728dd2.js.map": "/Portfolio/static/js/main.e5728dd2.js.map",
+    "main.3e0e8077.js.map": "/Portfolio/static/js/main.3e0e8077.js.map",
     "787.b98c23e5.chunk.js.map": "/Portfolio/static/js/787.b98c23e5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a84a7de3.css",
-    "static/js/main.e5728dd2.js"
+    "static/js/main.3e0e8077.js"
   ]
 }
