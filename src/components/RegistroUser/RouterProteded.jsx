@@ -4,6 +4,7 @@ import { Footer } from "../footer";
 import { useLocalStorage } from "react-use";
 
 export const RouterProteded = () => {
+  // eslint-disable-next-line no-unused-vars
   const [user, setUser] = useLocalStorage("user");
   const Contenido = () => {
     return (
