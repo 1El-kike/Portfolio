@@ -1,6 +1,7 @@
 import React from "react";
 import { Menu } from "../components/Menu/Menu";
 import { Footer } from "../components/footer";
+import { Link } from "react-router-dom";
 
 export const ErrorRouter = () => {
   const Error = () => {
@@ -41,9 +42,9 @@ export const ErrorRouter = () => {
 
         <div className="alert alert-primary" role="alert">
           <strong>Warning!</strong>
-          <a href="#" class="alert-link">
+          <Link to="/registro" class="alert-link text-danger">
             Click Here
-          </a>
+          </Link>
         </div>
       </div>
     );
