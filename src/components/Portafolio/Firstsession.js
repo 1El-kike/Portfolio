@@ -517,7 +517,7 @@ export const Firstsession = () => {
       <>
         <div className="col-lg-12 mb-5 col-md-12">
           <nav className="col-12 d-flex justify-content-center align-items-center">
-            <ul className="nav gap-5">
+            <ul className="nav justify-content-center gap-5">
               <li className="nav-item my-li " onClick={() => setimage("set1")}>
                 ALL
               </li>
@@ -535,7 +535,7 @@ export const Firstsession = () => {
               </li>
             </ul>
           </nav>
-          <div style={{ marginRight: "60px" }}>
+          <div className="" style={{ marginRight: "60px", width: "100%" }}>
             <div className="col-lg-12 gap-3 mt-5 mb-5 d-flex flex-wrap justify-content-center align-items-center ">
               <Portafolio link={[linkFolios]} />
             </div>
@@ -724,7 +724,9 @@ export const Firstsession = () => {
             subtitulo={"PORTFOLIO"}
             link={"lista3"}
           />
-          <Section childrend={<Web5 />}></Section>
+          <div style={window.innerWidth < 400 ? { marginLeft: -200 } : null}>
+            <Section childrend={<Web5 />}></Section>
+          </div>
 
           <Title
             background={"CONTACT"}
