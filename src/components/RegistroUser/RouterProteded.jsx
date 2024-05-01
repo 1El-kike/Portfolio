@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Menu } from "../Menu/Menu";
 import { Footer } from "../footer";
 import { Link } from "react-router-dom";
-import { Button, Modal } from "react-bootstrap";
+import { Alert, Button, Modal } from "react-bootstrap";
 
 export const RouterProteded = () => {
   // eslint-disable-next-line no-unused-vars
@@ -73,63 +73,83 @@ export const RouterProteded = () => {
       (acumulador, valorActual) => acumulador + valorActual,
       0
     );
+    const [ancho, setancho] = useState();
 
-    console.log(suma);
+    window.addEventListener("resize", function () {
+      var ancho = window.innerWidth;
+      setancho(ancho);
+    });
+
     return (
       <>
-        <div className="col-md-3 col-xs-1 col-1 col-lg-4 mb-5 mt-4" style={{}}>
-          <div className="table-responsive" style={{ borderRadius: 8 }}>
-            <table
-              style={{ borderRadius: 8 }}
-              className="table table-striped table-hover table-dark mt-3 table-borderless table-primary align-middle"
-            >
-              <>
-                <thead
-                  className="table-dark"
-                  style={{
-                    borderRadius: 8,
-                  }}
+        {ancho > 990 ? (
+          <>
+            <div className="col-md-3 col-lg-4 mb-5 mt-4">
+              <div className="table-responsive" style={{ borderRadius: 8 }}>
+                <table
+                  style={{ borderRadius: 8 }}
+                  className="table table-striped table-hover table-dark mt-3 table-borderless table-primary align-middle"
                 >
-                  <tr>
-                    <th>
-                      Nombre <i className="fas fa-user ms-2"></i>
-                    </th>
-                    <th>
-                      Email <i className="fas fa-envelope-square ms-2"></i>
-                    </th>
-                    <th style={{ width: 90 }}>
-                      Total <i className="fas fa-fax ms-2"></i>
-                    </th>
-                  </tr>
-                </thead>
-                {user?.map((elem) => {
-                  return (
-                    <tbody className="table-group-divider">
-                      <tr className="">
-                        <td scope="row">{elem.name}</td>
-                        <td scope="row">{elem.email}</td>
-                        <td scope="row">
-                          {countTodusByUser ? countTodusByUser[elem.id] : null}
-                        </td>
+                  <>
+                    <thead
+                      className="table-dark"
+                      style={{
+                        borderRadius: 8,
+                      }}
+                    >
+                      <tr>
+                        <th style={{ borderTopLeftRadius: 6 }}>
+                          Nombre <i className="fas fa-user ms-2"></i>
+                        </th>
+                        <th>
+                          Email <i className="fas fa-envelope-square ms-2"></i>
+                        </th>
+                        <th style={{ width: 190, borderTopRightRadius: 6 }}>
+                          Total <i className="fas fa-fax ms-2"></i>
+                        </th>
                       </tr>
-                    </tbody>
-                  );
-                })}
-                <tfoot>
-                  <tr className="">
-                    <td scope="row">Total</td>
-                    <td scope="row"></td>
-                    <td scope="row">{suma}</td>
-                  </tr>
-                </tfoot>
-              </>
-            </table>
-          </div>
-        </div>
+                    </thead>
+                    {user?.map((elem) => {
+                      return (
+                        <tbody className="table-group-divider">
+                          <tr className="">
+                            <td scope="row">{elem.name}</td>
+                            <td scope="row">{elem.email}</td>
+                            <td scope="row">
+                              {countTodusByUser
+                                ? countTodusByUser[elem.id]
+                                : null}
+                            </td>
+                          </tr>
+                        </tbody>
+                      );
+                    })}
+                    <tfoot>
+                      <tr className="">
+                        <td scope="row">Total</td>
+                        <td scope="row"></td>
+                        <td scope="row">{suma}</td>
+                      </tr>
+                    </tfoot>
+                  </>
+                </table>
+              </div>
+              <Alert variant="success">
+                <Alert.Heading>
+                  Datos Obtenidos de aqui
+                  <i className="fas fa-chevron-circle-down ms-3"></i>
+                </Alert.Heading>
+                <p>jsonplaceholder.typicode.com</p>
+                <hr />
+                <p className="mb-0">1/5/2024</p>
+              </Alert>
+            </div>
+          </>
+        ) : null}
 
         <div
           style={{ height: "auto" }}
-          className="container justify-content-center align-items-center col-md-9 col-xs-11 col-11 col-lg-7 mb-5 mt-4"
+          className="container justify-content-center align-items-center col-md-12 col-xs-12 col-12 col-lg-7 mb-5 mt-4"
         >
           {/*  {JSON.stringify(user, null, 5)} */}
 
