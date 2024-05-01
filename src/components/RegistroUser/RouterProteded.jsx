@@ -64,11 +64,17 @@ export const RouterProteded = () => {
 
   const countTodusByUser = todus.reduce((acc, todo) => {
     acc[todo.userId] = (acc[todo.userId] || 0) + 1;
+
     return acc;
   }, {});
 
   const Contenido = () => {
-    console.log(countTodusByUser);
+    const suma = Object.values(countTodusByUser).reduce(
+      (acumulador, valorActual) => acumulador + valorActual,
+      0
+    );
+
+    console.log(suma);
     return (
       <>
         <div className="col-md-3 col-xs-1 col-1 col-lg-4 mb-5 mt-4" style={{}}>
@@ -109,7 +115,13 @@ export const RouterProteded = () => {
                     </tbody>
                   );
                 })}
-                <tfoot></tfoot>
+                <tfoot>
+                  <tr className="">
+                    <td scope="row">Total</td>
+                    <td scope="row"></td>
+                    <td scope="row">{suma}</td>
+                  </tr>
+                </tfoot>
               </>
             </table>
           </div>
