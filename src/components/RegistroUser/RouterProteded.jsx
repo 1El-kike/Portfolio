@@ -3,13 +3,28 @@ import React, { useEffect, useState } from "react";
 import { Menu } from "../Menu/Menu";
 import { Footer } from "../footer";
 import { Link } from "react-router-dom";
-import { Alert, Button, Modal } from "react-bootstrap";
+import {
+  Alert,
+  Button,
+  Col,
+  Dropdown,
+  Modal,
+  Row,
+  Toast,
+} from "react-bootstrap";
 
 export const RouterProteded = () => {
   // eslint-disable-next-line no-unused-vars
   const [todus, setTodus] = useState([]);
   const [user, setuser] = useState([]);
   const [photos, setphotos] = useState([]);
+  const [comment, setcomment] = useState([]);
+  const [showA, setShowA] = useState(true);
+  const [showB, setShowB] = useState(true);
+
+  const toggleShowA = () => setShowA(!showA);
+  const toggleShowB = () => setShowB(!showB);
+
   const [show, setShow] = useState(false);
   const [ids, setid] = useState(0);
 
@@ -41,11 +56,18 @@ export const RouterProteded = () => {
       .then((json) => setphotos(json))
       .catch((err) => console.log(err));
   };
+  const GetComment = () => {
+    fetch("https://jsonplaceholder.typicode.com/comments")
+      .then((response) => response.json())
+      .then((data) => setcomment(data))
+      .catch((err) => console.log(err));
+  };
 
   useEffect(() => {
     Getdatos();
     GetUser();
     Getphotos();
+    GetComment();
   }, []);
 
   const cambiarComplit = (e, id) => {
@@ -73,7 +95,7 @@ export const RouterProteded = () => {
       (acumulador, valorActual) => acumulador + valorActual,
       0
     );
-    const [ancho, setancho] = useState();
+    const [ancho, setancho] = useState(window.innerWidth);
 
     window.addEventListener("resize", function () {
       var ancho = window.innerWidth;
@@ -164,7 +186,7 @@ export const RouterProteded = () => {
                       backgroundColor: "#423D3D",
                       borderColor: "#065064",
                     }}
-                    className="list-group-item list-group-item-action d-flex justify-content-between align-items-start active"
+                    className="list-group-item list-group-item-action d-flex flex-wrap justify-content-between align-items-start active"
                     aria-current="true"
                   >
                     <div className="d-flex gap-3">
@@ -205,13 +227,44 @@ export const RouterProteded = () => {
                           )}
                         </small>
                         <small className="text-muted mt-2 ms-1">
-                          <i className="fas fa-genderless  bg-danger text-white p-2 rounded"></i>
+                          <i className="fas fa-trash  bg-danger text-white p-2 rounded"></i>
                         </small>
                         <small className="text-muted mt-2 ms-1">
                           <i className="fas fa-exchange text-white bg-primary p-2 rounded"></i>
                         </small>
                       </div>
-                      <small className="text-muted">paragraph footer</small>
+                      <small className="text-muted">
+                        <Row
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            e.preventDefault();
+                          }}
+                        >
+                          <Col md={10} className="mb-2">
+                            <Button onClick={toggleShowB} className="mb-2">
+                              <i className="fas fa-comment"></i>
+                            </Button>
+                            <Toast
+                              onClose={toggleShowB}
+                              show={showB}
+                              animation={false}
+                            >
+                              <Toast.Header>
+                                <img
+                                  src="holder.js/20x20?text=%20"
+                                  className="rounded me-2"
+                                  alt=""
+                                />
+                                <strong className="me-auto">Bootstrap</strong>
+                                <small>11 mins ago</small>
+                              </Toast.Header>
+                              <Toast.Body>
+                                Woohoo, you're reading this text in a Toast!
+                              </Toast.Body>
+                            </Toast>
+                          </Col>
+                        </Row>
+                      </small>
                     </div>
                   </Link>
                 </div>
