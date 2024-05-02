@@ -190,7 +190,14 @@ export const RouterProteded = () => {
                     className="list-group-item list-group-item-action overflow-auto d-flex flex-wrap justify-content-between align-items-start active"
                     aria-current="true"
                   >
-                    <div className="d-flex gap-3">
+                    <div
+                      style={{
+                        maxWidth: "60%",
+                        background:
+                          "linear-gradient(45deg ,rgb(2, 36, 53),transparent,rgb(2, 36, 53))",
+                      }}
+                      className="d-flex  rounded"
+                    >
                       <img
                         style={{ width: "205px", margin: 5, height: "205px" }}
                         src={
@@ -201,7 +208,10 @@ export const RouterProteded = () => {
                         className="rounded me-2 "
                         alt=""
                       ></img>
-                      <div className="d-flex flex-column justify-content-start gap-4">
+                      <div
+                        style={{ width: 500 }}
+                        className="d-flex flex-column justify-content-start gap-4"
+                      >
                         <p className="mt-4 h3 text-white">
                           {user && user[userId]
                             ? user[userId].name
@@ -215,7 +225,7 @@ export const RouterProteded = () => {
                       className="d-flex flex-column justify-content-between "
                       style={{ height: 200 }}
                     >
-                      <div>
+                      <div style={{}} className=" ">
                         <small
                           onClick={(e) => cambiarComplit(e, id)}
                           className="text-muted mt-2"
