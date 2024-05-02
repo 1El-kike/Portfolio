@@ -218,7 +218,7 @@ export const RouterProteded = () => {
                     </div>
 
                     <div
-                      className="d-flex flex-column col-lg-4 justify-content-between align-items-end hm-100  "
+                      className="d-flex flex-column  justify-content-between align-items-end hm-100  "
                       style={{ height: "100%" }}
                     >
                       <div style={{}} className=" ">

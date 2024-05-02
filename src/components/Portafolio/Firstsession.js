@@ -90,8 +90,8 @@ export const Firstsession = () => {
           ["REACT", 80, "ffe047"],
           ["NODE JS", 60, "fff"],
           ["MYSQL", 78, "ab24ec"],
-          ["BOOTSTRAP", 80, "f16428"],
-          ["ReacT.Native", 55, "f82c14"],
+          ["TYPESCRIPT", 80, "f16428"],
+          ["REACT'Native", 55, "f82c14"],
         ],
       },
     });
