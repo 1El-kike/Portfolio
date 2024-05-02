@@ -187,16 +187,15 @@ export const RouterProteded = () => {
                       borderColor: "#065064",
                       height: "auto",
                     }}
-                    className="list-group-item list-group-item-action overflow-auto d-flex flex-wrap justify-content-between align-items-start active"
+                    className="list-group-item row list-group-item-action overflow-auto d-flex flex-wrap justify-content-between align-items-start active"
                     aria-current="true"
                   >
                     <div
                       style={{
-                        maxWidth: "60%",
                         background:
                           "linear-gradient(45deg ,rgb(2, 36, 53),transparent,rgb(2, 36, 53))",
                       }}
-                      className="d-flex  rounded"
+                      className="d-flex col-lg-8 rounded mb-3"
                     >
                       <img
                         style={{ width: "205px", margin: 5, height: "205px" }}
@@ -208,22 +207,19 @@ export const RouterProteded = () => {
                         className="rounded me-2 "
                         alt=""
                       ></img>
-                      <div
-                        style={{ width: 500 }}
-                        className="d-flex flex-column justify-content-start gap-4"
-                      >
-                        <p className="mt-4 h3 text-white">
+                      <div className=" row  col-5 d-flex flex-wrap flex-column justify-content-center ">
+                        <p className="mt-4 h3 text-white  ">
                           {user && user[userId]
                             ? user[userId].name
                             : "Cargando..."}
                         </p>
-                        <h5 className="mb-1 text-white">{title}</h5>
+                        <h5 className="mb-1 text-white ">{title}</h5>
                       </div>
                     </div>
 
                     <div
-                      className="d-flex flex-column justify-content-between "
-                      style={{ height: 200 }}
+                      className="d-flex flex-column col-lg-4 justify-content-between align-items-end hm-100  "
+                      style={{ height: "100%" }}
                     >
                       <div style={{}} className=" ">
                         <small
