@@ -3,15 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Menu } from "../Menu/Menu";
 import { Footer } from "../footer";
 import { Link } from "react-router-dom";
-import {
-  Alert,
-  Button,
-  Col,
-  Dropdown,
-  Modal,
-  Row,
-  Toast,
-} from "react-bootstrap";
+import { Alert, Button, Modal } from "react-bootstrap";
 
 export const RouterProteded = () => {
   // eslint-disable-next-line no-unused-vars
@@ -19,11 +11,6 @@ export const RouterProteded = () => {
   const [user, setuser] = useState([]);
   const [photos, setphotos] = useState([]);
   const [comment, setcomment] = useState([]);
-  const [showA, setShowA] = useState(true);
-  const [showB, setShowB] = useState(true);
-
-  const toggleShowA = () => setShowA(!showA);
-  const toggleShowB = () => setShowB(!showB);
 
   const [show, setShow] = useState(false);
   const [ids, setid] = useState(0);
@@ -101,6 +88,19 @@ export const RouterProteded = () => {
       var ancho = window.innerWidth;
       setancho(ancho);
     });
+
+    const [filteredComments, setFilteredComments] = useState([]);
+    const [selectedListId, setSelectedListId] = useState(null);
+    const [stado, setstado] = useState(false);
+    const mostrarComment = (postId) => {
+      // Filtrar los comentarios que pertenecen a la tarea específica
+      const comentariosFiltrados = comment.filter((e) => e.postId === postId);
+      // Actualizar el estado para mostrar solo los comentarios de la lista seleccionada
+      setSelectedListId(postId);
+      // Almacenar los comentarios filtrados en el estado
+      setFilteredComments(comentariosFiltrados);
+      console.log(comentariosFiltrados);
+    };
 
     return (
       <>
@@ -185,8 +185,9 @@ export const RouterProteded = () => {
                     style={{
                       backgroundColor: "#423D3D",
                       borderColor: "#065064",
+                      height: "auto",
                     }}
-                    className="list-group-item list-group-item-action d-flex flex-wrap justify-content-between align-items-start active"
+                    className="list-group-item list-group-item-action overflow-auto d-flex flex-wrap justify-content-between align-items-start active"
                     aria-current="true"
                   >
                     <div className="d-flex gap-3">
@@ -234,36 +235,69 @@ export const RouterProteded = () => {
                         </small>
                       </div>
                       <small className="text-muted">
-                        <Row
+                        <button
                           onClick={(e) => {
-                            e.stopPropagation();
                             e.preventDefault();
+                            e.stopPropagation();
+                            mostrarComment(id);
+                            setstado(!stado);
                           }}
+                          className="btn btn-outline-white"
                         >
-                          <Col md={10} className="mb-2">
-                            <Button onClick={toggleShowB} className="mb-2">
-                              <i className="fas fa-comment"></i>
-                            </Button>
-                            <Toast
-                              onClose={toggleShowB}
-                              show={showB}
-                              animation={false}
-                            >
-                              <Toast.Header>
-                                <img
-                                  src="holder.js/20x20?text=%20"
-                                  className="rounded me-2"
-                                  alt=""
-                                />
-                                <strong className="me-auto">Bootstrap</strong>
-                                <small>11 mins ago</small>
-                              </Toast.Header>
-                              <Toast.Body>
-                                Woohoo, you're reading this text in a Toast!
-                              </Toast.Body>
-                            </Toast>
-                          </Col>
-                        </Row>
+                          <i className="fas fa-comments"></i>
+                        </button>
+                        {selectedListId === id && stado !== true && (
+                          <div className="rounded bg-white  m-3">
+                            {filteredComments.map((comment) => (
+                              <div
+                                style={{ borderTopRightRadius: 8 }}
+                                className="rounded m-2"
+                                key={comment.id}
+                              >
+                                <ul class="list-group rounded-top-right  list-group-flush">
+                                  <div className="d-flex text-boid mb-3 flex-column">
+                                    <p>
+                                      <b>Email: </b> {comment.email}
+                                    </p>
+                                    <li class="list-group-item rounded position-relative">
+                                      {comment.body}
+
+                                      <span className=" row ms-auto col-lg-5 col-md-8 col-xs-12 col-12">
+                                        <div class="mb-3">
+                                          <label for="" class="form-label">
+                                            Responder :
+                                          </label>
+                                          <input
+                                            type="text"
+                                            className="form-control form-control-sm"
+                                            name=""
+                                            id=""
+                                            aria-describedby="helpId"
+                                            placeholder=""
+                                          />
+                                          <small
+                                            id="helpId"
+                                            className="form-text text-muted"
+                                          >
+                                            Help text
+                                          </small>
+                                        </div>
+                                      </span>
+                                      <span
+                                        style={{ button: 50, right: 10 }}
+                                        className="position-absolute  d-flex gap-3 button-0 "
+                                      >
+                                        <i className="fas fa-heart text-white p-2 bg-danger rounded-circle"></i>
+                                        <i className="fas fa-thumbs-up text-white p-2 bg-primary rounded-circle"></i>
+                                        <i className="fas fa-face-smile-beam text-white p-2 bg-warning rounded-circle"></i>
+                                      </span>
+                                    </li>
+                                  </div>
+                                </ul>
+                              </div>
+                            ))}
+                          </div>
+                        )}
                       </small>
                     </div>
                   </Link>
