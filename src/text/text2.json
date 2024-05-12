@@ -27,6 +27,20 @@
             "detalle": "Resultados Profecional"
         }
     ],
+    "detalles2": [
+        {
+            "detalle2": ""
+        },
+        {
+            "detalle2": ""
+        },
+        {
+            "detalle2": ""
+        },
+        {
+            "detalle2": ""
+        }
+    ],
     "name_segundo_detalles": [
         {
             "detalle": "Bienvenidos al manual de Python de DesarrolloWeb."
@@ -58,11 +72,11 @@
     "Article": [
         {
             "title": "HTML",
-            "texto": "La imagen se HTML fondo.jpg y suponemos que se encuentra en el mismo directorio."
+            "texto": "HTML, CSS, Javascript, Typescript, React, Next.js, Vitest y Tailwindcss."
         },
         {
             "title": "Css",
-            "texto": "La imagen se CSS fondo.jpg y suponemos que se encuentra en el mismo directorio."
+            "texto": "Node.js, Express, mysql, mongoDB."
         }
     ],
     "Article2": [
