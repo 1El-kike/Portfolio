@@ -19,6 +19,7 @@ import { RouterProteded } from "../components/RegistroUser/RouterProteded";
 import { useLocalStorage } from "react-use";
 
 export const Home = () => {
+  // eslint-disable-next-line no-unused-vars
   const [user, setUser] = useLocalStorage("user");
 
   return (

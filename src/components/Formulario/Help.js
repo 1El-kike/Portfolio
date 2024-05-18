@@ -1,11 +1,8 @@
-import React, { useRef } from 'react'
+import React from "react";
 
 export const Help = () => {
+  //const [state, dispatch] = useReducer(first, second, third)
+  //const elem = useRef()
 
-    //const [state, dispatch] = useReducer(first, second, third)
-    const elem = useRef()
-
-    return (
-        <div>Help</div>
-    )
-}
+  return <div>Help</div>;
+};
