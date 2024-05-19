@@ -1,16 +1,16 @@
 {
     "name_detalle": [
         {
-            "detalle": "Bienvenidos ."
+            "detalle": ""
         },
         {
-            "detalle": "Bienvenidos al manual de Css de DesarrolloWeb."
+            "detalle": ""
         },
         {
-            "detalle": "Bienvenidos al manual de JavaScript de DesarrolloWeb."
+            "detalle": ""
         },
         {
-            "detalle": "Bienvenidos al manual de Typescript de DesarrolloWeb."
+            "detalle": ""
         }
     ],
     "detalles": [
@@ -71,12 +71,12 @@
     ],
     "Article": [
         {
-            "title": "HTML",
-            "texto": "HTML, CSS, Javascript, Typescript, React, Next.js, Vitest y Tailwindcss."
+            "title": "Jornada Científica ",
+            "texto": "Primer logro científico alcanzado en la nominación en 1º lugar en el concurso de Programación del instituto. Destacando sobre el cumplimiento de dicha labor cuando había culminado mi tercer año de la carrera"
         },
         {
-            "title": "Css",
-            "texto": "Node.js, Express, mysql, mongoDB."
+            "title": "Primer Proyecto",
+            "texto": "Concurso de participación por equipo de estudiantes para presentar el desarrollo de un sistema de redes de climatización por zonas específicas. Obteniendo un gran resultado y categoría de mencionados destacados entre los primeros lugares "
         }
     ],
     "Article2": [
@@ -101,9 +101,9 @@
     ],
     "Alert": [
         {
-            "titleAlert": "HTML",
-            "AlertsHeader": "La imagen se llama fondo.jpg y suponemos que se encuentra en el mismo directorio que lapágina. En este caso se colocaría la siguiente etiquetaEs importante tener claro todo ello puesto que en función de vuestros objetivos puede que, más que aprender HTML",
-            "AlertsFooter": "HTML es el lenguaje con el que se escriben las páginas web. Las páginas web pueden servistas por el usuario mediante un tipo de aplicación llamada navegador. Podemos decir por lotanto que el HTML es el lenguaje usado por los navegadores para mostrar las páginas webs alusuario, siendo hoy en día la interface más extendida en la red."
+            "titleAlert": "Porque Desarrollador web",
+            "AlertsHeader": "Desde siempre fui bueno con la matemática, me gustaban los retos y resolver problemas. Me  gusta y sienta bien gratificante la satisfacción que da luego de dar con la solución después de mucho tiempo de invertido en análisis y estudios.Por eso siempre busqué dónde podría reflejar mejor estos retos, así que un día pregunté en qué son buenas las matemáticas y nunca se me olvida el día en que alguien me dijo por qué no programas ",
+            "AlertsFooter": "Cuando descubrí  este mundo tan grande que es la programación, me di cuenta de que era lo que buscaba y lo que quería lograr. Descubrí  y entendí la lógica de la programación, lo extenso que es,  las diferentes rutas que tienen  las diversas tecnologías y solo entonces, de  ahí partir, donde nació mi sueño de convertirme en Desarrollador Web. "
         },
         {
             "titleAlert": "Css",

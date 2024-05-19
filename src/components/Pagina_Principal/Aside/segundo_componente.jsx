@@ -5,7 +5,7 @@ import image4 from "../../../assets/images/resultado.jpg";
 import image5 from "../../../assets/images/TI.jpg";
 import image6 from "../../../assets/images/frontend.jpg";
 import image7 from "../../../assets/images/backend.png";
-import image8 from "../../../assets/images/aws.jpg";
+import image8 from "../../../assets/images/docker.jpg";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import { CardGroupEdixt, CarouselEdixt } from "./estilosAside";
