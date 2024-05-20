@@ -1,18 +1,18 @@
-import React from 'react'
-import { Placeholders } from './Placeholder'
+import React from "react";
+import { Placeholders } from "./Placeholder";
 
 export const Loading = () => {
-    return (
-        <>
-            <Placeholders />
-            <Placeholders />
-            <Placeholders />
-            <Placeholders />
-            <Placeholders />
-            <Placeholders />
-            <Placeholders />
-            <Placeholders />
-            <Placeholders />
-        </>
-    )
-}
+  return (
+    <>
+      <Placeholders />
+      <Placeholders />
+      <Placeholders />
+      <Placeholders />
+      <Placeholders />
+      <Placeholders />
+      <Placeholders />
+      <Placeholders />
+      <Placeholders />
+    </>
+  );
+};

@@ -6,7 +6,7 @@ import { Loading } from "./Loading";
 
 export const Thumbnail = ({ id }) => {
   const [pagina, setpagina] = useState(1);
-  const [loadings, setloadings] = useState(false);
+  const [loadings, setloadings] = useState(true);
 
   const handlepage = () => {
     setpagina(pagina + 1);
@@ -17,21 +17,26 @@ export const Thumbnail = ({ id }) => {
   const [data, setdata] = useState([]);
 
   useEffect(() => {
+    setloadings(true);
     fetch(
       `https://api.themoviedb.org/3/movie/popular?api_key=f397458aaaf92f659df45279ff3196bf&language=es-ES&page=${pagina}`
     )
       .then((response) => response.json())
-      .then((data) => setdata(data))
-      .catch((error) => console.error(error));
-
-    setloadings(true);
+      .then((data) => {
+        setdata(data);
+        setloadings(false);
+      })
+      .catch((error) => {
+        console.error(error);
+        setloadings(false);
+      });
   }, [pagina]);
 
   return (
     <>
       <DivContainer>
         <Div>
-          {loadings === false ? (
+          {loadings ? (
             <Loading />
           ) : (
             data.results?.map((element) => (

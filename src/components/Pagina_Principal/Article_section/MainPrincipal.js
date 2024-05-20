@@ -23,6 +23,8 @@ export const MainPrincipal = () => {
   const image4 = require("../../../assets/images/dsassad.jpg");
   const image5 = require("../../../assets/images/fondoText.jpg");
   const image6 = require("../../../assets/images/diseno.jpg");
+  const image7 = require("../../../assets/images/images.jpg");
+  const image8 = require("../../../assets/images/diseno.jpg");
 
   return (
     <div style={{}} className="">
@@ -45,9 +47,9 @@ export const MainPrincipal = () => {
         parragofooter={datosAlert[0][2]}
       />
       <Articleblog
-        title={[datosArticle[0][0], datosArticle[1][0]]}
-        texto={[datosArticle[0][1], datosArticle[1][1]]}
-        image={[image4, image5]}
+        title={[datosArticle[2][0], datosArticle[3][0]]}
+        texto={[datosArticle[2][1], datosArticle[3][1]]}
+        image={[image7, image8]}
       />
       <Alerta
         alerHeader={datosAlert[1][0]}
