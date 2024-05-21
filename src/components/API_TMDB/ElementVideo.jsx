@@ -6,9 +6,24 @@ import {
   faHeart,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import { P, DivElemPlayer, Titulo, DivButton, Bottom, icono } from "./Api";
+import {
+  P,
+  DivElemPlayer,
+  Titulo,
+  DivButton,
+  Bottom,
+  icono,
+  Progress,
+  ProgressValue,
+} from "./Api";
 
-export const ElementVideo = ({ tituloPlayer, id, textPlayer, imagen }) => {
+export const ElementVideo = ({
+  tituloPlayer,
+  id,
+  textPlayer,
+  imagen,
+  porsentaje,
+}) => {
   const [contador, setcontador] = useState(0);
 
   const contar = () => {
@@ -24,9 +39,8 @@ export const ElementVideo = ({ tituloPlayer, id, textPlayer, imagen }) => {
   return (
     <>
       <DivElemPlayer>
-        <Titulo>{tituloPlayer}</Titulo>
-
         <Link
+          className="position-relative"
           to={`/about/${id}`}
           style={{
             display: "grid",
@@ -36,12 +50,27 @@ export const ElementVideo = ({ tituloPlayer, id, textPlayer, imagen }) => {
           }}
         >
           <img
+            style={{ borderRadius: 8, margin: "auto" }}
             src={imagen}
             alt="no se encuentra"
-            width="90%"
+            width="99%"
             height="400px"
           ></img>
+          <Progress
+            number={porsentaje}
+            className={" position-absolute"}
+            style={{ right: -39, bottom: -30 }}
+          >
+            <ProgressValue
+              role="progressbar"
+              aria-valuenow="75"
+              aria-valuemin="0"
+            >
+              {porsentaje + "%"}
+            </ProgressValue>
+          </Progress>
         </Link>
+        <Titulo>{tituloPlayer}</Titulo>
 
         {textPlayer === "" ? <P>{textPlayer}</P> : <></>}
         <DivButton>
