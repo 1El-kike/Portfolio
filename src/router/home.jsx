@@ -17,6 +17,7 @@ import { ProtetedRouter } from "../utils/ProtetedRouter";
 import { ErrorRouter } from "../utils/errorRouter";
 import { RouterProteded } from "../components/RegistroUser/RouterProteded";
 import { useLocalStorage } from "react-use";
+import { Movies } from "../components/API_TMDB/movies";
 
 export const Home = () => {
   // eslint-disable-next-line no-unused-vars
@@ -32,6 +33,18 @@ export const Home = () => {
               <Menu />
               <section>
                 <Main />
+              </section>
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/about/:id"
+          element={
+            <>
+              <Menu />
+              <section>
+                <Movies />
               </section>
               <Footer />
             </>

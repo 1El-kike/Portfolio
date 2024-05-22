@@ -24,23 +24,29 @@ const Butom = styled.button`
 `;
 
 const DivElemPlayer = styled.div`
-/*  display: flex;
+  /*  display: flex;
  flex-direction: column;
  justify-content: space-around;
  align-items: center;
  margin: auto; */
- padding:30px;
- background: linear-gradient(0deg,transparent, transparent,#002B36,#00212B,#002);
- display: grid;
- border-radius:7px;
- grid-row: span 4;
- grid-column: span 3;
- grid-template-columns: subgrid;
- grid-template-rows: subgrid;
- margin-top: 50px;
- margin-bottom: 50px ;
-back
- `;
+  padding: 30px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #002b36,
+    #00212b,
+    #002
+  );
+  display: grid;
+  border-radius: 8px;
+  grid-row: span 4;
+  grid-column: span 3;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+  margin-top: 40px;
+  margin-bottom: 0px;
+`;
 
 const Titulo = styled.h2`
   padding-top: 10px;
@@ -64,57 +70,33 @@ const P = styled.p`
   padding: 10px;
   text-align: start;
 `;
-const Bottom = styled.button`
+const Bottom = styled.div`
   display: grid;
+  font-size: 24px;
+  color: #cccc;
   grid-template-columns: 1fr 1fr 1fr;
-  background-color: transparent;
-  border: none;
-  border: 2px solid transparent;
-  border-radius: 5px;
   transition: backdrop-filter 0.3s;
-
-  &:active {
-    border: 2px solid black;
-    border-radius: 5px;
-  }
-
-  &:focus {
-    backdrop-filter: blur(5px);
-  }
-
-  &:last-child {
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    background-color: #050505;
-  }
-  &:last-child:active {
-  }
 `;
 const DivButton = styled.div`
   display: grid;
   grid-column: span 3;
   grid-template-columns: subgrid;
-  border: 2px dotted black;
   padding: 10px;
   border-radius: 6px;
 `;
 const icono = {
   blue: {
-    fontSize: "29px",
-    color: "blue",
-    paddingLeft: "10px",
-    paddingRight: "10px",
-    paddingBottom: "2px",
-    paddingTop: "2px",
+    fontSize: "24px",
+    color: "#21D07A",
+    fontWeight: "bold",
+    marginTop: "-13px",
+    textShadow: "3px 3px 7px black",
   },
   red: {
     fontSize: "29px",
-    color: "red",
-    paddingLeft: "10px",
-    paddingRight: "10px",
-    paddingBottom: "2px",
-    paddingTop: "2px",
+    color: "#cccc ",
+    width: 180,
+    marginTop: "-10px",
   },
   span: {
     paddingLeft: "10px",
@@ -132,7 +114,7 @@ const Progress = styled.div`
       ? "#21D07A"
       : props.number > 80
       ? "#1EA198"
-      : props.number > 60
+      : props.number > 50
       ? "#D2D531"
       : "#D9235f"};
 
@@ -145,7 +127,7 @@ const Progress = styled.div`
             ? "#21D07A"
             : props.number > 80
             ? "#1EA198"
-            : props.number > 60
+            : props.number > 50
             ? "#D2D531"
             : "#D9235f"}
         0
@@ -195,7 +177,7 @@ const Progress = styled.div`
         ? "#21D07A"
         : props.number > 80
         ? "#1EA198"
-        : props.number > 60
+        : props.number > 50
         ? "#D2D531"
         : "#D9235f"};
     transform: rotate(calc((${(props) => props.number} - 50) * 0.01turn));

@@ -24,7 +24,6 @@ export const Thumbnail = ({ id }) => {
       .then((response) => response.json())
       .then((data) => {
         setdata(data);
-        console.log(data);
         setloadings(false);
       })
       .catch((error) => {
@@ -47,6 +46,7 @@ export const Thumbnail = ({ id }) => {
                 textPlayer={element.overview}
                 imagen={`https://image.tmdb.org/t/p/w500/${element.poster_path}`}
                 porsentaje={Math.floor(element.vote_average * 10)}
+                data={element.release_date}
               />
             ))
           )}

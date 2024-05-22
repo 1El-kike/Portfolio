@@ -1,10 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faPlay,
-  faCommentSms,
-  faHeart,
-} from "@fortawesome/free-solid-svg-icons";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import {
   P,
@@ -23,18 +19,33 @@ export const ElementVideo = ({
   textPlayer,
   imagen,
   porsentaje,
+  data,
 }) => {
-  const [contador, setcontador] = useState(0);
+  const start = (item) => {
+    console.log(item);
+    if (item > 90) {
+      return "5";
+    }
+    if (item > 70) {
+      return "4";
+    }
+    if (item > 50) {
+      return "3";
+    }
 
-  const contar = () => {
-    setcontador(contador + 1);
+    return "2";
   };
 
-  const [comment, setcomment] = useState(0);
-  const comentario = () => {
-    setcomment(comment + 1);
-    console.log("contador 1");
-  };
+  function formatDate(dateString) {
+    const date = new Date(dateString);
+    // Configura las opciones para obtener el formato deseado
+    const options = { year: "numeric", month: "short", day: "2-digit" };
+
+    // Convierte la fecha al formato deseado
+    const formattedDate = date.toLocaleDateString("en-US", options);
+
+    return formattedDate;
+  }
 
   return (
     <>
@@ -75,24 +86,12 @@ export const ElementVideo = ({
         {textPlayer === "" ? <P>{textPlayer}</P> : <></>}
         <DivButton>
           <Bottom role="button">
-            <FontAwesomeIcon
-              style={icono.blue}
-              icon={faCommentSms}
-              onClick={comentario}
-            />
-            <span>{comment}</span>
+            <FontAwesomeIcon icon={faStar} size={52} color="#D2D531" />
+            <span style={icono.blue}>{start(porsentaje)}</span>
           </Bottom>
+          <Bottom role="button"></Bottom>
           <Bottom role="button">
-            <FontAwesomeIcon
-              style={{ fontSize: "29px", color: "red" }}
-              icon={faHeart}
-              onClick={contar}
-            />
-            {contador}
-          </Bottom>
-          <Bottom role="button">
-            <FontAwesomeIcon style={icono.red} icon={faPlay} />
-            <span style={icono.span}>Player</span>
+            <span style={icono.red}>{formatDate(data)}</span>
           </Bottom>
         </DivButton>
       </DivElemPlayer>
