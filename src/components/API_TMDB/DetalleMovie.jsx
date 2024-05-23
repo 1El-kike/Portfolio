@@ -39,8 +39,11 @@ export const DetalleMovie = ({ fondo, title, imagen, imagen2, overview }) => {
     <>
       <div style={{ background: "white" }} className="mt-4 ">
         <span className="colorfondo"></span>
-        <div style={{ position: "relative" }} className="container p-2">
-          <div className="d-flex justify-content-center">
+        <div
+          style={{ position: "relative", zIndex: 10 }}
+          className="container p-2"
+        >
+          <div className="d-flex justify-content-center ">
             <ul className="nav nav-tabs">
               <Nav
                 name={"Overview"}
@@ -73,36 +76,30 @@ export const DetalleMovie = ({ fondo, title, imagen, imagen2, overview }) => {
             </ul>
           </div>
           <div
+            className="h-100"
             style={{
+              zIndex: 10,
               overflow: "hidden",
-              height: 700,
-              width: "100%",
-              marginLeft: 108,
-              zIndex: 20,
+              marginLeft: 132,
+              maxHeight: 600,
+              opacity: 0.8,
+              width: 1280,
+              height: "auto",
+              marginTop: 5,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              background: `linear-gradient(to right  ,#000,transparent),url(${imagen})`,
             }}
+            auto
           >
-            <img
-              style={{
-                display: "block",
-                opacity: 0.8,
-                marginTop: 5,
-                marginLeft: "auto",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundImage: `linear-gradient(to right, transparent, #000)`, // Aplica el gradiente
-                backgroundBlendMode: "multiply", // Combina el gradiente con la imagen
-              }}
-              src={imagen}
-              alt="no se encuentra"
-              width="1280px"
-              height="600px"
-            ></img>
+            <span className="fondo">s</span>
             <div
               style={{ zIndex: 20, position: "absolute", top: 100, left: 10 }}
               className=""
             >
-              <div className="d-flex gap-5">
+              <div className="d-flex row justify-content-center align-items-center gap-5">
                 <img
+                  className="col-lg-4 col-md-5 col-sm-8  "
                   style={{
                     display: "block",
                     borderRadius: 8,
@@ -110,7 +107,6 @@ export const DetalleMovie = ({ fondo, title, imagen, imagen2, overview }) => {
                     marginLeft: "auto",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
-                    backgroundImage: `linear-gradient(to right, transparent, #000)`, // Aplica el gradiente
                     backgroundBlendMode: "multiply", // Combina el gradiente con la imagen
                   }}
                   src={imagen2}
@@ -118,7 +114,7 @@ export const DetalleMovie = ({ fondo, title, imagen, imagen2, overview }) => {
                   width="400px"
                   height="500px"
                 ></img>
-                <div>
+                <div className="col-lg-7 col-md-5 col-xs-12 ">
                   <h1 className="text-white display-5">{title}</h1>
                   <h2 className="text-white">Overview</h2>
                   <p className="h4 text-white">{overview}</p>
