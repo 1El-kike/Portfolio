@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.a84a7de3.css",
-    "main.js": "/Portfolio/static/js/main.760a2110.js",
-    "static/js/787.b98c23e5.chunk.js": "/Portfolio/static/js/787.b98c23e5.chunk.js",
+    "main.css": "/Portfolio/static/css/main.5dfd37d0.css",
+    "main.js": "/Portfolio/static/js/main.c697b9dc.js",
+    "static/js/787.1ed0c42c.chunk.js": "/Portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/portafolio.jpg": "/Portfolio/static/media/portafolio.f9c3afa3aa190fa0fba2.jpg",
     "static/media/newMetas.jpg": "/Portfolio/static/media/newMetas.9152b96f4ec9693ddc16.jpg",
     "static/media/1229908.jpg": "/Portfolio/static/media/1229908.617bccd4f3cd87205bdc.jpg",
     "static/media/12-tips-every-it-guy-should-know-man-with-laptop-11562889285hwldim1kbf.png": "/Portfolio/static/media/12-tips-every-it-guy-should-know-man-with-laptop-11562889285hwldim1kbf.6c762ea068868cd043cb.png",
     "static/media/image3.png": "/Portfolio/static/media/image3.4f41f0aae97cba29f0b6.png",
     "static/media/fa-solid-900.ttf": "/Portfolio/static/media/fa-solid-900.d75e3fd1eb12e9bd6655.ttf",
+    "static/media/dsassad.jpg": "/Portfolio/static/media/dsassad.e13d20afef229baf721a.jpg",
     "static/media/laptop-gamer-amd.webp": "/Portfolio/static/media/laptop-gamer-amd.3af3a0e97ed70ed123cf.webp",
+    "static/media/fondoText.jpg": "/Portfolio/static/media/fondoText.f7c44baea36c3d507ba5.jpg",
     "static/media/thumb-1920-1162236.jpg": "/Portfolio/static/media/thumb-1920-1162236.32968ef44a285f276deb.jpg",
     "static/media/image2.png": "/Portfolio/static/media/image2.29481bc4ad5b8ab8d4ba.png",
     "static/media/fa-brands-400.ttf": "/Portfolio/static/media/fa-brands-400.016b4a6cdced82ab3aa1.ttf",
@@ -17,7 +19,9 @@
     "static/media/fa-solid-900.woff2": "/Portfolio/static/media/fa-solid-900.b6879d41b0852f01ed5b.woff2",
     "static/media/developpement-web-featured.jpg": "/Portfolio/static/media/developpement-web-featured.76afd22513a82fed2967.jpg",
     "static/media/fa-brands-400.woff2": "/Portfolio/static/media/fa-brands-400.878f31251d960bd6266f.woff2",
+    "static/media/diseno.jpg": "/Portfolio/static/media/diseno.5eeee2273e5227c2a5cf.jpg",
     "static/media/diseno-web-1566701.jpg": "/Portfolio/static/media/diseno-web-1566701.e3bc59aff1246476ed00.jpg",
+    "static/media/docker.jpg": "/Portfolio/static/media/docker.84ce3a4e11de9c421957.jpg",
     "static/media/image4.png": "/Portfolio/static/media/image4.9163281d7030bbe8760f.png",
     "static/media/prod-24eta.png": "/Portfolio/static/media/prod-24eta.4a31c77718dc4a4ea7b7.png",
     "static/media/image1.png": "/Portfolio/static/media/image1.361f710d642df582c6eb.png",
@@ -27,22 +31,26 @@
     "static/media/mejora-tu-presencia-online-768x432.jpg": "/Portfolio/static/media/mejora-tu-presencia-online-768x432.2c3f0f40a6205efd3cd4.jpg",
     "static/media/fa-regular-400.ttf": "/Portfolio/static/media/fa-regular-400.50701fbb8177c2dde530.ttf",
     "static/media/primerPaso2.jpg": "/Portfolio/static/media/primerPaso2.89d3f0a4ec5e793d2f6a.jpg",
+    "static/media/TI.jpg": "/Portfolio/static/media/TI.ca40692b211e1eff00c5.jpg",
     "static/media/resultado.jpg": "/Portfolio/static/media/resultado.715e855b038391dde077.jpg",
+    "static/media/aws.jpg": "/Portfolio/static/media/aws.033f9ac9ee92c9a719fa.jpg",
     "static/media/HD-wallpaper-technology-msi.jpg": "/Portfolio/static/media/HD-wallpaper-technology-msi.6940991d88f2b9d8fe13.jpg",
     "static/media/beautiful-15728_640.jpg": "/Portfolio/static/media/beautiful-15728_640.d523f1449289d58147a2.jpg",
+    "static/media/frontend.jpg": "/Portfolio/static/media/frontend.04ae88f95ae5870252de.jpg",
     "static/media/optimizar.jpg": "/Portfolio/static/media/optimizar.bbc74915919831a0bc5c.jpg",
     "static/media/fa-regular-400.woff2": "/Portfolio/static/media/fa-regular-400.b041b1fa4fe241b23445.woff2",
+    "static/media/backend.png": "/Portfolio/static/media/backend.bb7bc4077bbf6c55ff30.png",
     "static/media/image5.png": "/Portfolio/static/media/image5.1d27c169b40db00859a0.png",
     "static/media/perfil.png": "/Portfolio/static/media/perfil.7a6a6c54279a54d1977c.png",
     "static/media/fa-v4compatibility.ttf": "/Portfolio/static/media/fa-v4compatibility.c6a0c95b0a95c4553700.ttf",
     "static/media/fa-v4compatibility.woff2": "/Portfolio/static/media/fa-v4compatibility.1bac2991f3dbfa237aec.woff2",
     "index.html": "/Portfolio/index.html",
-    "main.a84a7de3.css.map": "/Portfolio/static/css/main.a84a7de3.css.map",
-    "main.760a2110.js.map": "/Portfolio/static/js/main.760a2110.js.map",
-    "787.b98c23e5.chunk.js.map": "/Portfolio/static/js/787.b98c23e5.chunk.js.map"
+    "main.5dfd37d0.css.map": "/Portfolio/static/css/main.5dfd37d0.css.map",
+    "main.c697b9dc.js.map": "/Portfolio/static/js/main.c697b9dc.js.map",
+    "787.1ed0c42c.chunk.js.map": "/Portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a84a7de3.css",
-    "static/js/main.760a2110.js"
+    "static/css/main.5dfd37d0.css",
+    "static/js/main.c697b9dc.js"
   ]
 }
