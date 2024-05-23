@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.37408f3c.css",
-    "main.js": "/Portfolio/static/js/main.b6d1031e.js",
+    "main.css": "/Portfolio/static/css/main.5dfd37d0.css",
+    "main.js": "/Portfolio/static/js/main.c697b9dc.js",
     "static/js/787.1ed0c42c.chunk.js": "/Portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/portafolio.jpg": "/Portfolio/static/media/portafolio.f9c3afa3aa190fa0fba2.jpg",
     "static/media/newMetas.jpg": "/Portfolio/static/media/newMetas.9152b96f4ec9693ddc16.jpg",
@@ -9,7 +9,9 @@
     "static/media/12-tips-every-it-guy-should-know-man-with-laptop-11562889285hwldim1kbf.png": "/Portfolio/static/media/12-tips-every-it-guy-should-know-man-with-laptop-11562889285hwldim1kbf.6c762ea068868cd043cb.png",
     "static/media/image3.png": "/Portfolio/static/media/image3.4f41f0aae97cba29f0b6.png",
     "static/media/fa-solid-900.ttf": "/Portfolio/static/media/fa-solid-900.d75e3fd1eb12e9bd6655.ttf",
+    "static/media/dsassad.jpg": "/Portfolio/static/media/dsassad.e13d20afef229baf721a.jpg",
     "static/media/laptop-gamer-amd.webp": "/Portfolio/static/media/laptop-gamer-amd.3af3a0e97ed70ed123cf.webp",
+    "static/media/fondoText.jpg": "/Portfolio/static/media/fondoText.f7c44baea36c3d507ba5.jpg",
     "static/media/thumb-1920-1162236.jpg": "/Portfolio/static/media/thumb-1920-1162236.32968ef44a285f276deb.jpg",
     "static/media/image2.png": "/Portfolio/static/media/image2.29481bc4ad5b8ab8d4ba.png",
     "static/media/fa-brands-400.ttf": "/Portfolio/static/media/fa-brands-400.016b4a6cdced82ab3aa1.ttf",
@@ -17,7 +19,9 @@
     "static/media/fa-solid-900.woff2": "/Portfolio/static/media/fa-solid-900.b6879d41b0852f01ed5b.woff2",
     "static/media/developpement-web-featured.jpg": "/Portfolio/static/media/developpement-web-featured.76afd22513a82fed2967.jpg",
     "static/media/fa-brands-400.woff2": "/Portfolio/static/media/fa-brands-400.878f31251d960bd6266f.woff2",
+    "static/media/diseno.jpg": "/Portfolio/static/media/diseno.5eeee2273e5227c2a5cf.jpg",
     "static/media/diseno-web-1566701.jpg": "/Portfolio/static/media/diseno-web-1566701.e3bc59aff1246476ed00.jpg",
+    "static/media/docker.jpg": "/Portfolio/static/media/docker.84ce3a4e11de9c421957.jpg",
     "static/media/image4.png": "/Portfolio/static/media/image4.9163281d7030bbe8760f.png",
     "static/media/prod-24eta.png": "/Portfolio/static/media/prod-24eta.4a31c77718dc4a4ea7b7.png",
     "static/media/image1.png": "/Portfolio/static/media/image1.361f710d642df582c6eb.png",
@@ -41,12 +45,12 @@
     "static/media/fa-v4compatibility.ttf": "/Portfolio/static/media/fa-v4compatibility.c6a0c95b0a95c4553700.ttf",
     "static/media/fa-v4compatibility.woff2": "/Portfolio/static/media/fa-v4compatibility.1bac2991f3dbfa237aec.woff2",
     "index.html": "/Portfolio/index.html",
-    "main.37408f3c.css.map": "/Portfolio/static/css/main.37408f3c.css.map",
-    "main.b6d1031e.js.map": "/Portfolio/static/js/main.b6d1031e.js.map",
+    "main.5dfd37d0.css.map": "/Portfolio/static/css/main.5dfd37d0.css.map",
+    "main.c697b9dc.js.map": "/Portfolio/static/js/main.c697b9dc.js.map",
     "787.1ed0c42c.chunk.js.map": "/Portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.37408f3c.css",
-    "static/js/main.b6d1031e.js"
+    "static/css/main.5dfd37d0.css",
+    "static/js/main.c697b9dc.js"
   ]
 }
