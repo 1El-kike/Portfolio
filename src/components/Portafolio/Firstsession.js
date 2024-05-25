@@ -13,6 +13,13 @@ import "./style.css";
 import { Card, CardGroup } from "react-bootstrap";
 
 export const Firstsession = () => {
+  const [ancho, setancho] = useState(window.innerWidth);
+
+  window.addEventListener("resize", function () {
+    var ancho = this.window.innerWidth;
+    setancho(ancho);
+  });
+
   const Button = ({ buttons, ico, href = "#" }) => {
     return (
       <>
@@ -334,7 +341,7 @@ export const Firstsession = () => {
       <>
         {port2.set1?.map((e, i) => {
           return (
-            <CardGroup className="col-lg-4 col-md-6 col-sm-12 ps-4 pb-4">
+            <CardGroup className="col-lg-4 col-md-6 col-sm-12 pb-4">
               <Card bg="dark">
                 <Card.Img variant="top" src={e[0]} />
                 <Card.Body className="top">
@@ -384,14 +391,17 @@ export const Firstsession = () => {
                     WEB DEVELOP
                   </h2>
                 </div>
-                <p className=" inline ps-3  mt-4 col-md-10 text-fondo h-4">
-                  Graduate in Computer Engineering, passionate about web
-                  development and design, specialized as a Front-End developer.
-                  I would like to contribute and gain experience in everything I
-                  can to be a better option in this great digital world. I hope
-                  to be of great help and manage to meet expectations to achieve
-                  better professional development.
-                </p>
+                <div className="inline">
+                  <p className=" col-md-10 p-4 texto-p h-4">
+                    Graduate in Computer Engineering, passionate about web
+                    development and design, specialized as a Front-End
+                    developer. I would like to contribute and gain experience in
+                    everything I can to be a better option in this great digital
+                    world. I hope to be of great help and manage to meet
+                    expectations to achieve better professional development.
+                  </p>
+                </div>
+
                 <div></div>
               </div>
 
@@ -663,7 +673,7 @@ export const Firstsession = () => {
     return (
       <>
         <div className="col-lg-11 ms-4">
-          <div className="d-flex flex-wrap">
+          <div className="d-flex justify-content-between flex-wrap">
             <CardElement />
           </div>
         </div>
@@ -724,9 +734,8 @@ export const Firstsession = () => {
             subtitulo={"PORTFOLIO"}
             link={"lista3"}
           />
-          <div style={window.innerWidth < 400 ? { marginLeft: -200 } : null}>
-            <Section childrend={<Web5 />}></Section>
-          </div>
+
+          <Section childrend={<Web5 />}></Section>
 
           <Title
             background={"CONTACT"}

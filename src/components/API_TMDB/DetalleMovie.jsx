@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./styles.css";
-export const DetalleMovie = ({ fondo, title, imagen, imagen2, overview }) => {
+export const DetalleMovie = ({
+  fondo,
+  title,
+  imagen,
+  imagen2,
+  overview,
+  pais,
+  data,
+  genero,
+}) => {
   const Nav = ({ name, item1, item2, item3, item4 }) => {
     return (
       <NavDropdown
@@ -35,13 +44,22 @@ export const DetalleMovie = ({ fondo, title, imagen, imagen2, overview }) => {
     );
   };
 
+  const genr = genero.map((e) => e.name);
+
+  const [ancho, setancho] = useState(window.innerWidth);
+
+  window.addEventListener("resize", function () {
+    var ancho = this.window.innerWidth;
+    setancho(ancho);
+  });
+
   return (
     <>
       <div style={{ background: "white" }} className="mt-4 ">
         <span className="colorfondo"></span>
         <div
           style={{ position: "relative", zIndex: 10 }}
-          className="container p-2"
+          className="container  p-2"
         >
           <div className="d-flex justify-content-center ">
             <ul className="nav nav-tabs">
@@ -76,46 +94,55 @@ export const DetalleMovie = ({ fondo, title, imagen, imagen2, overview }) => {
             </ul>
           </div>
           <div
-            className="h-100"
+            className="h-100 col-12"
             style={{
               zIndex: 10,
               overflow: "hidden",
               marginLeft: 132,
               maxHeight: 600,
               opacity: 0.8,
-              width: 1280,
-              height: "auto",
+              width: "98%",
+              height: ancho > 1199 ? "auto" : 1200,
               marginTop: 5,
               backgroundSize: "cover",
               backgroundPosition: "center",
               background: `linear-gradient(to right  ,#000,transparent),url(${imagen})`,
             }}
-            auto
           >
-            <span className="fondo">s</span>
+            <span className="fondo"></span>
             <div
-              style={{ zIndex: 20, position: "absolute", top: 100, left: 10 }}
+              style={{
+                zIndex: 20,
+                position: "absolute",
+                top: 100,
+                left: 10,
+              }}
               className=""
             >
-              <div className="d-flex row justify-content-center align-items-center gap-5">
+              <div className="d-flex row justify-content-center align-items-start gap-5">
                 <img
-                  className="col-lg-4 col-md-5 col-sm-8  "
+                  className="col-lg-4 col-md-5 rounded col-sm-8  "
                   style={{
                     display: "block",
-                    borderRadius: 8,
-                    marginTop: 5,
-                    marginLeft: "auto",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    backgroundBlendMode: "multiply", // Combina el gradiente con la imagen
+                    borderRadius: 9,
+
+                    width: 370,
+                    height: 430,
                   }}
                   src={imagen2}
                   alt="no se encuentra"
-                  width="400px"
-                  height="500px"
                 ></img>
-                <div className="col-lg-7 col-md-5 col-xs-12 ">
-                  <h1 className="text-white display-5">{title}</h1>
+                <div className="col-lg-7  col-md-5 col-xs-12 col-12 ">
+                  <h1 className="text-white title display-5">{title}</h1>
+                  <div className="d-flex flex'wrap text gap-2 ">
+                    <p></p>
+                    <p>{data}</p>
+                    <p>({pais}) -</p>
+                    {genr.map((e) => (
+                      <p>{e},</p>
+                    ))}
+                    <p> - </p>
+                  </div>
                   <h2 className="text-white">Overview</h2>
                   <p className="h4 text-white">{overview}</p>
                 </div>

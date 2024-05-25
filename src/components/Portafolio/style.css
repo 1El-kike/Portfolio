@@ -6,9 +6,10 @@
     border-radius: 6px;
     height: 400px;
     margin-bottom: 50px;
-   box-shadow: -25px 25px 17px rgb(41, 1, 8);
+   box-shadow: -25px 25px 17px rgb(41, 1, 8), 25px -25px 17px #E4A11B;
     overflow: hidden;
 }
+
 
 :root{
     --i:59;
@@ -22,7 +23,7 @@
    justify-content: end;
   height: 400px;
   margin-left: auto;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
     width: 50%;
     background: radial-gradient(ellipse at right ,transparent,transparent,rgb(2, 36, 53)),
     linear-gradient(0deg,transparent, transparent,rgb(2,36,53)),
@@ -40,7 +41,7 @@
     width: 330px;
     height: 400px;
     background: linear-gradient(0deg,transparent, transparent,#45f3ff,#4106e4,#e9d30e);
-    z-index: 1;
+    z-index: 1; 
     transform-origin: bottom right;
     animation: animate 6s linear infinite;
 }
@@ -135,16 +136,40 @@
     
 }
 
+
 .inline{
-    font-weight: 600;
+    position: relative;
+    font-weight: bold;
+   background-color: #E4A11B  ;
     color: #111210;
     opacity: 0.8;
     border-radius: 8px;
-    background: radial-gradient(ellipse at center,rgb(247, 246, 251),rgb(150, 150, 165),rgb(2, 36, 53));
+    overflow: hidden;
     box-shadow: -14px 13px 10px rgb(36, 27, 27);
-    padding: 20px 6px 40px 10px;
+    margin-bottom: 30px;
+    margin-left: 50px;
+    margin-top: 30px;
 }
 
+.inline::before{
+    content: '';
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    background: linear-gradient(to top,rgb(236, 116, 4),#dd3d08,#f60404);
+    padding: 20px 6px 40px 10px;
+    transform: rotate(50deg);
+    z-index: -1;
+}
+
+.texto-p{
+    font-weight: bold;
+    width: 100%;
+    text-align: justify;
+   
+}
 
 .image-fondo{
     top: 80px;
@@ -221,7 +246,6 @@ z-index: -100;
     background: #444 linear-gradient(to right,transparent  50%, var(--clr) 0);
     border-radius: 50%;
     position: relative;
-    justify-content: ;
 }
 
 .progress-value{

@@ -46,6 +46,9 @@ export const Movies = () => {
               imagen={`https://image.tmdb.org/t/p/w1280${data.backdrop_path}`}
               imagen2={`https://image.tmdb.org/t/p/w1280${data.poster_path}`}
               overview={data.overview}
+              data={data.release_date}
+              pais={data.origin_country[0]}
+              genero={data.genres}
             />
           </div>
         )}

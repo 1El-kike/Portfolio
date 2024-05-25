@@ -13,11 +13,26 @@
     height: 603px;
  } 
  
+ .title{
+   font-weight: bold;
+ }
+ .title:hover{
+   color: #cccc !important;
+   ;
+ }
+
+ /* .text{
+   margin-top: -800;
+   color: rgb(80, 158, 227);
+   line-height: 1.5;
+ }
+
 .fondo{
    display: flex;
    width: 100%;
    height: 600px;
 }
+ */
 
 
  /*  background-image: linear-gradient(to right, transparent,#504c4c);
