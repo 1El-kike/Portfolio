@@ -341,7 +341,10 @@ export const Firstsession = () => {
       <>
         {port2.set1?.map((e, i) => {
           return (
-            <CardGroup className="col-lg-4 col-md-6 col-sm-12 pb-4">
+            <CardGroup
+              style={{ paddingRight: ancho > 350 ? 20 : "" }}
+              className="col-lg-4 col-md-6 col-sm-12 pb-4"
+            >
               <Card bg="dark">
                 <Card.Img variant="top" src={e[0]} />
                 <Card.Body className="top">
