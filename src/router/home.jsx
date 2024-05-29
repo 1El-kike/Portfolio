@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { PaginaDeFormulario } from "../components/Formulario/pagina_de_formulario";
 import { TableGran } from "../components/tableGran";
 import { Footer } from "../components/footer";
-import { Thumbnail } from "../components/API_TMDB/Thumbnail";
 import { RegistroUsuario } from "../components/RegistroUser/RegistroUsuario";
 import { Props } from "../components/Pagina_de_vuelos_comerciales/Props";
 import { EjemploMenuBootstrap } from "../components/ejemploMenuBootstrap";
@@ -18,6 +17,7 @@ import { ErrorRouter } from "../utils/errorRouter";
 import { RouterProteded } from "../components/RegistroUser/RouterProteded";
 import { useLocalStorage } from "react-use";
 import { Movies } from "../components/API_TMDB/movies";
+import { ApiMovie } from "../components/API_TMDB/ApiMovie";
 
 export const Home = () => {
   // eslint-disable-next-line no-unused-vars
@@ -69,7 +69,7 @@ export const Home = () => {
             <>
               <Menu />
               <section>
-                <Thumbnail />
+                <ApiMovie />
               </section>
               <Footer />
             </>

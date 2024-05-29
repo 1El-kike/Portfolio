@@ -20,7 +20,7 @@
 .imgfondo{
     z-index: -100;
     display: flex;
-   justify-content: end;
+   justify-content: flex-end;
   height: 400px;
   margin-left: auto;
   margin-bottom: 0px;
@@ -31,8 +31,8 @@
     linear-gradient(to right ,transparent, transparent,rgb(48, 6, 186))    
     ,url('../../assets/images/developpement-web-featured.jpg');   
 
-}
-
+} 
+ 
 .img1::before{
     content: '';
     position: absolute;
@@ -44,7 +44,7 @@
     z-index: 1; 
     transform-origin: bottom right;
     animation: animate 6s linear infinite;
-}
+} 
 
 .img1::after{
 
@@ -424,3 +424,4 @@ z-index: 1;
         display: none;
     }
 }
+

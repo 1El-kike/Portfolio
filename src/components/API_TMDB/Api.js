@@ -1,18 +1,25 @@
 import { styled } from "styled-components";
 
 const DivContainer = styled.div`
-  max-width: 1300px;
-  width: 90%;
+  width: 100%;
   margin: auto;
 `;
 const Div = styled.div`
   display: grid;
-  grid-template-columns: repeat(9, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(1, auto 1fr auto);
   grid-gap: 20px;
   margin: auto;
 
-  @media (max-width: 980px) {
+  @media (max-width: 1400px) {
+    grid-template-columns: repeat(9, 1fr);
+  }
+
+  @media (max-width: 992px) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
 `;
@@ -29,7 +36,7 @@ const DivElemPlayer = styled.div`
  justify-content: space-around;
  align-items: center;
  margin: auto; */
-  padding: 30px;
+  padding-top: 20px;
   background: linear-gradient(
     0deg,
     transparent,
