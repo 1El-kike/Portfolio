@@ -202,7 +202,7 @@ export const DetalleMovie = ({
             >
               <div className="d-flex row justify-content-center flex-wrap align-items-start gap-5">
                 <img
-                  className="col-lg-4 col-md-3 bg-info col-sm-8  "
+                  className="col-lg-4 col-md-3 col-sm-8  "
                   style={{
                     display: "block",
                     width: "26%",
@@ -312,21 +312,23 @@ export const DetalleMovie = ({
                 {" "}
                 <div
                   className="rounded border"
-                  style={{ boxShadow: "3px 3px 9px #7777" }}
+                  style={{ boxShadow: "3px 3px 9px #7777", maxHeight: 350 }}
                 >
                   <div
                     style={{
                       background: `url(https://image.tmdb.org/t/p/w500${e.profile_path})`,
-                      minWidth: 150,
-                      opacity: 0.8,
+                      minWidth: 160,
+                      opacity: 0.9,
                       height: 180,
                       backgroundSize: "cover",
                       backgroundPosition: "center",
                     }}
-                    className="rounded"
+                    className="rounded "
                   ></div>
-                  <h4 className="m-2">{e.name}</h4>
-                  <p className="m-2 h5 text-secondary">{e.character}</p>
+                  <div className="d-flex flex-column justify-content-end align-items-start ">
+                    <h4 className="m-2">{e.name}</h4>
+                    <p className="m-2 h5 text-secondary">{e.character}</p>
+                  </div>
                 </div>
               </>
             );
