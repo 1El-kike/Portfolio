@@ -1,9 +1,13 @@
+:root{
+  --color:"black"
+}
+
 .dropdown-title {
-    color: black!important;
+    color: black !important;
   }
 
  .colorfondo{
-    background-color: #000;
+    background-color: black;
   background-blend-mode: "multiply";
     position: absolute;
     z-index: 1;
@@ -22,14 +26,55 @@
 
   .text2{
    margin-top: -800;
-   color: rgb(80, 158, 227);
-   line-height: 1.5;
+   font-size: 18px;
+   color: rgb(235, 241, 245);
+   line-height: 1;
  }
+
+ .text3{
+
+font-size: 1.3em;
+ }
+
+ .icons{
+  font-size: 2em;
+  margin-left: -10px;
+  border-radius: 50%;
+  border: 1px solid black;
+  overflow:visible;
+  transition: transform.2s ease-in-out;
+
+ }
+ .icons:hover{
+  transform: scale(1.3,1.3);
+ }
+
 
 .fondo2 {
    display: flex;
    width: 100%;
    height: 600px;
+}
+
+.btn2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 1em;
+}
+
+
+.btn:hover{
+  color: #cccc !important;
+}
+
+.secondary{
+  letter-spacing: 2px;
+  margin-top: 1em;
+  font-size: 1.2em;
+  font-style: italic;
+  margin-bottom: 0;
 }
  
 

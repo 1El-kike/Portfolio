@@ -9,12 +9,14 @@ export const Movies = () => {
   const [loadings, setloadings] = useState(true);
   const [data, setdata] = useState([]);
 
-  const api = "?api_key=f397458aaaf92f659df45279ff3196bf&";
+  const api = "?api_key=f397458aaaf92f659df45279ff3196bf";
+  //const credit = "&append_to_response=credits";
+  const recursos = "&append_to_response=images,videos,credits";
 
   useEffect(() => {
     setloadings(true);
     fetch(
-      `https://api.themoviedb.org/3/movie/${id}${api}&language=es-ES&append_to_response=images,videos`
+      `https://api.themoviedb.org/3/movie/${id}${api}&language=es-ES${recursos}`
       /*   {
         headers: {
           Authorization: `Bearer ${api}`,
@@ -49,6 +51,11 @@ export const Movies = () => {
               data={data.release_date}
               pais={data.origin_country[0]}
               genero={data.genres}
+              time={data.runtime}
+              porsentaje={Math.floor(data.vote_average * 10)}
+              tagline={data.tagline}
+              credit={data.credits}
+              actores={data.credits.cast}
             />
           </div>
         )}
