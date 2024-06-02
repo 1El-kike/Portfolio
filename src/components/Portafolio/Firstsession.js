@@ -20,10 +20,10 @@ export const Firstsession = () => {
     setancho(ancho);
   });
 
-  const Button = ({ buttons, ico, href = "#" }) => {
+  const Button = ({ buttons, ico, href = "#", onClick }) => {
     return (
       <>
-        <Link to={href}>
+        <Link onClick={onClick} to={href}>
           <button className="btn mt-3 btn-outline-info rounded-pill btn-lg">
             <div className="d-flex flex-direction-around but gap-3 justify-content-center align-items-center">
               <span className="">{buttons} </span>
@@ -415,6 +415,17 @@ export const Firstsession = () => {
       </>
     );
   };
+
+  const onButtonClick = () => {
+    const pdfUrl = "../../myCurricum/pdf_enriquegrass.pdf";
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "pdf_enriquegrass.pdf"; // Especifica el nombre del archivo descargado
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const Web2 = () => {
     return (
       <>
@@ -441,7 +452,7 @@ export const Firstsession = () => {
                     <b className="text-light">enriquegrassporras@gmail.com</b>{" "}
                   </p>
                   <p className="text-secondary">
-                    Langages: <b className="text-light">English,Españoñ</b>{" "}
+                    Langages: <b className="text-light">English, Spanish</b>{" "}
                   </p>
                 </div>
                 <div className=" col-lg-6 col-md-12 col-sm-12 col-12  d-flex flex-column gap-1 mt-4">
@@ -463,7 +474,11 @@ export const Firstsession = () => {
                 </div>
               </div>
               <div className="col-3S mt-2">
-                <Button buttons="DOWNLOAD CV" ico="fa-download" />
+                <Button
+                  onClick={onButtonClick}
+                  buttons="DOWNLOAD CV"
+                  ico="fa-download"
+                />
               </div>
             </div>
           </div>
