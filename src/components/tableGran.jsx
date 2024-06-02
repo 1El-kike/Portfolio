@@ -1,11 +1,11 @@
-import { Tablelist } from "../element/tablelist"
-import { TablaMes } from "../element/TablaMes"
+import { Tablelist } from "../webInfoTable/tablelist";
+import { TablaMes } from "../webInfoTable/TablaMes";
 
 export const TableGran = () => {
-    return (
-        <>
-            <TablaMes />
-            <Tablelist />
-        </>
-    )
-}
+  return (
+    <>
+      <TablaMes />
+      <Tablelist />
+    </>
+  );
+};

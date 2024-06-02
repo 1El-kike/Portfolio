@@ -3,7 +3,7 @@ import { Articleblog } from "./Article";
 import datas from "../../../text/text2.json";
 import { Carrusel } from "./Carrusel";
 import { Alerta } from "./Alerta";
-import { ToastMens } from "./Toast_mens";
+//import { ToastMens } from "./Toast_mens";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export const MainPrincipal = () => {
@@ -57,7 +57,7 @@ export const MainPrincipal = () => {
         parragofooter={datosAlert[1][2]}
       />
 
-      <ToastMens body={"Prueba de nota"} />
+      {/*   <ToastMens body={"Prueba de nota"} /> */}
     </div>
   );
 };

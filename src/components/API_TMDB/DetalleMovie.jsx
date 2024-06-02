@@ -221,7 +221,7 @@ export const DetalleMovie = ({
                       {`${title} ${convertirdata(data, 2)}`}
                     </h1>
 
-                    <div className="d-flex flex-wrap text2 gap-2 ">
+                    <div className="d-flex flex-wrap textsecondary gap-2 ">
                       <p></p>
                       <p>{convertirdata(data, 1)}</p>
                       <p>{`( ${pais} )`} </p>
@@ -240,7 +240,7 @@ export const DetalleMovie = ({
                           {porsentaje + "%"}
                         </ProgressValue>
                       </Progress>
-                      <h1 className="text-white lh-1  ms-2 text3">
+                      <h1 className="text-white lh-1  ms-2 textthree">
                         Puntuación <br />
                         de
                         <br /> usuarios

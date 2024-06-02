@@ -1,7 +1,7 @@
 import { Article } from "./Estilos_css";
 import { CardGroup, Card } from "react-bootstrap";
 
-import { Time } from "../../../element/Time";
+//import { Time } from "../../../element/Time";
 
 export const Articleblog = ({ title, texto, image }) => {
   const [title1, title2] = title,
@@ -22,9 +22,7 @@ export const Articleblog = ({ title, texto, image }) => {
             <Card.Text>{texto1}</Card.Text>
           </Card.Body>
           <Card.Footer>
-            <small className="text-muted">
-              Last updated {<Time />} min ago
-            </small>
+            <small className="text-muted">Last updated 1 year old</small>
           </Card.Footer>
         </Card>
       </CardGroup>
@@ -41,9 +39,7 @@ export const Articleblog = ({ title, texto, image }) => {
             <Card.Text>{texto2}</Card.Text>
           </Card.Body>
           <Card.Footer>
-            <small className="text-muted">
-              Last updated {<Time />} min ago
-            </small>
+            <small className="text-muted">Last updated 1 year old</small>
           </Card.Footer>
         </Card>
       </CardGroup>

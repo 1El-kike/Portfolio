@@ -13,14 +13,14 @@ export const Alerta = ({ alerHeader, parrafoHeader, parragofooter, image }) => {
         textAlign: "justify",
         border: "1px solid #ccc",
         textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
-        paddingRight: "80px",
+        paddingRight: "30px",
       }}
       variant="success"
     >
       <Alert.Heading>{alerHeader}</Alert.Heading>
-      <p>{parrafoHeader} </p>
+      <p className="w-100 m-0 ">{parrafoHeader} </p>
       <hr />
-      <p className="mb-0">{parragofooter}</p>
+      <p className="mb-0 ">{parragofooter}</p>
     </Alert>
   );
 };
