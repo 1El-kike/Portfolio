@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.ae9b1de2.css",
-    "main.js": "/Portfolio/static/js/main.460fb635.js",
+    "main.css": "/Portfolio/static/css/main.6ee2e1e2.css",
+    "main.js": "/Portfolio/static/js/main.1d1fc8ab.js",
     "static/js/787.1ed0c42c.chunk.js": "/Portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/portafolio.jpg": "/Portfolio/static/media/portafolio.f9c3afa3aa190fa0fba2.jpg",
     "static/media/newMetas.jpg": "/Portfolio/static/media/newMetas.9152b96f4ec9693ddc16.jpg",
@@ -15,7 +15,6 @@
     "static/media/thumb-1920-1162236.jpg": "/Portfolio/static/media/thumb-1920-1162236.32968ef44a285f276deb.jpg",
     "static/media/image2.png": "/Portfolio/static/media/image2.29481bc4ad5b8ab8d4ba.png",
     "static/media/fa-brands-400.ttf": "/Portfolio/static/media/fa-brands-400.016b4a6cdced82ab3aa1.ttf",
-    "static/media/David.jpg": "/Portfolio/static/media/David.ca219de87e024d0e7ec2.jpg",
     "static/media/fa-solid-900.woff2": "/Portfolio/static/media/fa-solid-900.b6879d41b0852f01ed5b.woff2",
     "static/media/developpement-web-featured.jpg": "/Portfolio/static/media/developpement-web-featured.76afd22513a82fed2967.jpg",
     "static/media/fa-brands-400.woff2": "/Portfolio/static/media/fa-brands-400.878f31251d960bd6266f.woff2",
@@ -27,7 +26,6 @@
     "static/media/image1.png": "/Portfolio/static/media/image1.361f710d642df582c6eb.png",
     "static/media/20-fondos-de-pantalla-para-pc-gamer-04-1200x675.jpg": "/Portfolio/static/media/20-fondos-de-pantalla-para-pc-gamer-04-1200x675.029bade66a9c25534f85.jpg",
     "static/media/hq720.jpg": "/Portfolio/static/media/hq720.8e1cbdd8012d6a527c7f.jpg",
-    "static/media/jpg": "/Portfolio/static/media/87f2ec93e7e4d9b4a9331a8b7042fae1.7bd13be394c7cc98c634.jpg",
     "static/media/mejora-tu-presencia-online-768x432.jpg": "/Portfolio/static/media/mejora-tu-presencia-online-768x432.2c3f0f40a6205efd3cd4.jpg",
     "static/media/fa-regular-400.ttf": "/Portfolio/static/media/fa-regular-400.50701fbb8177c2dde530.ttf",
     "static/media/primerPaso2.jpg": "/Portfolio/static/media/primerPaso2.89d3f0a4ec5e793d2f6a.jpg",
@@ -45,12 +43,12 @@
     "static/media/fa-v4compatibility.ttf": "/Portfolio/static/media/fa-v4compatibility.c6a0c95b0a95c4553700.ttf",
     "static/media/fa-v4compatibility.woff2": "/Portfolio/static/media/fa-v4compatibility.1bac2991f3dbfa237aec.woff2",
     "index.html": "/Portfolio/index.html",
-    "main.ae9b1de2.css.map": "/Portfolio/static/css/main.ae9b1de2.css.map",
-    "main.460fb635.js.map": "/Portfolio/static/js/main.460fb635.js.map",
+    "main.6ee2e1e2.css.map": "/Portfolio/static/css/main.6ee2e1e2.css.map",
+    "main.1d1fc8ab.js.map": "/Portfolio/static/js/main.1d1fc8ab.js.map",
     "787.1ed0c42c.chunk.js.map": "/Portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ae9b1de2.css",
-    "static/js/main.460fb635.js"
+    "static/css/main.6ee2e1e2.css",
+    "static/js/main.1d1fc8ab.js"
   ]
 }
