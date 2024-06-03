@@ -417,7 +417,7 @@ export const Firstsession = () => {
   };
 
   const onButtonClick = () => {
-    const pdfUrl = "../../myCurricum/pdf_enriquegrass.pdf";
+    const pdfUrl = "../myCurricum/pdf_enriquegrass.pdf";
     const link = document.createElement("a");
     link.href = pdfUrl;
     link.download = "pdf_enriquegrass.pdf"; // Especifica el nombre del archivo descargado
