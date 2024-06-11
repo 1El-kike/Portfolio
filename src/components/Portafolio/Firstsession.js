@@ -7,6 +7,7 @@ import image4 from "../../assets/images/image4.png";
 import image5 from "../../assets/images/image5.png";
 import image6 from "../../assets/images/image2.png";
 import imagex from "../../assets/images/image1.png";
+import path from "path";
 import { MDBIcon, MDBBtn } from "mdb-react-ui-kit";
 import { Link } from "react-router-dom";
 import "./style.css";
@@ -417,7 +418,9 @@ export const Firstsession = () => {
   };
 
   const onButtonClick = () => {
-    const pdfUrl = "https://github.com/1El-kike/Portfolio/pdf_enriquegrass.pdf";
+    // const relativePath = path.join(__dirname, "./pdf_enriquegrass.pdf");
+    // const absolutePath = path.resolve(relativePath);
+    const pdfUrl = "/pdf_enriquegrass.pdf";
     const link = document.createElement("a");
     link.href = pdfUrl;
     link.download = "pdf_enriquegrass.pdf"; // Especifica el nombre del archivo descargado
