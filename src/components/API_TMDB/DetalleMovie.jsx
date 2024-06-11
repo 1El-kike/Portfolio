@@ -9,6 +9,7 @@ import grinningFace from "@iconify-icons/twemoji/grinning-face";
 import angryFace from "@iconify-icons/twemoji/angry-face";
 import { Icon } from "@iconify/react";
 export const DetalleMovie = ({
+  estado,
   fondo,
   title,
   imagen,
@@ -17,11 +18,15 @@ export const DetalleMovie = ({
   pais,
   tagline,
   data,
+  idiomaOriginal,
   time,
   credit,
   genero,
+  puntuacion,
   actores,
+  presupuesto,
   porsentaje,
+  ingreso,
 }) => {
   const Nav = ({ name, item1, item2, item3, item4 }) => {
     return (
@@ -132,7 +137,7 @@ export const DetalleMovie = ({
 
   return (
     <>
-      <div style={{ background: "white" }} className="mt-4 ">
+      <div style={{ background: "white" }} className="mt-4">
         <span className="colorfondo"></span>
         <div
           style={{ position: "relative", zIndex: 10 }}
@@ -298,41 +303,119 @@ export const DetalleMovie = ({
             </div>
           </div>
         </div>
-        <div
-          className="d-flex col-12 pt-3 gap-3 pb-3"
-          style={{
-            overflow: "scroll",
-            background: `linear-gradient(to right  ,transparent,#fdf12f))`,
-            zIndex: 10,
-          }}
-        >
-          {actores?.map((e) => {
-            return (
-              <>
-                {" "}
-                <div
-                  className="rounded border"
-                  style={{ boxShadow: "3px 3px 9px #7777", maxHeight: 350 }}
-                >
+        <div className="container d-flex">
+          <div
+            className="d-flex col-lg-9 pt-3 gap-3 pb-3"
+            style={{
+              overflow: "auto",
+              position: "relative",
+              height: 380,
+              marginLeft: 0,
+            }}
+          >
+            <div
+              className="positiont-absolute "
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                background: `linear-gradient(
+                    to right,
+                    transparent 95%,
+                    #fff 
+                  )`,
+                zIndex: 100,
+              }}
+            ></div>
+            {actores?.map((e) => {
+              return (
+                <>
                   <div
+                    className="rounded  border"
                     style={{
-                      background: `url(https://image.tmdb.org/t/p/w500${e.profile_path})`,
-                      minWidth: 160,
-                      opacity: 0.9,
-                      height: 180,
-                      backgroundSize: "cover",
-                      backgroundPosition: "center",
+                      boxShadow: "3px 3px 9px #7777",
+                      maxHeight: 350,
                     }}
-                    className="rounded "
-                  ></div>
-                  <div className="d-flex flex-column justify-content-end align-items-start ">
-                    <h4 className="m-2">{e.name}</h4>
-                    <p className="m-2 h5 text-secondary">{e.character}</p>
+                  >
+                    <div
+                      style={{
+                        background: `url(https://image.tmdb.org/t/p/w500${e.profile_path})`,
+                        minWidth: 160,
+                        opacity: 0.9,
+                        height: 190,
+                        backgroundSize: "cover",
+                        backgroundPosition: "",
+                      }}
+                      className="rounded "
+                    ></div>
+                    <div className="d-flex flex-column justify-content-end align-items-start ">
+                      <h4 className="m-2">
+                        <b>{e.name} </b>{" "}
+                      </h4>
+                      <p className="ms-2 h5 text-secondary">{e.character}</p>
+                    </div>
                   </div>
-                </div>
-              </>
-            );
-          })}
+                </>
+              );
+            })}
+          </div>
+          <div
+            className="col-lg-3 d-flex flex-column p-5 "
+            style={{ overflow: "visible" }}
+          >
+            <div className="">
+              <p>
+                <b>Estado</b>
+              </p>
+              <p>{estado}</p>
+            </div>
+            <div className="">
+              <p>
+                <b>Idioma original</b>
+              </p>
+              <p>{idiomaOriginal}</p>
+            </div>
+            <div className="">
+              <p>
+                <b>Presupuesto</b>
+              </p>
+              <p>{presupuesto}</p>
+            </div>
+            <div className="">
+              <p>
+                <b>Ingresos</b>
+              </p>
+              <p>{ingreso}</p>
+            </div>
+            <hr />
+            <div className="">
+              <p>
+                <b>Puntuación del contenido</b>
+              </p>
+              <div className=" m-0">
+                <p className=" ps-2 ">
+                  {puntuacion > 500
+                    ? "80"
+                    : puntuacion > 400
+                    ? "70"
+                    : puntuacion > 300
+                    ? "60"
+                    : "50"}
+                </p>
+                <p className=" ps-2 pb-4 pt-0 mt-0  ">
+                  {puntuacion > 500
+                    ? "¡Si! ¡Buena Pinta!"
+                    : puntuacion > 400
+                    ? "¡No! ¡Esta mal!"
+                    : puntuacion > 300
+                    ? "¡Bien!"
+                    : "¡Mas! ¡menos!"}
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>

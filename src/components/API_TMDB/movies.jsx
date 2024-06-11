@@ -56,6 +56,11 @@ export const Movies = () => {
               tagline={data.tagline}
               credit={data.credits}
               actores={data.credits.cast}
+              estado={data.status}
+              idiomaOriginal={data.spoken_languages[0].name}
+              presupuesto={"-"}
+              ingreso={"-"}
+              puntuacion={data.vote_count}
             />
           </div>
         )}

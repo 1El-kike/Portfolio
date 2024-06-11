@@ -29,19 +29,19 @@ export const AsideLeft = () => {
           <CardGroupEdixt>
             <CardGroup
               logo={image4}
-              title={"Mi Blog Personal"}
+              title={"My Personal Blog"}
               text={
-                "Como todo buen desarrollador, es indispensable seguir mejorando y fundamentando tus expectativas. En este blog a continuación explicaré mis especialidades, experiencia y mi camino como desarrollador. "
+                "Like any good developer, it is essential to continue improving and justifying my expectations. In this blog below I will explain my specialties, experience and my path as a developer"
               }
             />
           </CardGroupEdixt>
           <CarouselEdixt>
             <Carrusel
               name={[
-                "Primera Ventana",
-                "Segunda Ventana ",
-                "Tercera Ventana",
-                "Cuarta Ventana",
+                "First Window",
+                "Second Window",
+                "Third Window",
+                "Fourth Window",
               ]}
               description={[datosJson]}
               image={[imagen, imagen2, imagen3, image4]}
@@ -57,7 +57,7 @@ export const AsideLeft = () => {
               <i className="fas fa-file"></i>,
             ]}
             adress={["/formulario", "/table", "/prueba"]}
-            title="Nota"
+            title="Note"
             texto={text.Text}
           />
           <CarouselEdixt>
@@ -72,7 +72,10 @@ export const AsideLeft = () => {
           </CarouselEdixt>
           <Accordions
             header={["Front-End", "Back-End"]}
-            body={[text.Article[0].texto, text.Article[1].texto]}
+            body={[
+              "HTML ,CSS ,JavaScript ,React ,Next js ,TypeScript ",
+              text.Article[1].texto,
+            ]}
           />
           <Alerts />
         </div>

@@ -15,16 +15,16 @@
     ],
     "detalles": [
         {
-            "detalle": "Mis primeros pasos"
+            "detalle": "My first steps"
         },
         {
-            "detalle": "Mientras más avanzas, más descubres"
+            "detalle": "The further you go, the more you discover"
         },
         {
-            "detalle": "Mejor Rendimiento, Optimización y Escalabilidad"
+            "detalle": "Better Performance, Optimization and Scalability"
         },
         {
-            "detalle": "Resultados Profecional"
+            "detalle": "Professional Results"
         }
     ],
     "detalles2": [
@@ -71,20 +71,20 @@
     ],
     "Article": [
         {
-            "title": "Jornada Científica ",
-            "texto": "Primer logro científico alcanzado en la nominación en 1º lugar en el concurso de Programación del instituto. Destacando sobre el cumplimiento de dicha labor cuando había culminado mi tercer año de la carrera"
+            "title": "Scientific day",
+            "texto": "First scientific achievement achieved in the 1st place nomination in the institute's Programming contest. Highlighting the fulfillment of said work when I had completed my third year of college."
         },
         {
-            "title": "Primer Proyecto",
-            "texto": "Concurso de participación por equipo de estudiantes para presentar el desarrollo de un sistema de redes de climatización por zonas específicas. Obteniendo un gran resultado y categoría de mencionados destacados entre los primeros lugares "
+            "title": "First project",
+            "texto": "Contest involving a team of students to present the development of a product sales system for specific areas. Obtaining a great result and category of mentions among the first places"
         },
         {
-            "title": "Mis Estudios",
-            "texto": "Después de entrar en la universidad me di cuenta de que si realmente quieres obtener un gran conocimiento no basta con solo atender, también tienes que ser autodidacta, no obstante aprender a aprender es fundamental y recibir las clases también es la base para profundizar cuál camino debes optar y abrir tu campo de visión a los múltiples servicios que existen"
+            "title": "My studies",
+            "texto": "After entering university I realized that if you really want to obtain great knowledge, it is not enough to just attend, you also have to be self-taught, however learning to learn is essential and taking classes is also the basis to deepen which path you should take. choose and open your field of vision to the multiple services that exist"
         },
         {
-            "title": "Graduación",
-            "texto": "El 12 de diciembre del 2022 cumpliría mi primera meta, graduarme de Ingeniero Informática después de 6 largos años interrumpidos por la covid. a pesar de las adversidades pude culminar la carrera a pesar de todo y ejercerme como un profesional para el trabajo de desarrollo de Software"
+            "title": "Graduation",
+            "texto": "On December 12, 2022, I would fulfill my first goal, graduating as a Computer Engineer after 6 long years interrupted by covid. Despite the adversities, I was able to complete my degree despite everything and work as a professional in Software development work."
         }
     ],
     "Article2": [
@@ -144,6 +144,6 @@
         }
     ],
     "Text": [
-        "Las siguientes páginas son una pequeña muestras de mis diseños personales"
+        "The following pages are a small sample of my personal designs."
     ]
 }

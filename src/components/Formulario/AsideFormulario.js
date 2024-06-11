@@ -22,24 +22,24 @@ export const AsideFormulario = () => {
   const equipo = <i className="fas fa-users "></i>;
 
   const cantidad = [
-    { id: "1", name: "User", content: "Admin:" },
-    { id: "2", name: "Tools", content: "Manager:" },
-    { id: "3", name: "Change", content: "Option:" },
+    { id: "1", name: "User", content: "Acount:" },
+    { id: "2", name: "Tools", content: "All Tools " },
+    { id: "3", name: "Option", content: "Option:" },
   ];
   const cantidad2 = [
-    { id: "4", name: "ayuda  ", content: "Cliente:" },
-    { id: "5", name: "rest", content: "Administrador:" },
-    { id: "6", name: "fste", content: "Usuarios:" },
+    { id: "4", name: "Data", content: "" },
+    { id: "5", name: "Sign in", content: "" },
+    { id: "6", name: "Sign out", content: "" },
   ];
   const cantidad3 = [
-    { id: "7", name: "kiki", content: "Archivos" },
-    { id: "8", name: "fula", content: "Directorio" },
-    { id: "9", name: "mlsc", content: "Funcion" },
+    { id: "7", name: "Web", content: "" },
+    { id: "8", name: "Repo", content: "" },
+    { id: "9", name: "Container", content: "" },
   ];
   const cantidad4 = [
-    { id: "10", name: "ffff", content: "Help" },
-    { id: "11", name: "zzzz", content: "Document" },
-    { id: "12", name: "mlsc", content: "Info" },
+    { id: "10", name: "Help", content: "" },
+    { id: "11", name: "Soport", content: "" },
+    { id: "12", name: "Info", content: "" },
   ];
   const [elementos] = useState([cantidad, cantidad2, cantidad3, cantidad4]);
   const [val, setval] = useState(1);
