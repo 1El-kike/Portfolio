@@ -1,14 +1,13 @@
-import React, { memo } from 'react'
-import { Firstsession } from './Firstsession'
+import React, { memo } from "react";
+import { Firstsession } from "./Firstsession";
+import "../../assets/css/practica.css";
 
 export const Port = memo(() => {
   return (
     <>
-    <div>
-    <Firstsession/>
-
-    </div>
-    
+      <div className="">
+        <Firstsession />
+      </div>
     </>
-  )
-})
+  );
+});
