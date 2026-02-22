@@ -1,7 +1,6 @@
 import React from "react";
 import { Button } from "../components/Button";
 import { Cuadro } from "../components/Cuadro";
-import { ContactItem } from "../components/ContactItem";
 
 export const PersonalInfoSection = ({ onDownload }) => (
   <>

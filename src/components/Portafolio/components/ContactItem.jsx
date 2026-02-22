@@ -1,5 +1,3 @@
-import React from "react";
-
 export const ContactItem = ({ titulo, ico, adress }) => (
   <div className="d-flex gap-2">
     <span>

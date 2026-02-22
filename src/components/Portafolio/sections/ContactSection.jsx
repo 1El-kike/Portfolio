@@ -34,7 +34,7 @@ export const ContactSection = () => (
           <MDBBtn
             floating
             className="m-1"
-            style={{ backgroundColor: "#3b5998" }}
+            style={{ backgroundColor: "var(--black)" }}
             href="https://www.facebook.com/Enrique_Grass_Porras"
             role="button"
           >
@@ -43,7 +43,7 @@ export const ContactSection = () => (
           <MDBBtn
             floating
             className="m-1 "
-            style={{ backgroundColor: "#55acee" }}
+            style={{ backgroundColor: "var(--red)" }}
             href=""
             role="button"
           >
@@ -52,7 +52,7 @@ export const ContactSection = () => (
           <MDBBtn
             floating
             className="m-1"
-            style={{ backgroundColor: "#dd4b39" }}
+            style={{ backgroundColor: "var(--red)" }}
             href="https:/www.youtube.com/"
             role="button"
           >
@@ -61,7 +61,7 @@ export const ContactSection = () => (
           <MDBBtn
             floating
             className="m-1 "
-            style={{ backgroundColor: "#e7960a" }}
+            style={{ backgroundColor: "var(--yellow)" }}
             href="https:/www.linkedin.com/"
             role=""
           >

@@ -7,7 +7,7 @@ import imagex from "../../assets/images/image1.png";
 import "./style.css";
 
 // custom hooks and subcomponents
-import { useWindowWidth } from "../../hooks/useWindowWidth";
+//import { useWindowWidth } from "../../hooks/useWindowWidth";
 import { useElementVisibility } from "../../hooks/useElementVisibility";
 import { Title } from "./components/Title";
 import { Section } from "./components/Section";
@@ -72,7 +72,7 @@ const BLOG_ENTRIES = [
 ];
 
 export const Firstsession = () => {
-  const ancho = useWindowWidth();
+  // const ancho = useWindowWidth();
   const scrolled = useElementVisibility("miscroll");
 
   const handleDownloadCV = () => {
