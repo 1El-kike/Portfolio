@@ -48,14 +48,14 @@ const ItemList = ({ data }) => (
     {data.map((ele, idx) => (
       <ul className="nav mb-3" key={idx}>
         <li>
-          <div className="d-flex">
-            <div className="d-flex flex-column ">
-              <i className="fas fa-briefcase rounded-pill bg-warning p-3 m-1" />
-              <span className="borders" />
+          <div className="flex">
+            <div className="flex flex-col ">
+              <i className="fas fa-briefcase rounded-full bg-yellow-500 p-3 m-1" />
+              <span className="border-l-2 border-gray-700 flex ml-auto mr-auto h-full" />
             </div>
 
-            <div className="d-flex  flex-column justify-content-start ">
-              <div className="d-flex w-auto">
+            <div className="flex  flex-col justify-start ">
+              <div className="flex w-auto">
                 <p
                   className="m-2 ms-3 mt-1 p-1 ps-3 px-3 rounded w-2"
                   style={{ background: "rgb(19, 44, 57)" }}
@@ -63,9 +63,9 @@ const ItemList = ({ data }) => (
                   {ele[3]}
                 </p>
               </div>
-              <div className="d-flex flex-wrap align-items-center gap-1">
+              <div className="flex flex-wrap items-center gap-1">
                 <h3 className="m-2 ms-3">{ele[0]}</h3>
-                <span className="raya" />
+                <span className="h-px w-16 border-b-4 border-gray-600 rounded" />
                 <h6 className="m-2 ms-3">{ele[1]}</h6>
               </div>
               <p className="m-2 ms-3">{ele[2]}</p>
@@ -79,10 +79,10 @@ const ItemList = ({ data }) => (
 
 export const Experience = () => (
   <>
-    <div className="col-md-12 col-lg-6 col-sm-12">
+    <div className="w-full md:w-full lg:w-1/2 sm:w-full">
       <ItemList data={EXP_DATA.exp1} />
     </div>
-    <div className="col-md-12 col-lg-6 col-sm-12 ">
+    <div className="w-full md:w-full lg:w-1/2 sm:w-full ">
       <ItemList data={EXP_DATA.exp2} />
     </div>
   </>

@@ -1,27 +1,23 @@
 import React from "react";
-import { Card, CardGroup } from "react-bootstrap";
-
-// entries should be passed from parent component for better flexibility
-// expect an array of [imageSrc, title, description]
 
 export const CardGrid = ({ entries = [], width }) => (
   <>
     {entries.map((item, i) => (
-      <CardGroup
+      <div
         key={i}
         style={{ paddingRight: width > 350 ? 20 : 0 }}
-        className="col-lg-4 col-md-6 col-sm-12 pb-4"
+        className="lg:w-1/3 md:w-1/2 sm:w-full pb-4"
       >
-        <Card bg="dark">
-          <Card.Img variant="top" src={item[0]} />
-          <Card.Body className="top">
-            <Card.Title className="text-light">{item[1]}</Card.Title>
-          </Card.Body>
-          <Card.Footer>
-            <small className="text-muted">{item[2]}</small>
-          </Card.Footer>
-        </Card>
-      </CardGroup>
+        <div className="bg-gray-900">
+          <img src={item[0]} className="w-full" alt="" />
+          <div className="border-t-4 border-yellow-500 p-4">
+            <h5 className="text-white">{item[1]}</h5>
+          </div>
+          <div className="p-3">
+            <small className="text-gray-400">{item[2]}</small>
+          </div>
+        </div>
+      </div>
     ))}
   </>
 );

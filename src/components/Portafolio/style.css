@@ -1,58 +1,21 @@
-.img1 {
-  margin-left: auto;
-  margin-right: auto;
-  width: 330px;
-  position: relative;
-  border-radius: 6px;
-  height: 400px;
-  margin-bottom: 50px;
-  box-shadow:
-    -25px 25px 17px rgb(41, 1, 8),
-    25px -25px 17px #e4a11b;
-  overflow: hidden;
-}
-
-/* responsive adjustments (IntroSection) */
-@media (max-width: 768px) {
-  .img1 {
-    width: 80%;
-    height: auto;
-    margin-bottom: 30px;
-  }
-  .fondo {
-    width: 100%;
-    height: auto;
-  }
-  .inline {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  .text-fondo {
-    font-size: 1.5rem;
-  }
-  .display-3 {
-    font-size: 2rem !important;
-  }
-  .display-4 {
-    font-size: 1.5rem !important;
-  }
-  .texto-p {
-    font-size: 0.9rem;
-  }
-  .btn-lg {
-    width: 100%;
-  }
-  .col-lg-7,
-  .col-lg-5 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
+/**
+ * Tailwind CSS Migration - Remaining Custom Styles
+ * 
+ * This file contains only the styles that cannot be easily expressed
+ * as Tailwind utilities or require complex CSS features:
+ * - Dynamic animations
+ * - Complex gradient backgrounds
+ * - CSS variable-based styling
+ * 
+ * Most utility classes have been migrated to Tailwind CSS and are now
+ * applied directly in JSX components.
+ */
 
 :root {
   --i: 59;
 }
 
+/* Complex background gradients */
 .imgfondo {
   z-index: -100;
   display: flex;
@@ -72,6 +35,54 @@
     linear-gradient(280deg, transparent, transparent, rgb(20, 33, 40)),
     linear-gradient(to right, transparent, transparent, rgb(48, 6, 186)),
     url("../../assets/images/developpement-web-featured.jpg");
+}
+
+.image-fondo {
+  top: 80px;
+  width: 100%;
+  position: absolute;
+  height: 90vh;
+  background:
+    linear-gradient(to bottom, #142128, transparent, #142128),
+    url("../../assets/images/diseno-web-1566701.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -100;
+}
+
+.image2-fondo {
+  width: 100%;
+  position: absolute;
+  height: 90vh;
+  background:
+    linear-gradient(to bottom, rgb(14, 26, 32), transparent, rgb(2, 36, 53)),
+    url("../../assets/images/diseno-web-1566701.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -100;
+}
+
+/* Rotating gradient animation */
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* img1 - Image with animated gradient border effect */
+.img1 {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  border-radius: 6px;
+  margin-bottom: 50px;
+  box-shadow:
+    -25px 25px 17px rgb(41, 1, 8),
+    25px -25px 17px #e4a11b;
+  overflow: hidden;
 }
 
 .img1::before {
@@ -115,15 +126,7 @@
   animation-delay: -3s;
 }
 
-@keyframes animate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
+/* espensy - Inner container for the image */
 .espensy {
   position: absolute;
   inset: 2px;
@@ -134,68 +137,55 @@
   display: flex;
 }
 
+/* fondo - Image container */
 .fondo {
   width: 325px;
   border-radius: 6px;
 }
 
-.circle {
-  border-radius: 50%;
-}
-
-.but {
-  position: relative;
-}
-
-.butarrow {
-  display: flex;
+/* Gradient border effect using pseudo-elements */
+.circle::before {
+  content: "";
   position: absolute;
-  border: 2px solid rgb(81, 160, 239);
-  margin-left: 150px;
-  padding: 14px;
-  border-radius: 50%;
+  top: -50%;
+  left: -50%;
+  width: 330px;
+  height: 400px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #45f3ff,
+    #4106e4,
+    #e9d30e
+  );
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
 }
 
-.fixed-navbar {
-  z-index: 1000;
-  position: fixed;
-  top: 20px;
-  right: 110px;
-  height: 100vh;
-  bottom: 800px;
-  overflow-y: auto;
+.circle::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 330px;
+  height: 400px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #e60c04,
+    #dae907,
+    #1be025
+  );
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
 }
 
-.fixed-navbar-item {
-  cursor: pointer;
-  background: #c4a807 !important;
-  color: #000;
-}
-.fixed-navbar-item:hover {
-  background-color: #adb68d !important;
-}
-
-.image-fondo {
-  z-index: -100;
-}
-.text-fondo {
-  text-shadow: 2px 2px 8px black;
-}
-
-.inline {
-  position: relative;
-  font-weight: bold;
-  background-color: #e4a11b;
-  color: #111210;
-  opacity: 0.8;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: -14px 13px 10px rgb(36, 27, 27);
-  margin-bottom: 30px;
-  margin-left: 50px;
-  margin-top: 30px;
-}
-
+/* Inline element with gradient background */
 .inline::before {
   content: "";
   top: 0;
@@ -209,79 +199,7 @@
   z-index: -1;
 }
 
-.texto-p {
-  font-weight: bold;
-  width: 100%;
-  text-align: justify;
-}
-
-.image-fondo {
-  top: 80px;
-  width: 100%;
-  position: absolute;
-  height: 90vh;
-  background:
-    linear-gradient(to bottom, rgb(14, 26, 32), transparent, rgb(17, 31, 38)),
-    url("../../assets/images/diseno-web-1566701.jpg");
-  background-size: cover;
-  background-position: center;
-  z-index: -100;
-}
-
-.image2-fondo {
-  width: 100%;
-  position: absolute;
-  height: 90vh;
-  background:
-    linear-gradient(to bottom, rgb(14, 26, 32), transparent, rgb(2, 36, 53)),
-    url("../../assets/images/diseno-web-1566701.jpg");
-  background-size: cover;
-  background-position: center;
-  z-index: -100;
-}
-
-.text {
-  font-weight: 600;
-  letter-spacing: 3px;
-  color: rgb(19, 44, 57);
-}
-.text2 {
-  font-weight: 600;
-  letter-spacing: -2px;
-}
-
-.alt {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  height: 100px;
-}
-
-.pos {
-  display: flex;
-  height: 90%;
-  justify-content: center;
-  align-items: center;
-}
-
-.cuadro {
-  border: 1px solid rgb(89, 89, 89);
-  border-radius: 3px;
-}
-
-.raya {
-  height: 1px;
-  width: 60px;
-  border: 3px solid rgb(89, 89, 89);
-  border-radius: 1px;
-  margin: -10px 0px 0px 15px;
-}
-
-.margen {
-  margin: -20px 30px 0px 15px;
-  padding-bottom: 20px;
-}
-
+/* Progress circle with dynamic color from CSS variables */
 .progress-circle {
   width: 150px;
   height: 150px;
@@ -291,27 +209,6 @@
   position: relative;
 }
 
-.progress-value {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2.5em;
-  font-weight: bold;
-  z-index: 1;
-}
-
-.texto {
-  position: absolute;
-  top: 62%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-  font-weight: 500;
-  color: var(--clr);
-  text-transform: uppercase;
-}
-
 .progress-circle::before {
   content: "";
   display: block;
@@ -319,15 +216,8 @@
   height: 100%;
   transform-origin: left;
   border-radius: 0 100% 100% 0/50%;
-  /* width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    
-    clip: rect(0,50px,120px,0);
-    z-index: 1; */
+  background: var(--clr);
+  transform: rotate(calc((var(--i) - 50) * 0.01turn));
 }
 
 .progress-circle::after {
@@ -336,23 +226,7 @@
   inset: 10px;
   background-color: rgb(2, 36, 53);
   border-radius: 50%;
-  /*  display: block;
-    margin-left: 50%;
-    height: 100%;
-    transform-origin: left;
-    border-radius: 0 100% 100% 0/50%; */
-  /*  
-    top: 0;
-    left: 0;
-    border: 10px solid #ccc;
-    clip: rect(0,120px,120px,50px);
-    z-index: 0;
-    animation: progress-animation 2s linear; */
-}
-
-.progress-circle::before {
-  background: var(--clr);
-  transform: rotate(calc((var(--i) - 50) * 0.01turn));
+  z-index: 1;
 }
 
 .progress-circle.less::before {
@@ -360,95 +234,34 @@
   transform: rotate(calc((var(--i) - 0) * 0.01turn));
 }
 
-.borders {
-  border-left: 2px solid rgb(19, 44, 57);
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  height: 100%;
-}
-
+/* Unused/deprecated styles - can be removed after full migration */
 .img {
   background-position: center;
 }
 
-.my-li {
-  transition: transform 0.3s ease;
-}
-.my-li:hover {
-  transform: scale(1.1);
-  color: #0c9d27;
-}
-
-.hover {
-  transition: transform 0.3s ease;
-}
-.hover:hover {
-  transform: scale(1.1);
-  color: #0c9d27;
+.butarrow {
+  display: flex;
+  position: absolute;
+  border: 2px solid rgb(81, 160, 239);
+  margin-left: 150px;
+  padding: 14px;
+  border-radius: 50%;
 }
 
-.input-round {
-  border-radius: 20px;
-}
 .input-width {
   width: 110%;
 }
+
 .input-width2 {
   padding-left: 50px;
   background: #000;
 }
 
-.input {
-  background-color: rgb(19, 35, 44);
-  border: none;
-  height: 40px;
-  color: #fff;
-  font-size: 16px;
-}
-.input:focus {
-  background-color: #444;
-  border: none;
-  color: #159157;
-}
-
-.textarea {
-  min-height: 200px !important;
-  height: 200px;
-  max-height: 600px;
-}
-
-.top {
-  border-top: 3px solid #b8c407;
-}
-
-.list-items {
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-.list-items:hover {
-  transform: scale(1.1);
-  z-index: 1;
-}
-
-.image {
-  width: 100%;
-  height: auto;
-}
-
-.list-items-info {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-.list-items:hover .list-items-info {
-  opacity: 1;
+@media (max-width: 768px) {
+  .fondo {
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media (max-width: 1150px) {

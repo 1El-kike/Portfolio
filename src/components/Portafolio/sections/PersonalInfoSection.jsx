@@ -4,51 +4,51 @@ import { Cuadro } from "../components/Cuadro";
 
 export const PersonalInfoSection = ({ onDownload }) => (
   <>
-    <div className="d-flex  flex-wrap  justify-content-center col-12">
-      <div className="col-md-12 col-lg-6 col-12 ">
-        <div className="col-12 d-flex flex-column justify-content-end">
-          <h2 className="text-light">PERSONAL INFOS</h2>
-          <div className="d-flex flex-wrap justify-content-around">
+    <div className="flex flex-wrap justify-center w-full">
+      <div className="w-full md:w-full lg:w-1/2 ">
+        <div className="w-full flex flex-col justify-end">
+          <h2 className="text-white">PERSONAL INFOS</h2>
+          <div className="flex flex-wrap justify-around">
             <div
               style={{ minWidth: "200px" }}
-              className="col-lg-6 col-md-12 col-sm-12 col-12  d-flex flex-column gap-1  mt-4"
+              className="w-full lg:w-1/2 md:w-full sm:w-full flex flex-col gap-1  mt-4"
             >
-              <p className="text-secondary">
-                First Name: <b className="text-light">Enrique</b>{" "}
+              <p className="text-gray-400">
+                First Name: <b className="text-white">Enrique</b>{" "}
               </p>
-              <p className="text-secondary">
-                Nationality: <b className="text-light">Cuba</b>{" "}
+              <p className="text-gray-400">
+                Nationality: <b className="text-white">Cuba</b>{" "}
               </p>
-              <p className="text-secondary">
-                Address: <b className="text-light">La Habana</b>{" "}
+              <p className="text-gray-400">
+                Address: <b className="text-white">La Habana</b>{" "}
               </p>
-              <p className="text-secondary">
+              <p className="text-gray-400">
                 Email:{" "}
-                <b className="text-light">enriquegrassporras@gmail.com</b>{" "}
+                <b className="text-white">enriquegrassporras@gmail.com</b>{" "}
               </p>
-              <p className="text-secondary">
-                Langages: <b className="text-light">English, Spanish</b>{" "}
+              <p className="text-gray-400">
+                Langages: <b className="text-white">English, Spanish</b>{" "}
               </p>
             </div>
-            <div className=" col-lg-6 col-md-12 col-sm-12 col-12  d-flex flex-column gap-1 mt-4">
-              <p className="text-secondary">
-                Last Name: <b className="text-light">Grass</b>{" "}
+            <div className="w-full lg:w-1/2 md:w-full sm:w-full flex flex-col gap-1 mt-4">
+              <p className="text-gray-400">
+                Last Name: <b className="text-white">Grass</b>{" "}
               </p>
-              <p className="text-secondary">
-                Age: <b className="text-light">25 Years</b>{" "}
+              <p className="text-gray-400">
+                Age: <b className="text-white">25 Years</b>{" "}
               </p>
-              <p className="text-secondary">
-                Freelance: <b className="text-light">Available</b>{" "}
+              <p className="text-gray-400">
+                Freelance: <b className="text-white">Available</b>{" "}
               </p>
-              <p className="text-secondary">
-                Phone: <b className="text-light">+53 58428530</b>{" "}
+              <p className="text-gray-400">
+                Phone: <b className="text-white">+53 58428530</b>{" "}
               </p>
-              <p className="text-secondary">
-                Skype: <b className="text-light">grass.@porras</b>{" "}
+              <p className="text-gray-400">
+                Skype: <b className="text-white">grass.@porras</b>{" "}
               </p>
             </div>
           </div>
-          <div className="col-3S mt-2">
+          <div className="w-1/3 mt-2">
             <Button
               onClick={onDownload}
               buttons="DOWNLOAD CV"
@@ -58,7 +58,7 @@ export const PersonalInfoSection = ({ onDownload }) => (
         </div>
       </div>
 
-      <div className="col-lg-6 mt-3 col-md-12 col-sm-12 d-flex flex-wrap gap-4 mt-2">
+      <div className="w-full lg:w-1/2 md:w-full sm:w-full flex flex-wrap gap-4 mt-3">
         <Cuadro num="2" text="YEARS OF EXPERENCE" />
         <Cuadro
           num="8"

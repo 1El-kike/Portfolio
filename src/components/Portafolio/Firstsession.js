@@ -87,16 +87,13 @@ export const Firstsession = () => {
 
   return (
     <div className="">
-      <div
-        style={{ top: "-100px" }}
-        className="m-0 position-relative  p-0 col-12"
-      >
+      <div style={{ top: "-100px" }} className="m-0 relative p-0 w-full">
         <div className="image-fondo"></div>
       </div>
 
-      <div className="container ">
+      <div className="max-w-7xl mx-auto px-4">
         <div
-          className="row"
+          className="flex flex-wrap"
           data-bs-target="navbar"
           data-bs-smooth-croll="true"
           tabIndex="0"
@@ -157,16 +154,16 @@ export const Firstsession = () => {
             <BlogSection entries={BLOG_ENTRIES} />
           </Section>
 
-          <div className="col-md-2">
+          <div className="md:w-1/6 sm:w-full">
             <nav
-              className={`fixed-navbar ${scrolled ? "" : "dnone"}`}
+              className={`fixed z-[1000] top-5 right-28 h-screen bottom-[800px] overflow-y-auto ${scrolled ? "" : "hidden"}`}
               id="miscroll"
             >
-              <ul className="nav nav-pills  d-flex flex-column justify-content-center align-items-center gap-2 h-100">
+              <ul className="nav nav-pills flex flex-col justify-center items-center gap-2 h-full">
                 <li>
                   <a
                     href="#lista1"
-                    className={`nav-link fixed-navbar-item rounded-circle p-3 text-light`}
+                    className={`nav-link !bg-yellow-600 text-black hover:bg-gray-600 rounded-full p-3 text-white`}
                   >
                     <i className="fas fa-home "></i>
                   </a>
@@ -174,7 +171,7 @@ export const Firstsession = () => {
                 <li>
                   <a
                     href="#lista2"
-                    className={`nav-link fixed-navbar-item rounded-circle p-3 fas fa-user text-light`}
+                    className={`nav-link !bg-yellow-600 text-black hover:bg-gray-600 rounded-full p-3 fas fa-user text-white`}
                   >
                     <span />
                   </a>
@@ -182,7 +179,7 @@ export const Firstsession = () => {
                 <li>
                   <a
                     href="#lista3"
-                    className={`nav-link fixed-navbar-item rounded-circle p-3  fas fa-address-card text-light`}
+                    className={`nav-link !bg-yellow-600 text-black hover:bg-gray-600 rounded-full p-3 fas fa-address-card text-white`}
                   >
                     <span />
                   </a>
@@ -190,7 +187,7 @@ export const Firstsession = () => {
                 <li>
                   <a
                     href="#lista4"
-                    className={`nav-link fixed-navbar-item rounded-circle p-3  fas fa-at text-light`}
+                    className={`nav-link !bg-yellow-600 text-black hover:bg-gray-600 rounded-full p-3 fas fa-at text-white`}
                   >
                     <span />
                   </a>
@@ -198,7 +195,7 @@ export const Firstsession = () => {
                 <li>
                   <a
                     href="#lista5"
-                    className={`nav-link fixed-navbar-item rounded-circle p-3  fas item fa-calendar-times text-light`}
+                    className={`nav-link !bg-yellow-600 text-black hover:bg-gray-600 rounded-full p-3 fas item fa-calendar-times text-white`}
                   >
                     <span />
                   </a>

@@ -1,10 +1,4 @@
-* {
-    box-sizing: border-box;
-
-}
-
-main {
-    max-width: 800px;
-    width: 90%;
-    margin-top: 40px;
-}
+/* migrated: Tailwind's preflight already sets box-sizing
+   and `main` layout should use utility classes such as
+   <main class="max-w-2xl w-11/12 mt-10 mx-auto">. This file can
+   be removed when no longer referenced. */

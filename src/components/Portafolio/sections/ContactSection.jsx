@@ -5,9 +5,9 @@ import { Button } from "../components/Button";
 
 export const ContactSection = () => (
   <>
-    <div className="d-flex  col-12 flex-wrap ">
-      <div className="d-flex flex-column col-lg-4 col-md-6 col-sm-12 ">
-        <div className="d-flex flex-column flex-wrap gap-2">
+    <div className="flex w-full flex-wrap ">
+      <div className="flex flex-col lg:w-1/4 md:w-1/2 sm:w-full ">
+        <div className="flex flex-col flex-wrap gap-2">
           <h3>DONT'BE SHY !</h3>
           <p>
             Feel free to get in touch with me.I am alwasy open to <br />{" "}
@@ -69,40 +69,40 @@ export const ContactSection = () => (
           </MDBBtn>
         </div>
       </div>
-      <div className="d-flex flex-column  col-lg-8 col-md-6 col-sm-12">
-        <form className="form-grup  col-lg-11 col-md-12">
-          <div className="d-flex gap-4 flex-wrap justify-content-between ">
-            <div className="col-lg-5 col-md-12 col-sm-12 ">
+      <div className="flex flex-col lg:w-2/3 md:w-1/2 sm:w-full">
+        <form className="lg:w-11/12 md:w-full">
+          <div className="flex gap-4 flex-wrap justify-between ">
+            <div className="lg:w-5/12 md:w-full sm:w-full ">
               <input
-                className="form-control input-round input "
+                className="rounded-full bg-gray-900 border-0 h-10 text-white text-base focus:bg-gray-700 focus:border-0 focus:text-green-400 w-full "
                 key={"input"}
                 placeholder="YOUR NAME"
                 type="text"
               />
             </div>
-            <div className="col-lg-6 col-md-12 col-sm-12 ">
+            <div className="lg:w-1/2 md:w-full sm:w-full ">
               <input
-                className="form-control input-round input "
+                className="rounded-full bg-gray-900 border-0 h-10 text-white text-base focus:bg-gray-700 focus:border-0 focus:text-green-400 w-full"
                 key={"input"}
                 placeholder="YOUR EMAIL"
                 type="text"
               />
             </div>
           </div>
-          <div className="d-flex col-12 mt-4 justify-content-start ">
-            <div className="col-12 ">
+          <div className="flex w-full mt-4 justify-start ">
+            <div className="w-full ">
               <input
-                className="form-control input-round  input"
+                className="rounded-full bg-gray-900 border-0 h-10 text-white text-base focus:bg-gray-700 focus:border-0 focus:text-green-400 w-full"
                 key={"input"}
                 placeholder="YOUR SUBJECT"
                 type="text"
               />
             </div>
           </div>
-          <div className="d-flex col-12 mt-4 justify-content-start">
-            <div className="col-12">
+          <div className="flex w-full mt-4 justify-start">
+            <div className="w-full">
               <textarea
-                className="form-control input-round textarea mb-4 input"
+                className="rounded-full bg-gray-900 border-0 min-h-52 max-h-96 text-white text-base focus:bg-gray-700 focus:border-0 focus:text-green-400 mb-4 w-full p-4"
                 key={"input"}
                 placeholder="YOUR MESSAGE"
                 type="month"

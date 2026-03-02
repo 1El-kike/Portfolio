@@ -1,14 +1,21 @@
 import React from "react";
 
 export const Cuadro = ({ num, text }) => (
-  <div data-aos="flip-left" className="cuadro col-5 mt-2 mb-2">
-    <div className="d-flex">
-      <h2 className="text text-warning display-1 ps-2">{num}</h2>
-      <span className="top-5 mt-1 ms-2 text text-warning display-6">+</span>
+  <div
+    data-aos="flip-left"
+    className="border border-gray-600 rounded w-5/12 mt-2 mb-2"
+  >
+    <div className="flex">
+      <h2 className="font-semibold tracking-widest text-gray-700 text-yellow-500 text-6xl ps-2">
+        {num}
+      </h2>
+      <span className="top-5 mt-1 ms-2 font-semibold tracking-widest text-gray-700 text-yellow-500 text-2xl">
+        +
+      </span>
     </div>
-    <div className="d-flex justify-content-between">
-      <span className="raya" />
-      <p className="margen text-light">{text}</p>
+    <div className="flex justify-between">
+      <span className="h-px w-16 border-b-4 border-gray-600 rounded mx-auto" />
+      <p className="-m-5 p-5 text-white">{text}</p>
     </div>
   </div>
 );

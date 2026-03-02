@@ -15,20 +15,28 @@ export const Progres = () => {
   return (
     <>
       {LANGUAGES.map(([name, percent, color], idx) => (
-        <div key={idx} className="col-md-6 col-lg-3 ml-0 mt-3 mb-3 flex-wrap">
+        <div
+          key={idx}
+          className="md:w-1/2 lg:w-1/4 ml-0 mt-3 mb-3 flex flex-wrap"
+        >
           <div
             className="progress-circle"
             style={{ "--clr": `#${color}`, "--i": `${percent}` }}
           >
             <div
-              className="progress-value"
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-3xl font-bold z-10"
               role="progressbar"
               aria-valuenow={percent}
               aria-valuemin="0"
             >
               {percent}%
             </div>
-            <div className="texto">{name}</div>
+            <div
+              className="absolute top-62% left-1/2 -translate-x-1/2 z-10 font-medium uppercase"
+              style={{ color: `#${color}` }}
+            >
+              {name}
+            </div>
           </div>
         </div>
       ))}
