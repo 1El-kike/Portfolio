@@ -1,44 +1,42 @@
-import React from "react";
-
 const EXP_DATA = {
   exp1: [
     [
       "WEB DEVELOPER ",
-      "ENVATO",
-      "Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore  adipisicing elit",
+      "FULL STACK",
+      "Constant evolution, from static pages to modern full-stack solutions.",
       "2022 - PRESENTE",
     ],
     [
       "UI/UX DESIGNER ",
-      "THEMEFOREST",
-      "Lorem incididunt sit amet, consectetur eiusmod dunt doidunt dot elit, tempor incididunt",
-      "2020-2023",
+      "",
+      "From information architecture to interaction design. I develop solutions that connect emotionally with people and solve real problems.",
+      "2020 - PRESENTE",
     ],
     [
-      "CONSULTANT ",
-      "ENVATO",
-      "Lorem ipsum dolor sit amet,tempor incididunt ut laboreconsectetur elit  sed do eismed tempor dunt",
-      "2018-2023",
+      "SOFTWARE ARCHITECT ",
+      "",
+      "I went from writing features to designing complete systems. Today I plan the software organization, ensuring quality, security, and long-term maintainability.",
+      "2018 - PRESENTE",
     ],
   ],
   exp2: [
     [
       "ENGINEERING ",
-      "OXFORD UNIVERSITY",
-      "Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit",
+      "CUJAE UNIVERSITY",
+      "Graduated in Computer Engineering. Comprehensive training that combines computational theory with practice in technological solutions.",
       "2022",
     ],
     [
-      "MASTER DEGREE ",
-      "KIEV UNIVERSITY",
-      "Lorem incididunt sit amet, consectetur eiusmod dunt doidunt dot elit, tempor incididunt",
-      "2023",
+      "E-COMMERCE",
+      "MARKET X",
+      "I designed and developed a dual web system: an administrative panel with a dashboard, inventory and order management, and a customer frontend for purchasing products, all with clean architecture and a centralized database.",
+      "2023 - 2024",
     ],
     [
-      "BACHELOR  ",
-      "TUNIS HIGH ACKOOL",
-      "Lorem ipsum dolor sit amet,tempor incididunt ut laboreconsectetur elit  sed do eismed tempor dunt",
-      "2021",
+      "E‑COMMERCE",
+      "Nay's Dreams",
+      "I implemented a complete web platform for the sale of customized items, with a modular backend (clean architecture), dynamic frontend, and an optimized database that supports the entire catalog and orders.",
+      "2025",
     ],
   ],
 };
@@ -48,9 +46,9 @@ const ItemList = ({ data }) => (
     {data.map((ele, idx) => (
       <div key={idx} className="grid grid-cols-[auto_1fr] gap-4 items-start">
         {/* Icon Column */}
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col h-full items-center">
           <i className="fas fa-briefcase rounded-full bg-yellow-500 p-3" />
-          <span className="border-l-2 border-gray-700 flex-1 w-0.5 mt-2" />
+          <span class="border-l-2 border-gray-700 flex ml-auto mr-auto h-full"></span>
         </div>
 
         {/* Content Column */}
