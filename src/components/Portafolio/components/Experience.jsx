@@ -78,12 +78,12 @@ const ItemList = ({ data }) => (
 );
 
 export const Experience = () => (
-  <>
+  <div className="flex flex-col md:flex-row">
     <div className="w-full md:w-full lg:w-1/2 sm:w-full">
       <ItemList data={EXP_DATA.exp1} />
     </div>
     <div className="w-full md:w-full lg:w-1/2 sm:w-full ">
       <ItemList data={EXP_DATA.exp2} />
     </div>
-  </>
+  </div>
 );

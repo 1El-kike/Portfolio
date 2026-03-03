@@ -44,7 +44,7 @@ export const PersonalInfoSection = ({ onDownload }) => (
                 Phone: <b className="text-white">+53 58428530</b>{" "}
               </p>
               <p className="text-gray-400">
-                Skype: <b className="text-white">grass.@porras</b>{" "}
+                GitHub: <b className="text-white">1El-kike</b>{" "}
               </p>
             </div>
           </div>
@@ -59,7 +59,7 @@ export const PersonalInfoSection = ({ onDownload }) => (
       </div>
 
       <div className="w-full lg:w-1/2 md:w-full sm:w-full flex flex-wrap gap-4 mt-3">
-        <Cuadro num="2" text="YEARS OF EXPERENCE" />
+        <Cuadro num="3" text="YEARS OF EXPERENCE" />
         <Cuadro
           num="8"
           text="HAPPY 

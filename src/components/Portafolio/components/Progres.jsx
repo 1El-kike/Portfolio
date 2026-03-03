@@ -5,11 +5,18 @@ const LANGUAGES = [
   ["HTML", 65, "43f94a"],
   ["CSS", 70, "2ccde9"],
   ["JAVASCRIPT", 85, "fb297b"],
-  ["REACT", 80, "ffe047"],
-  ["NODE JS", 60, "fff"],
-  ["MYSQL", 78, "ab24ec"],
-  ["TYPESCRIPT", 80, "f16428"],
+  ["Git", 95, "b22704"],
+  ["REACT", 90, "ffe047"],
   ["REACT Native", 55, "f82c14"],
+  ["Angular", 80, "f82c14"],
+  ["TYPESCRIPT", 80, "f16428"],
+  ["NODE JS", 60, "fff"],
+  ["Next JS", 70, "fff"],
+  ["Rest API", 90, "fff"],
+  ["MYSQL", 78, "ab24ec"],
+  ["PostgreSQL", 75, "ab24ec"],
+  ["MongoDb", 60, "ab24ec"],
+  ["Railway", 85, "f0ff"],
 ];
 
 // Individual animated skill card
@@ -26,7 +33,7 @@ const AnimatedSkillCard = ({ name, percent, color, index }) => {
   return (
     <div
       ref={ref}
-      className="md:w-1/2 lg:w-1/4 ml-0 mt-3 mb-3 flex flex-wrap"
+      className="md:w-1/4 lg:w-1/6 mt-3 mb-3 flex justify-center flex-wrap"
       style={animationStyles}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}

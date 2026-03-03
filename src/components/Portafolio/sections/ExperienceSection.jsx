@@ -23,12 +23,12 @@ const AnimatedElement = ({
 };
 
 export const ExperienceSection = () => (
-  <div className="w-full">
+  <div className="w-full ">
     {/* Section Title */}
     <AnimatedElement
       animation="fadeInDown"
       delay={0}
-      className="w-full flex justify-center mb-8"
+      className="w-full flex  justify-center mb-8"
     >
       <h3 className="text-2xl sm:text-3xl font-bold text-white relative">
         <span className="relative z-10">EXPERIENCE & EDUCATION</span>

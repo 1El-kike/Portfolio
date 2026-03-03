@@ -37,7 +37,7 @@ export const SkillsSection = () => (
     </AnimatedElement>
 
     {/* Progress Bars with staggered animation */}
-    <AnimatedElement animation="fadeInUp" delay={100} className="w-full">
+    <AnimatedElement animation="fadeInUp" delay={100} className="w-full ">
       <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
         <Progres />
       </div>
