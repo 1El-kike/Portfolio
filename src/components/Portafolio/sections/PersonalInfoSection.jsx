@@ -6,7 +6,7 @@ export const PersonalInfoSection = ({ onDownload }) => (
   <>
     <div className="flex flex-wrap justify-center w-full">
       <div className="w-full md:w-full lg:w-1/2 ">
-        <div className="w-full flex flex-col justify-end">
+        <div className="w-full flex flex-col justify-end gap-4">
           <h2 className="text-white">PERSONAL INFOS</h2>
           <div className="flex flex-wrap justify-around">
             <div
@@ -35,7 +35,7 @@ export const PersonalInfoSection = ({ onDownload }) => (
                 Last Name: <b className="text-white">Grass</b>{" "}
               </p>
               <p className="text-gray-400">
-                Age: <b className="text-white">25 Years</b>{" "}
+                Age: <b className="text-white">26 Years</b>{" "}
               </p>
               <p className="text-gray-400">
                 Freelance: <b className="text-white">Available</b>{" "}
@@ -48,7 +48,7 @@ export const PersonalInfoSection = ({ onDownload }) => (
               </p>
             </div>
           </div>
-          <div className="w-1/3 mt-2">
+          <div className=" mt-3">
             <Button
               onClick={onDownload}
               buttons="DOWNLOAD CV"

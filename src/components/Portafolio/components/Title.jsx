@@ -1,17 +1,30 @@
 import React from "react";
 
-export const Title = ({ background, titulo, subtitulo, link }) => (
-  <div className="w-full md:w-full sm:w-full flex" id={link}>
-    <div className="justify-center items-center flex w-full">
-      <div className="relative w-full flex justify-center h-24">
-        <h1 className="text-5xl font-semibold tracking-widest text-gray-700 absolute top-0">
-          {background}
-        </h1>
-        <h1 className="text-2xl font-semibold -tracking-0.5 text-white flex gap-1 absolute w-full justify-center items-center">
-          {titulo}
-          <span className="text-yellow-500">{subtitulo}</span>
-        </h1>
-      </div>
+export const Title = ({
+  background,
+  titulo,
+  subtitulo,
+  link,
+  className = "",
+}) => (
+  <div
+    className={`w-full flex justify-center items-center py-12 ${className}`}
+    id={link}
+  >
+    <div className="relative flex flex-col items-center justify-center">
+      {/* Background text */}
+      <h1
+        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-700/30 absolute top-1/2 -translate-y-1/2 select-none"
+        aria-hidden="true"
+      >
+        {background}
+      </h1>
+
+      {/* Main title */}
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white relative z-10 flex items-center gap-2">
+        {titulo}
+        <span className="text-yellow-500">{subtitulo}</span>
+      </h2>
     </div>
   </div>
 );

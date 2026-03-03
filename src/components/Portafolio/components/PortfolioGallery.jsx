@@ -1,30 +1,84 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useInView, getAnimationStyles } from "../../../hooks/useInView";
+
+// Individual animated image card
+const AnimatedImageCard = ({ src, link, index }) => {
+  const [ref, isInView] = useInView({
+    threshold: 0.1,
+    delay: index * 100,
+    triggerOnce: true,
+  });
+  const [isHovered, setIsHovered] = useState(false);
+
+  const animationStyles = getAnimationStyles("scaleIn", isInView, index * 100);
+
+  return (
+    <div
+      ref={ref}
+      className="relative overflow-hidden bg-gray-900 flex rounded-xl justify-center items-center transition-all duration-300"
+      style={{
+        ...animationStyles,
+        width: "100%",
+        maxWidth: "400px",
+        height: "280px",
+        transform: isHovered ? "scale(1.05)" : animationStyles.transform,
+      }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <Link to={link} className="w-full h-full block">
+        <div
+          className="relative w-full h-full overflow-hidden group"
+          style={{ transform: isHovered ? "scale(1.1)" : "scale(1)" }}
+        >
+          <img
+            src={src}
+            alt={`Portfolio project ${index + 1}`}
+            className="w-full h-full object-cover transition-transform duration-500"
+          />
+
+          {/* Overlay on hover */}
+          <div
+            className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent flex items-end justify-center transition-opacity duration-300 ${
+              isHovered ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <div className="p-4 text-center w-full">
+              <p className="text-yellow-500 font-semibold text-sm sm:text-base truncate">
+                {link.replace(/(^\w+:|^)\/\//, "").split("/")[0]}
+              </p>
+              <p className="text-white/80 text-xs mt-1">
+                Click to view project
+              </p>
+            </div>
+          </div>
+
+          {/* Corner accents */}
+          <div
+            className={`absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-yellow-500 transition-all duration-300 ${isHovered ? "opacity-100" : "opacity-0"}`}
+          />
+          <div
+            className={`absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-yellow-500 transition-all duration-300 ${isHovered ? "opacity-100" : "opacity-0"}`}
+          />
+          <div
+            className={`absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-yellow-500 transition-all duration-300 ${isHovered ? "opacity-100" : "opacity-0"}`}
+          />
+          <div
+            className={`absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-yellow-500 transition-all duration-300 ${isHovered ? "opacity-100" : "opacity-0"}`}
+          />
+        </div>
+      </Link>
+    </div>
+  );
+};
 
 export const PortfolioGallery = ({ images, links }) => (
   <>
     {images.map((src, i) => (
-      <div
-        key={i}
-        style={{ overflow: "hidden", width: "400px", height: "300px" }}
-        className="bg-gray-900 flex rounded justify-center items-center lg:w-1/3 md:w-1/2 transition-transform duration-300 ease hover:scale-110"
-      >
-        <Link to={links[i]}>
-          <div className="relative overflow-hidden transition-transform duration-300 ease hover:scale-110 hover:z-10 group">
-            <img
-              style={{ width: "400px", height: "280px" }}
-              className="w-full h-auto"
-              src={src}
-              alt=""
-            />
-            <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-              <div className="flex m-3 justify-around ">
-                <p>Link: {links[i]}</p>
-              </div>
-            </div>
-          </div>
-        </Link>
-      </div>
+      <AnimatedImageCard key={i} src={src} link={links[i]} index={i} />
     ))}
   </>
 );
+
+export default PortfolioGallery;

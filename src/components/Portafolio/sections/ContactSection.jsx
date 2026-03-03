@@ -1,118 +1,224 @@
-import React from "react";
+import React, { useState } from "react";
 import { MDBBtn, MDBIcon } from "mdb-react-ui-kit";
 import { ContactItem } from "../components/ContactItem";
 import { Button } from "../components/Button";
+import { useInView, getAnimationStyles } from "../../../hooks/useInView";
 
-export const ContactSection = () => (
-  <>
-    <div className="flex w-full flex-wrap ">
-      <div className="flex flex-col lg:w-1/4 md:w-1/2 sm:w-full ">
-        <div className="flex flex-col flex-wrap gap-2">
-          <h3>DONT'BE SHY !</h3>
-          <p>
-            Feel free to get in touch with me.I am alwasy open to <br />{" "}
-            discussing new projects, creative ideas or opportunities to
-            <br /> be part of your visions
-          </p>
-          <ContactItem
-            titulo={"ADDRESS POINT"}
-            ico={"fa-map"}
-            adress={"calle 206 e/  26 y 27a, Habana City ,Cuba"}
-          />
-          <ContactItem
-            titulo={"MAIL ME"}
-            ico={"fa-envelope"}
-            adress={"enriquegrassporras@gmail.com"}
-          />
-          <ContactItem
-            titulo={"ADDRESS POINT"}
-            ico={"fa-bank"}
-            adress={"+53 58428530"}
-          />
+const AnimatedElement = ({
+  children,
+  animation = "fadeInUp",
+  delay = 0,
+  className = "",
+}) => {
+  const [ref, isInView] = useInView({
+    threshold: 0.1,
+    delay,
+    triggerOnce: true,
+  });
+  const animationStyles = getAnimationStyles(animation, isInView, delay);
+
+  return (
+    <div ref={ref} className={className} style={animationStyles}>
+      {children}
+    </div>
+  );
+};
+
+export const ContactSection = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission
+    console.log("Form submitted:", formData);
+  };
+
+  return (
+    <div className="flex w-full flex-wrap gap-8">
+      {/* Left Column - Contact Info */}
+      <AnimatedElement
+        animation="fadeInLeft"
+        delay={0}
+        className="flex flex-col lg:w-1/3 md:w-1/2 sm:w-full"
+      >
+        <div className="flex flex-col gap-4">
+          <div>
+            <h3 className="text-2xl font-bold text-white mb-2">
+              DON'T BE SHY!
+            </h3>
+            <p className="text-gray-400 text-sm sm:text-base">
+              Feel free to get in touch with me. I am always open to discussing
+              new projects, creative ideas or opportunities to be part of your
+              visions.
+            </p>
+          </div>
+
+          {/* Contact Items with staggered animation */}
+          <AnimatedElement animation="fadeInUp" delay={100}>
+            <ContactItem
+              titulo={"ADDRESS POINT"}
+              ico={"fa-map"}
+              adress={"calle 206 e/ 26 y 27a, Habana City, Cuba"}
+            />
+          </AnimatedElement>
+
+          <AnimatedElement animation="fadeInUp" delay={200}>
+            <ContactItem
+              titulo={"MAIL ME"}
+              ico={"fa-envelope"}
+              adress={"enriquegrassporras@gmail.com"}
+            />
+          </AnimatedElement>
+
+          <AnimatedElement animation="fadeInUp" delay={300}>
+            <ContactItem
+              titulo={"CALL ME"}
+              ico={"fa-phone"}
+              adress={"+53 58428530"}
+            />
+          </AnimatedElement>
         </div>
-        <div className="mt-4 mb-4">
+
+        {/* Social Media Buttons */}
+        <AnimatedElement
+          animation="fadeInUp"
+          delay={400}
+          className="mt-6 flex gap-3"
+        >
           <MDBBtn
             floating
-            className="m-1"
-            style={{ backgroundColor: "var(--black)" }}
+            className="m-1 transition-transform duration-300 hover:scale-110"
+            style={{ backgroundColor: "#1877f2" }}
             href="https://www.facebook.com/Enrique_Grass_Porras"
             role="button"
+            aria-label="Facebook"
           >
             <MDBIcon fab icon="facebook-f" />
           </MDBBtn>
           <MDBBtn
             floating
-            className="m-1 "
-            style={{ backgroundColor: "var(--red)" }}
-            href=""
+            className="m-1 transition-transform duration-300 hover:scale-110"
+            style={{ backgroundColor: "#1da1f2" }}
+            href="https://twitter.com"
             role="button"
+            aria-label="Twitter"
           >
             <MDBIcon fab icon="twitter" />
           </MDBBtn>
           <MDBBtn
             floating
-            className="m-1"
-            style={{ backgroundColor: "var(--red)" }}
-            href="https:/www.youtube.com/"
+            className="m-1 transition-transform duration-300 hover:scale-110"
+            style={{ backgroundColor: "#ff0000" }}
+            href="https://www.youtube.com/"
             role="button"
+            aria-label="YouTube"
           >
             <MDBIcon fab icon="youtube" />
           </MDBBtn>
           <MDBBtn
             floating
-            className="m-1 "
-            style={{ backgroundColor: "var(--yellow)" }}
-            href="https:/www.linkedin.com/"
-            role=""
+            className="m-1 transition-transform duration-300 hover:scale-110"
+            style={{ backgroundColor: "#0077b5" }}
+            href="https://www.linkedin.com/"
+            role="button"
+            aria-label="LinkedIn"
           >
-            <MDBIcon fab icon="linkedin" />
+            <MDBIcon fab icon="linkedin-in" />
           </MDBBtn>
-        </div>
-      </div>
-      <div className="flex flex-col lg:w-2/3 md:w-1/2 sm:w-full">
-        <form className="lg:w-11/12 md:w-full">
-          <div className="flex gap-4 flex-wrap justify-between ">
-            <div className="lg:w-5/12 md:w-full sm:w-full ">
+        </AnimatedElement>
+      </AnimatedElement>
+
+      {/* Right Column - Contact Form */}
+      <AnimatedElement
+        animation="fadeInRight"
+        delay={200}
+        className="flex flex-col lg:w-2/3 md:w-1/2 sm:w-full"
+      >
+        <form className="w-full" onSubmit={handleSubmit}>
+          <div className="flex gap-4 flex-wrap justify-between">
+            <AnimatedElement
+              animation="fadeInUp"
+              delay={300}
+              className="lg:w-5/12 md:w-full sm:w-full"
+            >
               <input
-                className="rounded-full bg-gray-900 border-0 h-10 text-white text-base focus:bg-gray-700 focus:border-0 focus:text-green-400 w-full "
-                key={"input"}
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                className="rounded-full bg-gray-900 border border-gray-700 h-12 text-white text-base focus:bg-gray-800 focus:border-yellow-500 focus:text-white w-full px-4 transition-all duration-300"
                 placeholder="YOUR NAME"
                 type="text"
+                required
+                aria-label="Your name"
               />
-            </div>
-            <div className="lg:w-1/2 md:w-full sm:w-full ">
+            </AnimatedElement>
+            <AnimatedElement
+              animation="fadeInUp"
+              delay={400}
+              className="lg:w-5/12 md:w-full sm:w-full"
+            >
               <input
-                className="rounded-full bg-gray-900 border-0 h-10 text-white text-base focus:bg-gray-700 focus:border-0 focus:text-green-400 w-full"
-                key={"input"}
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                className="rounded-full bg-gray-900 border border-gray-700 h-12 text-white text-base focus:bg-gray-800 focus:border-yellow-500 focus:text-white w-full px-4 transition-all duration-300"
                 placeholder="YOUR EMAIL"
-                type="text"
+                type="email"
+                required
+                aria-label="Your email"
               />
-            </div>
-          </div>
-          <div className="flex w-full mt-4 justify-start ">
-            <div className="w-full ">
-              <input
-                className="rounded-full bg-gray-900 border-0 h-10 text-white text-base focus:bg-gray-700 focus:border-0 focus:text-green-400 w-full"
-                key={"input"}
-                placeholder="YOUR SUBJECT"
-                type="text"
-              />
-            </div>
-          </div>
-          <div className="flex w-full mt-4 justify-start">
-            <div className="w-full">
-              <textarea
-                className="rounded-full bg-gray-900 border-0 min-h-52 max-h-96 text-white text-base focus:bg-gray-700 focus:border-0 focus:text-green-400 mb-4 w-full p-4"
-                key={"input"}
-                placeholder="YOUR MESSAGE"
-                type="month"
-              ></textarea>
-            </div>
+            </AnimatedElement>
           </div>
 
-          <Button buttons="SEND MESSAGE" ico="fa-user" href="#" />
+          <AnimatedElement
+            animation="fadeInUp"
+            delay={500}
+            className="flex w-full mt-4"
+          >
+            <input
+              name="subject"
+              value={formData.subject}
+              onChange={handleChange}
+              className="rounded-full bg-gray-900 border border-gray-700 h-12 text-white text-base focus:bg-gray-800 focus:border-yellow-500 focus:text-white w-full px-4 transition-all duration-300"
+              placeholder="YOUR SUBJECT"
+              type="text"
+              required
+              aria-label="Subject"
+            />
+          </AnimatedElement>
+
+          <AnimatedElement
+            animation="fadeInUp"
+            delay={600}
+            className="flex w-full mt-4"
+          >
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              className="rounded-2xl bg-gray-900 border border-gray-700 min-h-48 max-h-64 text-white text-base focus:bg-gray-800 focus:border-yellow-500 focus:text-white mb-4 w-full p-4 transition-all duration-300 resize-none"
+              placeholder="YOUR MESSAGE"
+              required
+              aria-label="Your message"
+            />
+          </AnimatedElement>
+
+          <AnimatedElement animation="fadeInUp" delay={700}>
+            <Button buttons="SEND MESSAGE" ico="fa-paper-plane" href="#" />
+          </AnimatedElement>
         </form>
-      </div>
+      </AnimatedElement>
     </div>
-  </>
-);
+  );
+};
+
+export default ContactSection;

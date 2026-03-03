@@ -1,0 +1,113 @@
+/* Estilos profesionales y animaciones para el botón del portafolio */
+.fancy-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  color: #06121a;
+  background: linear-gradient(90deg, #f59e0b 0%, #f97316 100%);
+  box-shadow:
+    0 6px 18px rgba(249, 115, 22, 0.18),
+    0 2px 6px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    filter 0.18s ease;
+  transform: translateZ(0);
+  overflow: hidden;
+}
+
+.fancy-btn .label {
+  padding: 0 6px 0 4px;
+  display: inline-block;
+}
+
+.fancy-btn .icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.04);
+  transition:
+    transform 0.22s cubic-bezier(0.2, 0.9, 0.3, 1),
+    background 0.18s ease;
+}
+
+.fancy-btn .icon i {
+  color: #0b0b0b;
+  font-size: 14px;
+}
+
+.fancy-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(249, 115, 22, 0.22);
+  filter: saturate(1.05);
+}
+
+.fancy-btn:hover .icon {
+  transform: translateX(6px);
+}
+
+.fancy-btn:active {
+  transform: translateY(0) scale(0.995);
+}
+
+.fancy-btn:focus-visible {
+  outline: 3px solid rgba(245, 158, 11, 0.18);
+  outline-offset: 4px;
+}
+
+/* Shimmer bar that slides on hover */
+.fancy-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.12),
+    rgba(255, 255, 255, 0.02)
+  );
+  transform: skewX(-20deg) translateX(0);
+  transition:
+    transform 0.65s ease,
+    opacity 0.45s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.fancy-btn:hover::after {
+  transform: skewX(-20deg) translateX(300%);
+  opacity: 1;
+}
+
+/* Responsive tweaks */
+@media (min-width: 768px) {
+  .fancy-btn {
+    font-size: 15px;
+    padding: 12px 20px;
+  }
+  .fancy-btn .icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .fancy-btn {
+    font-size: 16px;
+    padding: 12px 22px;
+  }
+}
