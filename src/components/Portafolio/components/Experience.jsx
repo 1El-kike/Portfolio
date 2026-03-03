@@ -44,45 +44,43 @@ const EXP_DATA = {
 };
 
 const ItemList = ({ data }) => (
-  <>
+  <div className="grid auto-rows-max gap-3">
     {data.map((ele, idx) => (
-      <ul className="nav mb-3" key={idx}>
-        <li>
-          <div className="flex">
-            <div className="flex flex-col ">
-              <i className="fas fa-briefcase rounded-full bg-yellow-500 p-3 m-1" />
-              <span className="border-l-2 border-gray-700 flex ml-auto mr-auto h-full" />
-            </div>
+      <div key={idx} className="grid grid-cols-[auto_1fr] gap-4 items-start">
+        {/* Icon Column */}
+        <div className="flex flex-col items-center">
+          <i className="fas fa-briefcase rounded-full bg-yellow-500 p-3" />
+          <span className="border-l-2 border-gray-700 flex-1 w-0.5 mt-2" />
+        </div>
 
-            <div className="flex  flex-col justify-start ">
-              <div className="flex w-auto">
-                <p
-                  className="m-2 ms-3 mt-1 p-1 ps-3 px-3 rounded w-2"
-                  style={{ background: "rgb(19, 44, 57)" }}
-                >
-                  {ele[3]}
-                </p>
-              </div>
-              <div className="flex flex-wrap items-center gap-1">
-                <h3 className="m-2 ms-3">{ele[0]}</h3>
-                <span className="h-px w-16 border-b-4 border-gray-600 rounded" />
-                <h6 className="m-2 ms-3">{ele[1]}</h6>
-              </div>
-              <p className="m-2 ms-3">{ele[2]}</p>
-            </div>
+        {/* Content Column */}
+        <div className="flex flex-col justify-start pt-1">
+          <div className="flex mb-2">
+            <p
+              className="px-3 py-1 rounded text-sm"
+              style={{ background: "rgb(19, 44, 57)" }}
+            >
+              {ele[3]}
+            </p>
           </div>
-        </li>
-      </ul>
+          <div className="flex flex-wrap items-center gap-2 mb-2">
+            <h3 className="font-semibold text-white">{ele[0]}</h3>
+            <span className="h-1 w-12 border-b-4 border-gray-600 rounded" />
+            <h6 className="text-gray-300 text-sm">{ele[1]}</h6>
+          </div>
+          <p className="text-gray-400 text-sm">{ele[2]}</p>
+        </div>
+      </div>
     ))}
-  </>
+  </div>
 );
 
 export const Experience = () => (
-  <div className="flex flex-col md:flex-row">
-    <div className="w-full md:w-full lg:w-1/2 sm:w-full">
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <div>
       <ItemList data={EXP_DATA.exp1} />
     </div>
-    <div className="w-full md:w-full lg:w-1/2 sm:w-full ">
+    <div>
       <ItemList data={EXP_DATA.exp2} />
     </div>
   </div>
