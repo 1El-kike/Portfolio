@@ -38,6 +38,7 @@ export const ContactSection = () => {
   };
 
   const handleSubmit = (e) => {
+    console.log("entro");
     e.preventDefault();
     // Send email using EmailJS
     emailjs
@@ -73,14 +74,14 @@ export const ContactSection = () => {
   };
 
   return (
-    <div className="flex w-full flex-wrap gap-8">
+    <div className="flex w-full flex-wrap">
       {/* Left Column - Contact Info */}
       <AnimatedElement
         animation="fadeInLeft"
         delay={0}
-        className="flex flex-col lg:w-1/3 md:w-1/2 sm:w-full"
+        className="flex flex-col mb-3 lg:w-1/3 md:w-1/2 sm:w-full"
       >
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col md:gap-4">
           <div>
             <h3 className="text-2xl font-bold text-white mb-2">
               DON'T BE SHY!
@@ -122,7 +123,7 @@ export const ContactSection = () => {
         <AnimatedElement
           animation="fadeInUp"
           delay={400}
-          className="mt-6 flex gap-3"
+          className="flex gap-3"
         >
           <MDBBtn
             floating
@@ -173,79 +174,86 @@ export const ContactSection = () => {
         delay={200}
         className="flex flex-col lg:w-2/3 md:w-1/2 sm:w-full"
       >
-        <form className="w-full" onSubmit={handleSubmit}>
-          <div className="flex gap-4 flex-wrap justify-between">
+        <div className="h-full w-full flex items-center justify-center md:px-8">
+          <form className="w-full" onSubmit={handleSubmit}>
+            <div className="flex gap-4 flex-wrap justify-between">
+              <AnimatedElement
+                animation="fadeInUp"
+                delay={300}
+                className="lg:w-5/12 md:w-full sm:w-full"
+              >
+                <input
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="rounded-full bg-gray-900 border border-gray-700 h-12 text-white text-base focus:bg-gray-800 focus:border-yellow-500 focus:text-white w-full px-4 transition-all duration-300"
+                  placeholder="YOUR NAME"
+                  type="text"
+                  required
+                  aria-label="Your name"
+                />
+              </AnimatedElement>
+              <AnimatedElement
+                animation="fadeInUp"
+                delay={400}
+                className="lg:w-5/12 md:w-full sm:w-full"
+              >
+                <input
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="rounded-full bg-gray-900 border border-gray-700 h-12 text-white text-base focus:bg-gray-800 focus:border-yellow-500 focus:text-white w-full px-4 transition-all duration-300"
+                  placeholder="YOUR EMAIL"
+                  type="email"
+                  required
+                  aria-label="Your email"
+                />
+              </AnimatedElement>
+            </div>
+
             <AnimatedElement
               animation="fadeInUp"
-              delay={300}
-              className="lg:w-5/12 md:w-full sm:w-full"
+              delay={500}
+              className="flex w-full mt-4"
             >
               <input
-                name="name"
-                value={formData.name}
+                name="subject"
+                value={formData.subject}
                 onChange={handleChange}
                 className="rounded-full bg-gray-900 border border-gray-700 h-12 text-white text-base focus:bg-gray-800 focus:border-yellow-500 focus:text-white w-full px-4 transition-all duration-300"
-                placeholder="YOUR NAME"
+                placeholder="YOUR SUBJECT"
                 type="text"
                 required
-                aria-label="Your name"
+                aria-label="Subject"
               />
             </AnimatedElement>
+
             <AnimatedElement
               animation="fadeInUp"
-              delay={400}
-              className="lg:w-5/12 md:w-full sm:w-full"
+              delay={600}
+              className="flex w-full mt-4"
             >
-              <input
-                name="email"
-                value={formData.email}
+              <textarea
+                name="message"
+                value={formData.message}
                 onChange={handleChange}
-                className="rounded-full bg-gray-900 border border-gray-700 h-12 text-white text-base focus:bg-gray-800 focus:border-yellow-500 focus:text-white w-full px-4 transition-all duration-300"
-                placeholder="YOUR EMAIL"
-                type="email"
+                className="rounded-2xl bg-gray-900 border border-gray-700 min-h-48 max-h-64 text-white text-base focus:bg-gray-800 focus:border-yellow-500 focus:text-white mb-4 w-full p-4 transition-all duration-300 resize-none"
+                placeholder="YOUR MESSAGE"
                 required
-                aria-label="Your email"
+                aria-label="Your message"
               />
             </AnimatedElement>
-          </div>
 
-          <AnimatedElement
-            animation="fadeInUp"
-            delay={500}
-            className="flex w-full mt-4"
-          >
-            <input
-              name="subject"
-              value={formData.subject}
-              onChange={handleChange}
-              className="rounded-full bg-gray-900 border border-gray-700 h-12 text-white text-base focus:bg-gray-800 focus:border-yellow-500 focus:text-white w-full px-4 transition-all duration-300"
-              placeholder="YOUR SUBJECT"
-              type="text"
-              required
-              aria-label="Subject"
-            />
-          </AnimatedElement>
-
-          <AnimatedElement
-            animation="fadeInUp"
-            delay={600}
-            className="flex w-full mt-4"
-          >
-            <textarea
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              className="rounded-2xl bg-gray-900 border border-gray-700 min-h-48 max-h-64 text-white text-base focus:bg-gray-800 focus:border-yellow-500 focus:text-white mb-4 w-full p-4 transition-all duration-300 resize-none"
-              placeholder="YOUR MESSAGE"
-              required
-              aria-label="Your message"
-            />
-          </AnimatedElement>
-
-          <AnimatedElement animation="fadeInUp" delay={700}>
-            <Button buttons="SEND MESSAGE" ico="fa-paper-plane" href="#" />
-          </AnimatedElement>
-        </form>
+            <AnimatedElement animation="fadeInUp" delay={700}>
+              <Button
+                type="submit"
+                buttons="SEND MESSAGE"
+                ico="fa-paper-plane"
+                href="#"
+              />
+            </AnimatedElement>
+          </form>
+        </div>
       </AnimatedElement>
     </div>
   );
