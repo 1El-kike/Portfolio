@@ -18,14 +18,14 @@ const EXP_DATA = {
       "I went from writing features to designing complete systems. Today I plan the software organization, ensuring quality, security, and long-term maintainability.",
       "2018 - PRESENTE",
     ],
-  ],
-  exp2: [
     [
       "ENGINEERING ",
       "CUJAE UNIVERSITY",
       "Graduated in Computer Engineering. Comprehensive training that combines computational theory with practice in technological solutions.",
       "2022",
     ],
+  ],
+  exp2: [
     [
       "E-COMMERCE",
       "MARKET X",
@@ -37,6 +37,12 @@ const EXP_DATA = {
       "Nay's Dreams",
       "I implemented a complete web platform for the sale of customized items, with a modular backend (clean architecture), dynamic frontend, and an optimized database that supports the entire catalog and orders.",
       "2025",
+    ],
+    [
+      "REAL ESTATE AGENCY",
+      "CASACuba",
+      "I developed a comprehensive real estate platform with management of sales, rentals, and leases, plus integrated immersive virtual tours. All on a scalable architecture and optimized database.",
+      "2025 - 2026",
     ],
   ],
 };

@@ -11,11 +11,11 @@ import { ContactSection } from "./sections/ContactSection";
 import { BlogSection } from "./sections/BlogSection";
 
 // Import images directly
-import imagex from "../../assets/images/image1.png";
-import image6 from "../../assets/images/image2.png";
-import image5 from "../../assets/images/image5.png";
-import image4 from "../../assets/images/image4.png";
-import image3 from "../../assets/images/image3.png";
+import naysDreams from "../../assets/images/naysDreams.png";
+import MarketX from "../../assets/images/MarketX.png";
+import MarketXAdmin from "../../assets/images/MarketXAdmin.png";
+import descargarApp from "../../assets/images/descargarApp.png";
+import inmobiliaria from "../../assets/images/inmobiliaria.png";
 import image2 from "../../assets/images/mejora-tu-presencia-online-768x432.jpg";
 
 // Animation hook
@@ -25,45 +25,45 @@ import "./style.css";
 
 // Data constants outside component to avoid recreation
 const PORT_IMAGES = Object.freeze({
-  set1: [imagex, image6, image5, image4, image3, image2],
-  set2: [image3, image4, image5],
-  set3: [image4],
-  set4: [image6],
-  set5: [imagex],
+  set1: [naysDreams, MarketX, MarketXAdmin, descargarApp, inmobiliaria, image2],
+  set2: [inmobiliaria, descargarApp, MarketXAdmin],
+  set3: [descargarApp],
+  set4: [MarketX],
+  set5: [naysDreams],
 });
 
 const PORT_LINKS = Object.freeze([
-  "//link1/one",
-  "//link2/two",
-  "https://1el-kike.github.io/registro",
-  "//link4/four",
+  "https://naysdreams-production.up.railway.app/init",
+  "https://1el-kike.github.io/myStore/",
+  "https://1el-kike.github.io/myStore-Admin/auth",
+  "https://1el-kike.github.io/myStore-Admin/",
   "https://1el-kike.github.io/formulario",
-  "//link6/six",
+  "https://1el-kike.github.io/blog",
 ]);
 
 const BLOG_ENTRIES = Object.freeze([
   [
-    imagex,
+    naysDreams,
     "How to own Your Audience by Creating an Email List",
     "Lorem ipsum dolor sit armet, consetetur sadipscing elit,sed diam nonumy eirmod tempor inviduant lat labore...",
   ],
   [
-    image6,
+    MarketX,
     "How to own Your Audience by Creating an Email List",
     "Lorem ipsum dolor sit armet, consetetur sadipscing elit,sed diam nonumy eirmod tempor inviduant lat labore...",
   ],
   [
-    image3,
+    inmobiliaria,
     "How to own Your Audience by Creating an Email List",
     "Lorem ipsum dolor sit armet, consetetur sadipscing elit,sed diam nonumy eirmod tempor inviduant lat labore...",
   ],
   [
-    image5,
+    MarketXAdmin,
     "How to own Your Audience by Creating an Email List",
     "Lorem ipsum dolor sit armet, consetetur sadipscing elit,sed diam nonumy eirmod tempor inviduant lat labore...",
   ],
   [
-    imagex,
+    naysDreams,
     "How to own Your Audience by Creating an Email List",
     "Lorem ipsum dolor sit armet, consetetur sadipscing elit,sed diam nonumy eirmod tempor inviduant lat labore...",
   ],

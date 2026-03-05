@@ -3,6 +3,7 @@ import { MDBBtn, MDBIcon } from "mdb-react-ui-kit";
 import { ContactItem } from "../components/ContactItem";
 import { Button } from "../components/Button";
 import { useInView, getAnimationStyles } from "../../../hooks/useInView";
+import emailjs from "@emailjs/browser";
 
 const AnimatedElement = ({
   children,
@@ -38,8 +39,37 @@ export const ContactSection = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
+    // Send email using EmailJS
+    emailjs
+      .send(
+        "service_dm9bhhg", // Replace with your EmailJS service ID
+        "template_4cl3el6", // Replace with your EmailJS template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to_email: "enriquegrassporras@gmail.com",
+        },
+        "NhnOdhlpIAGNKtS9G", // Replace with your EmailJS public key
+      )
+      .then(
+        (result) => {
+          console.log("Email sent successfully:", result.text);
+          alert("Message sent successfully!");
+          // Reset form
+          setFormData({
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
+          });
+        },
+        (error) => {
+          console.log("Failed to send email:", error.text);
+          alert("Failed to send message. Please try again.");
+        },
+      );
   };
 
   return (

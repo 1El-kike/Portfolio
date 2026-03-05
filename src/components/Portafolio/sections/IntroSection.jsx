@@ -70,7 +70,7 @@ export const IntroSection = () => {
             <div className="flex items-center justify-center lg:justify-start mb-6">
               <span className="text-base sm:text-lg text-gray-400">I'm a </span>
               <span className="text-base sm:text-lg text-yellow-500 font-semibold ml-1">
-                Front-End Developer
+                Full-Stack Developer
               </span>
               <span className="w-1 h-5 sm:h-6 bg-yellow-500 ml-1 animate-pulse" />
             </div>
