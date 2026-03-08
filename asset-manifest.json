@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.a6cdf7fd.css",
-    "main.js": "/Portfolio/static/js/main.2e8c3a87.js",
+    "main.css": "/Portfolio/static/css/main.839cdeea.css",
+    "main.js": "/Portfolio/static/js/main.44555b87.js",
     "static/js/453.a7d99afe.chunk.js": "/Portfolio/static/js/453.a7d99afe.chunk.js",
     "static/media/portafolio.jpg": "/Portfolio/static/media/portafolio.0f07d8292447b0473e66.jpg",
     "static/media/naysDreams.png": "/Portfolio/static/media/naysDreams.34504992e63728c26f19.png",
@@ -12,21 +12,26 @@
     "static/media/descargarApp.png": "/Portfolio/static/media/descargarApp.43e3a3219c485e7e5c32.png",
     "static/media/fa-brands-400.ttf": "/Portfolio/static/media/fa-brands-400.1815e00441357e01619e.ttf",
     "static/media/fa-solid-900.woff2": "/Portfolio/static/media/fa-solid-900.2463b90d9a316e4e5294.woff2",
-    "static/media/developpement-web-featured.jpg": "/Portfolio/static/media/developpement-web-featured.76afd22513a82fed2967.jpg",
+    "static/media/card1.jpg": "/Portfolio/static/media/card1.76afd22513a82fed2967.jpg",
     "static/media/fa-brands-400.woff2": "/Portfolio/static/media/fa-brands-400.c210719e60948b211a12.woff2",
+    "static/media/card3.jpg": "/Portfolio/static/media/card3.5eeee2273e5227c2a5cf.jpg",
     "static/media/diseno-web-1566701.jpg": "/Portfolio/static/media/diseno-web-1566701.e3bc59aff1246476ed00.jpg",
     "static/media/mejora-tu-presencia-online-768x432.jpg": "/Portfolio/static/media/mejora-tu-presencia-online-768x432.2c3f0f40a6205efd3cd4.jpg",
     "static/media/fa-regular-400.ttf": "/Portfolio/static/media/fa-regular-400.914997e1bdfc990d0897.ttf",
+    "static/media/card5.jpg": "/Portfolio/static/media/card5.89d3f0a4ec5e793d2f6a.jpg",
+    "static/media/card4.jpg": "/Portfolio/static/media/card4.ca40692b211e1eff00c5.jpg",
+    "static/media/card6.jpg": "/Portfolio/static/media/card6.715e855b038391dde077.jpg",
+    "static/media/card2.jpg": "/Portfolio/static/media/card2.e6b23f5b5cf0853593b1.jpg",
     "static/media/fa-regular-400.woff2": "/Portfolio/static/media/fa-regular-400.89999bdf5d835c012025.woff2",
     "static/media/fa-v4compatibility.ttf": "/Portfolio/static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
     "static/media/fa-v4compatibility.woff2": "/Portfolio/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
     "index.html": "/Portfolio/index.html",
-    "main.a6cdf7fd.css.map": "/Portfolio/static/css/main.a6cdf7fd.css.map",
-    "main.2e8c3a87.js.map": "/Portfolio/static/js/main.2e8c3a87.js.map",
+    "main.839cdeea.css.map": "/Portfolio/static/css/main.839cdeea.css.map",
+    "main.44555b87.js.map": "/Portfolio/static/js/main.44555b87.js.map",
     "453.a7d99afe.chunk.js.map": "/Portfolio/static/js/453.a7d99afe.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a6cdf7fd.css",
-    "static/js/main.2e8c3a87.js"
+    "static/css/main.839cdeea.css",
+    "static/js/main.44555b87.js"
   ]
 }
