@@ -34,7 +34,7 @@
     linear-gradient(0deg, transparent, transparent, rgb(20, 33, 40)),
     linear-gradient(280deg, transparent, transparent, rgb(20, 33, 40)),
     linear-gradient(to right, transparent, transparent, rgb(48, 6, 186)),
-    url("../../assets/images/developpement-web-featured.jpg");
+    url("../../assets/images/card1.jpg");
 }
 
 .image-fondo {

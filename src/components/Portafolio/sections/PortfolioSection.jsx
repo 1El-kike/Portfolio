@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { PortfolioGallery } from "../components/PortfolioGallery";
 import { useInView, getAnimationStyles } from "../../../hooks/useInView";
 
@@ -22,8 +22,8 @@ const AnimatedElement = ({
   );
 };
 
-export const PortfolioSection = ({ imagesSets, links }) => {
-  const [activeSet, setActiveSet] = useState("set1");
+export const PortfolioSection = ({ imagesSets }) => {
+  const [activeSet, setActiveSet] = useState("ALL");
   const currentImages = imagesSets[activeSet] || [];
 
   // Animation for tabs
@@ -56,9 +56,7 @@ export const PortfolioSection = ({ imagesSets, links }) => {
                     transitionDelay: `${index * 50}ms`,
                   }}
                 >
-                  {name.toUpperCase().replace("SET", "") === "1"
-                    ? "ALL"
-                    : name.toUpperCase().replace("SET", "")}
+                  {name.toUpperCase()}
                 </li>
               );
             })}
@@ -69,7 +67,7 @@ export const PortfolioSection = ({ imagesSets, links }) => {
       {/* Gallery with staggered animation */}
       <AnimatedElement animation="fadeInUp" delay={200} className="w-full">
         <div className="w-full gap-3 mt-5 mb-5 flex flex-wrap justify-center items-center">
-          <PortfolioGallery images={currentImages} links={links} />
+          <PortfolioGallery element={currentImages} />
         </div>
       </AnimatedElement>
     </div>

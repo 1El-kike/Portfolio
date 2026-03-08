@@ -17,6 +17,12 @@ import MarketXAdmin from "../../assets/images/MarketXAdmin.png";
 import descargarApp from "../../assets/images/descargarApp.png";
 import inmobiliaria from "../../assets/images/inmobiliaria.png";
 import image2 from "../../assets/images/mejora-tu-presencia-online-768x432.jpg";
+import card1 from "../../assets/images/card1.jpg";
+import card2 from "../../assets/images/card2.jpg";
+import card3 from "../../assets/images/card3.jpg";
+import card4 from "../../assets/images/card4.jpg";
+import card5 from "../../assets/images/card5.jpg";
+import card6 from "../../assets/images/card6.jpg";
 
 // Animation hook
 import { useInView, getAnimationStyles } from "../../hooks/useInView";
@@ -24,13 +30,6 @@ import { useInView, getAnimationStyles } from "../../hooks/useInView";
 import "./style.css";
 
 // Data constants outside component to avoid recreation
-const PORT_IMAGES = Object.freeze({
-  set1: [naysDreams, MarketX, MarketXAdmin, descargarApp, inmobiliaria, image2],
-  set2: [inmobiliaria, descargarApp, MarketXAdmin],
-  set3: [descargarApp],
-  set4: [MarketX],
-  set5: [naysDreams],
-});
 
 const PORT_LINKS = Object.freeze([
   "https://naysdreams-production.up.railway.app/init",
@@ -40,37 +39,73 @@ const PORT_LINKS = Object.freeze([
   "https://1el-kike.github.io/formulario",
   "https://1el-kike.github.io/blog",
 ]);
+const PORT_IMAGES = Object.freeze({
+  ALL: [
+    {
+      foto: naysDreams,
+      link: PORT_LINKS[0],
+    },
+    {
+      foto: MarketX,
+      link: PORT_LINKS[1],
+    },
+    {
+      foto: MarketXAdmin,
+      link: PORT_LINKS[2],
+    },
+    {
+      foto: descargarApp,
+      link: PORT_LINKS[3],
+    },
+    {
+      foto: inmobiliaria,
+      link: PORT_LINKS[4],
+    },
+    {
+      foto: image2,
+      link: PORT_LINKS[5],
+    },
+  ],
+  SHOPPING: [
+    { foto: naysDreams, link: PORT_LINKS[0] },
+    { foto: descargarApp, link: PORT_LINKS[3] },
+    { foto: MarketX, link: PORT_LINKS[1] },
+  ],
+  MANAGER: [{ foto: MarketXAdmin, link: PORT_LINKS[2] }],
+  AGENCY: [{ foto: inmobiliaria, link: PORT_LINKS[4] }],
+  set5: [{ foto: naysDreams, link: PORT_LINKS[1] }],
+});
 
 const BLOG_ENTRIES = Object.freeze([
   [
-    naysDreams,
+    card1,
+    "Clean Architecture in Web Projects: A Practical Guide", //Arquitectura Limpia en Proyectos Web: Guía Práctica
+    "Learn how to apply layers, DDD, and separation of responsibilities to create scalable and maintainable applications", //Aprende cómo aplicar capas, DDD y separación de responsabilidades para crear aplicaciones escalables y mantenibles
+  ],
+  [
+    card2,
+    "From Zero to Production: My Experience with a Customized E-commerce", //De Cero a Producción: Mi Experiencia con un E‑commerce Personalizado
+    "The technical challenges and design decisions behind an online store with configurable products and a database.", //Los retos técnicos y decisiones de diseño detrás de una tienda online con productos configurables y base de datos.
+  ],
+  [
+    card3,
+    "UI/UX for Administrative Dashboards:Keys to Efficient Management", //UI/UX para Dashboards Administrativos
+    "Design principles that improve usability in dashboards with a lot of data (inventory, orders, metrics)", //Principios de diseño que mejoran la usabilidad en paneles de control con mucho datos (inventario, órdenes, métricas)
+  ],
+  [
+    card4,
+    "My Graduation at CUJAE: What the University Taught Me About Software Engineering", //Mi Graduación en la CUJAE: Lo que la Universidad me Enseñó sobre Ingeniería de Software
+    "Reflection on academic training and how I apply that knowledge in real projects.", //Reflexión sobre la formación académica y cómo aplico esos conocimientos en proyectos reales.
+  ],
+  [
+    card5,
     "How to own Your Audience by Creating an Email List",
     "Lorem ipsum dolor sit armet, consetetur sadipscing elit,sed diam nonumy eirmod tempor inviduant lat labore...",
   ],
   [
-    MarketX,
-    "How to own Your Audience by Creating an Email List",
-    "Lorem ipsum dolor sit armet, consetetur sadipscing elit,sed diam nonumy eirmod tempor inviduant lat labore...",
-  ],
-  [
-    inmobiliaria,
-    "How to own Your Audience by Creating an Email List",
-    "Lorem ipsum dolor sit armet, consetetur sadipscing elit,sed diam nonumy eirmod tempor inviduant lat labore...",
-  ],
-  [
-    MarketXAdmin,
-    "How to own Your Audience by Creating an Email List",
-    "Lorem ipsum dolor sit armet, consetetur sadipscing elit,sed diam nonumy eirmod tempor inviduant lat labore...",
-  ],
-  [
-    naysDreams,
-    "How to own Your Audience by Creating an Email List",
-    "Lorem ipsum dolor sit armet, consetetur sadipscing elit,sed diam nonumy eirmod tempor inviduant lat labore...",
-  ],
-  [
-    image2,
-    "How to own Your Audience by Creating an Email List",
-    "Lorem ipsum dolor sit armet, consetetur sadipscing elit,sed diam nonumy eirmod tempor inviduant lat labore...",
+    card6,
+    "5 Mistakes I Avoided When Developing a System with Two Frontends", //5 Errores que Evité al Desarrollar un Sistema con Dos Frontends (Admin + Clientes)
+    "Lessons learned from building a dual platform, from data synchronization to security.", //Lecciones aprendidas al construir una plataforma dual, desde la sincronización de datos hasta la seguridad.
   ],
 ]);
 
@@ -270,7 +305,7 @@ export const Firstsession = () => {
             {/* Portfolio Section */}
             <Section id="lista3">
               <AnimatedSection animation="fadeInUp" delay={200}>
-                <PortfolioSection imagesSets={PORT_IMAGES} links={PORT_LINKS} />
+                <PortfolioSection imagesSets={PORT_IMAGES} />
               </AnimatedSection>
             </Section>
 

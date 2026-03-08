@@ -73,11 +73,14 @@ const AnimatedImageCard = ({ src, link, index }) => {
   );
 };
 
-export const PortfolioGallery = ({ images, links }) => (
+export const PortfolioGallery = ({ element }) => (
   <>
-    {images.map((src, i) => (
-      <AnimatedImageCard key={i} src={src} link={links[i]} index={i} />
-    ))}
+    {element.map((ele, i) => {
+      console.log(ele.foto);
+      return (
+        <AnimatedImageCard key={i} src={ele.foto} link={ele.link} index={i} />
+      );
+    })}
   </>
 );
 
