@@ -26,7 +26,7 @@ const AnimatedBlogCard = ({ item, index, width }) => {
       <div
         className={`bg-gray-900 rounded-xl overflow-hidden transition-all duration-300 ${
           isHovered
-            ? "transform -translate-y-2 shadow-xl shadow-yellow-500/10"
+            ? "transform -translate-y-2 shadow-xl shadow-brand-primary/10"
             : ""
         }`}
       >
@@ -48,8 +48,8 @@ const AnimatedBlogCard = ({ item, index, width }) => {
         </div>
 
         {/* Content */}
-        <div className="border-t-4 border-yellow-500 p-4">
-          <h5 className="text-white font-semibold text-lg">{item[1]}</h5>
+        <div className="border-t-4 border-brand-primary p-4">
+          <h5 className="text-primary font-semibold text-lg">{item[1]}</h5>
         </div>
         <div className="p-3">
           <small className="text-gray-400">{item[2]}</small>

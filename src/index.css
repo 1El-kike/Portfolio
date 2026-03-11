@@ -1,11 +1,23 @@
 @import "tailwindcss";
 
+/* design tokens as CSS variables so non-Tailwind styles can refer to them */
+:root {
+  --color-brand: #f59e0b;
+  --color-brand-dark: #f97316;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #e5e7eb;
+  --color-canvas: #0f172a;
+  --color-bg-elevated: #1e293b;
+  --color-border-default: rgba(255, 255, 255, 0.12);
+}
+
 /* global resets and migrated styles from practica.css */
 html {
   scroll-behavior: smooth;
 }
 body {
-  @apply bg-[#142128] font-sans m-0 p-0; /* using rgb(20,33,40) background */
+  @apply font-sans m-0 p-0; /* canvas color set via CSS variable */
+  background-color: var(--color-canvas);
 }
 
 /* overflow set originally; Tailwind preflight already sets sensible defaults */

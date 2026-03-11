@@ -42,8 +42,8 @@ export const IntroSection = () => {
             className={`flex-1 text-center lg:text-left transition-all duration-1000 delay-300 ${isLoaded ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
           >
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-yellow-500/10 border border-yellow-500/30 rounded-full px-4 py-2 mb-6">
-              <span className="w-2 h-2 bg-yellow-500 rounded-full animate-pulse" />
+            <div className="inline-flex items-center gap-2 bg-brand-yellow/10 border border-brand-yellow/30 rounded-full px-4 py-2 mb-6">
+              <span className="w-2 h-2 bg-brand-yellow rounded-full animate-pulse" />
               <span className="text-yellow-500 text-sm font-medium">
                 Available for work
               </span>
@@ -59,17 +59,17 @@ export const IntroSection = () => {
 
             {/* Subtitle */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 mb-4">
-              <span className="h-px w-12 bg-yellow-500/50" />
+              <span className="h-px w-12 bg-brand-yellow/50" />
               <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-semibold text-white/90">
                 WEB DEVELOP
               </h2>
-              <span className="hidden sm:inline h-px w-12 bg-yellow-500/50" />
+              <span className="hidden sm:inline h-px w-12 bg-brand-yellow/50" />
             </div>
 
             {/* Animated typing cursor */}
             <div className="flex items-center justify-center lg:justify-start mb-6">
               <span className="text-base sm:text-lg text-gray-400">I'm a </span>
-              <span className="text-base sm:text-lg text-yellow-500 font-semibold ml-1">
+              <span className="text-base sm:text-lg text-brand-yellow font-semibold ml-1">
                 Full-Stack Developer
               </span>
               <span className="w-1 h-5 sm:h-6 bg-yellow-500 ml-1 animate-pulse" />

@@ -20,7 +20,7 @@ export const ContactItem = ({ titulo, ico, adress }) => {
       {/* Icon */}
       <span
         className={`flex-shrink-0 transition-transform duration-300 ${
-          isHovered ? "scale-110 text-yellow-400" : "text-yellow-500"
+          isHovered ? "scale-110 text-brand-primary/70" : "text-brand-primary"
         }`}
       >
         <i className={`fas ${ico} text-2xl sm:text-3xl md:text-4xl`} />
@@ -28,10 +28,12 @@ export const ContactItem = ({ titulo, ico, adress }) => {
 
       {/* Content */}
       <div className="flex flex-col justify-start">
-        <h5 className="text-white font-semibold text-sm sm:text-base">
+        <h5 className="text-primary font-semibold text-sm sm:text-base">
           {titulo}
         </h5>
-        <p className="text-gray-400 text-xs sm:text-sm font-medium">{adress}</p>
+        <p className="text-secondary text-xs sm:text-sm font-medium">
+          {adress}
+        </p>
       </div>
     </div>
   );

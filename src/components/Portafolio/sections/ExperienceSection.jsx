@@ -30,9 +30,9 @@ export const ExperienceSection = () => (
       delay={0}
       className="w-full flex  justify-center mb-8"
     >
-      <h3 className="text-2xl sm:text-3xl font-bold text-white relative">
+      <h3 className="text-2xl sm:text-3xl font-bold text-primary relative">
         <span className="relative z-10">EXPERIENCE & EDUCATION</span>
-        <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-32 h-1 bg-yellow-500 rounded-full" />
+        <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-32 h-1 bg-brand-yellow rounded-full" />
       </h3>
     </AnimatedElement>
 

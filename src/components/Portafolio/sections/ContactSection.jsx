@@ -186,7 +186,7 @@ export const ContactSection = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="rounded-full bg-gray-900 border border-gray-700 h-12 text-white text-base focus:bg-gray-800 focus:border-yellow-500 focus:text-white w-full px-4 transition-all duration-300"
+                  className="rounded-full bg-elevated border border-border-default h-12 text-primary text-base focus:bg-elevated focus:border-brand-yellow focus:text-primary w-full px-4 transition-all duration-300"
                   placeholder="YOUR NAME"
                   type="text"
                   required
@@ -220,7 +220,7 @@ export const ContactSection = () => {
                 name="subject"
                 value={formData.subject}
                 onChange={handleChange}
-                className="rounded-full bg-gray-900 border border-gray-700 h-12 text-white text-base focus:bg-gray-800 focus:border-yellow-500 focus:text-white w-full px-4 transition-all duration-300"
+                className="rounded-full bg-elevated border border-border-default h-12 text-primary text-base focus:bg-elevated focus:border-brand-yellow focus:text-primary w-full px-4 transition-all duration-300"
                 placeholder="YOUR SUBJECT"
                 type="text"
                 required
@@ -237,7 +237,7 @@ export const ContactSection = () => {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                className="rounded-2xl bg-gray-900 border border-gray-700 min-h-48 max-h-64 text-white text-base focus:bg-gray-800 focus:border-yellow-500 focus:text-white mb-4 w-full p-4 transition-all duration-300 resize-none"
+                className="rounded-2xl bg-elevated border border-border-default min-h-48 max-h-64 text-primary text-base focus:bg-elevated focus:border-brand-yellow focus:text-primary mb-4 w-full p-4 transition-all duration-300 resize-none"
                 placeholder="YOUR MESSAGE"
                 required
                 aria-label="Your message"

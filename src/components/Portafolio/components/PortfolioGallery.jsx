@@ -45,7 +45,7 @@ const AnimatedImageCard = ({ src, link, index }) => {
             }`}
           >
             <div className="p-4 text-center w-full">
-              <p className="text-yellow-500 font-semibold text-sm sm:text-base truncate">
+              <p className="text-brand-yellow font-semibold text-sm sm:text-base truncate">
                 {link.replace(/(^\w+:|^)\/\//, "").split("/")[0]}
               </p>
               <p className="text-white/80 text-xs mt-1">
@@ -56,16 +56,16 @@ const AnimatedImageCard = ({ src, link, index }) => {
 
           {/* Corner accents */}
           <div
-            className={`absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-yellow-500 transition-all duration-300 ${isHovered ? "opacity-100" : "opacity-0"}`}
+            className={`absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-brand-yellow transition-all duration-300 ${isHovered ? "opacity-100" : "opacity-0"}`}
           />
           <div
-            className={`absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-yellow-500 transition-all duration-300 ${isHovered ? "opacity-100" : "opacity-0"}`}
+            className={`absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-brand-yellow transition-all duration-300 ${isHovered ? "opacity-100" : "opacity-0"}`}
           />
           <div
-            className={`absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-yellow-500 transition-all duration-300 ${isHovered ? "opacity-100" : "opacity-0"}`}
+            className={`absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-brand-yellow transition-all duration-300 ${isHovered ? "opacity-100" : "opacity-0"}`}
           />
           <div
-            className={`absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-yellow-500 transition-all duration-300 ${isHovered ? "opacity-100" : "opacity-0"}`}
+            className={`absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-brand-yellow transition-all duration-300 ${isHovered ? "opacity-100" : "opacity-0"}`}
           />
         </div>
       </Link>
