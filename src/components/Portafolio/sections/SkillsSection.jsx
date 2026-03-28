@@ -31,14 +31,14 @@ export const SkillsSection = () => (
       className="w-full flex justify-center mb-6"
     >
       <h3 className="text-2xl sm:text-3xl font-bold text-primary relative">
-        <span className="relative z-10">MY SKILLS</span>
+        <span className="relative text-white z-10">MY SKILLS</span>
         <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-20 h-1 bg-brand-yellow rounded-full" />
       </h3>
     </AnimatedElement>
 
     {/* Progress Bars with staggered animation */}
     <AnimatedElement animation="fadeInUp" delay={100} className="w-full ">
-      <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
+      <div className="flex flex-wrap justify-center md:gap-4 gap-1">
         <Progres />
       </div>
     </AnimatedElement>

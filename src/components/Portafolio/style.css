@@ -201,8 +201,6 @@
 
 /* Progress circle with dynamic color from CSS variables */
 .progress-circle {
-  width: 150px;
-  height: 150px;
   color: #fff;
   background: #444 linear-gradient(to right, transparent 50%, var(--clr) 0);
   border-radius: 50%;
