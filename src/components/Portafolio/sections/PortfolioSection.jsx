@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import { PortfolioGallery } from "../components/PortfolioGallery";
 import { useInView, getAnimationStyles } from "../../../hooks/useInView";
 

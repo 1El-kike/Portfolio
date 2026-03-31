@@ -60,9 +60,9 @@ export const IntroSection = () => {
             {/* Subtitle */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 mb-4">
               <span className="h-px w-12 bg-brand-yellow/50" />
-              <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-semibold text-white/90">
+              <p className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-semibold text-white/90">
                 WEB DEVELOP
-              </h2>
+              </p>
               <span className="hidden sm:inline h-px w-12 bg-brand-yellow/50" />
             </div>
 

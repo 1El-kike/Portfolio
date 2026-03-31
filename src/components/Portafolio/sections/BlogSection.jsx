@@ -1,4 +1,3 @@
-import React from "react";
 import { CardGrid } from "../components/CardGrid";
 import { useWindowWidth } from "../../../hooks/useWindowWidth";
 import { useInView, getAnimationStyles } from "../../../hooks/useInView";

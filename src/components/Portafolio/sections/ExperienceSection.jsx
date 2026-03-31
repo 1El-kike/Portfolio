@@ -31,7 +31,7 @@ export const ExperienceSection = () => (
       className="w-full flex  justify-center mb-8"
     >
       <h3 className="text-2xl sm:text-3xl font-bold text-primary relative">
-        <span className="relative z-10">EXPERIENCE & EDUCATION</span>
+        <span className="relative text-white z-10">EXPERIENCE & EDUCATION</span>
         <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-32 h-1 bg-brand-yellow rounded-full" />
       </h3>
     </AnimatedElement>

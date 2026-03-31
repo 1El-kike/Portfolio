@@ -16,13 +16,13 @@ import MarketX from "../../assets/images/MarketX.png";
 import MarketXAdmin from "../../assets/images/MarketXAdmin.png";
 import descargarApp from "../../assets/images/descargarApp.png";
 import inmobiliaria from "../../assets/images/inmobiliaria.png";
-import image2 from "../../assets/images/mejora-tu-presencia-online-768x432.jpg";
 import card1 from "../../assets/images/card1.jpg";
 import card2 from "../../assets/images/card2.jpg";
 import card3 from "../../assets/images/card3.jpg";
 import card4 from "../../assets/images/card4.jpg";
 import card5 from "../../assets/images/card5.jpg";
 import card6 from "../../assets/images/card6.jpg";
+import image from "../../assets/images/portafolio.jpg";
 
 // Animation hook
 import { useInView, getAnimationStyles } from "../../hooks/useInView";
@@ -61,10 +61,6 @@ const PORT_IMAGES = Object.freeze({
       foto: inmobiliaria,
       link: PORT_LINKS[4],
     },
-    {
-      foto: image2,
-      link: PORT_LINKS[5],
-    },
   ],
   SHOPPING: [
     { foto: naysDreams, link: PORT_LINKS[0] },
@@ -73,7 +69,6 @@ const PORT_IMAGES = Object.freeze({
   ],
   MANAGER: [{ foto: MarketXAdmin, link: PORT_LINKS[2] }],
   AGENCY: [{ foto: inmobiliaria, link: PORT_LINKS[4] }],
-  set5: [{ foto: naysDreams, link: PORT_LINKS[1] }],
 });
 
 const BLOG_ENTRIES = Object.freeze([
@@ -172,7 +167,7 @@ const AnimatedSection = ({
 export const Firstsession = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [activeSection, setActiveSection] = useState("lista1");
-  const isScrolled = useScrollPosition(300);
+  const isScrolled = useScrollPosition(900);
 
   useEffect(() => {
     const timer = setTimeout(() => setIsLoaded(true), 150);
@@ -234,7 +229,43 @@ export const Firstsession = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900/90 via-slate-900/80 to-slate-900/90" />
       </div>
 
-      {/* Content wrapper */}
+      {/* Header after scroll - Glassmorphism con animación fade-in y slide */}
+      <div
+        className={`fixed py-2 top-0 left-0 right-0 z-50 transition-all duration-500 ease-out ${
+          isScrolled
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 -translate-y-4 pointer-events-none"
+        }`}
+        style={{
+          background: "rgba(15, 23, 42, 0.85)",
+          backdropFilter: "blur(12px)",
+          WebkitBackdropFilter: "blur(12px)",
+          borderBottom: "1px solid rgba(255, 255, 255, 0.08)",
+        }}
+      >
+        <div className="flex justify-around items-center w-full h-full px-4 sm:px-8">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold">
+            <span className="text-white">I'M </span>
+            <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">
+              Enrique Grass
+            </span>
+          </h1>
+
+          <div className="relative">
+            <div
+              className={
+                "w-12 h-12 sm:w-14 sm:h-14 transition-all duration-500"
+              }
+            >
+              <img
+                src={image}
+                alt="Enrique Grass - Web Developer"
+                className="w-full h-full object-cover rounded-xl shadow-2xl border-2 border-slate-700/50"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="relative z-10">
         <div className="max-w-7xl mx-auto px-0 lg:px-8">
           <div
