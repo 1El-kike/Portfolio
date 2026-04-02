@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import { Title } from "./components/Title";
 import { Section } from "./components/Section";
 // sections
@@ -131,15 +131,6 @@ const useScrollPosition = (threshold = 100) => {
   return isScrolled;
 };
 
-// Smooth scroll handler
-const handleSmoothScroll = (e, targetId) => {
-  e.preventDefault();
-  const element = document.getElementById(targetId);
-  if (element) {
-    element.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-};
-
 // Animated wrapper component
 const AnimatedSection = ({
   children,
@@ -168,13 +159,14 @@ export const Firstsession = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [activeSection, setActiveSection] = useState("lista1");
   const isScrolled = useScrollPosition(900);
+  const isManualNavigation = useRef(false);
 
   useEffect(() => {
     const timer = setTimeout(() => setIsLoaded(true), 150);
     return () => clearTimeout(timer);
   }, []);
 
-  const handleDownloadCV = useCallback(() => {
+  const handleDownloadCV = () => {
     try {
       const pdfUrl = "/pdf_enriquegrass.pdf";
       const link = document.createElement("a");
@@ -187,17 +179,45 @@ export const Firstsession = () => {
     } catch (error) {
       console.error("Error downloading CV:", error);
     }
+  };
+
+  // Smooth scroll handler con actualización inmediata de activeSection
+  const handleSmoothScroll = useCallback((e, targetId) => {
+    e.preventDefault();
+    // Marcar como navegación manual
+    isManualNavigation.current = true;
+
+    // Actualizar activeSection inmediatamente
+    setActiveSection(targetId);
+
+    const element = document.getElementById(targetId);
+    if (element) {
+      // Offset fijo para el header de Firstsession
+      const offset = 100;
+      const elementPosition =
+        element.getBoundingClientRect().top + window.pageYOffset;
+      const scrollTarget = elementPosition - offset;
+      window.scrollTo({ top: scrollTarget, behavior: "smooth" });
+
+      // Desactivar flag manual después de que termine el scroll
+      setTimeout(() => {
+        isManualNavigation.current = false;
+      }, 1000);
+    }
   }, []);
 
   // Track active section on scroll
   useEffect(() => {
     const observerOptions = {
       root: null,
-      rootMargin: "-20% 0px -80% 0px",
+      rootMargin: "0% 0px 0% 0px",
       threshold: 0,
     };
 
     const handleObserver = (entries) => {
+      // Solo actualizar si NO está en navegación manual
+      if (isManualNavigation.current) return;
+
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           setActiveSection(entry.target.id);
@@ -245,9 +265,9 @@ export const Firstsession = () => {
       >
         <div className="flex justify-around items-center w-full h-full px-4 sm:px-8">
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold">
-            <span className="text-white">I'M </span>
+            <span className="text-white">WEB </span>
             <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">
-              Enrique Grass
+              DEVELOP
             </span>
           </h1>
 

@@ -47,7 +47,7 @@ export const PortfolioSection = ({ imagesSets }) => {
                   ref={tabRef}
                   className={`nav-item cursor-pointer px-3 py-2 rounded-full transition-all duration-300 ${
                     isActive
-                      ? "bg-brand-yellow text-black font-bold shadow-lg shadow-brand-yellow/30 scale-110"
+                      ? "bg-yellow-400 text-black font-bold shadow-lg shadow-brand-yellow/30 scale-110"
                       : "text-white/70 hover:text-brand-yellow hover:bg-white/10"
                   }`}
                   onClick={() => setActiveSet(name)}

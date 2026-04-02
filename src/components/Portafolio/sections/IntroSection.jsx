@@ -7,7 +7,7 @@ export const IntroSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 350);
+    const handleScroll = () => setScrolled(window.scrollY > 300);
     window.addEventListener("scroll", handleScroll);
 
     // Trigger animations after component mounts
@@ -20,7 +20,12 @@ export const IntroSection = () => {
     e.preventDefault();
     const element = document.getElementById(targetId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      // Offset fijo para el header de Firstsession (py-2 + imagen + padding)
+      const offset = 100; // Altura aproximada del header
+      const elementPosition =
+        element.getBoundingClientRect().top + window.pageYOffset;
+      const scrollTarget = elementPosition - offset;
+      window.scrollTo({ top: scrollTarget, behavior: "smooth" });
     }
   };
 
@@ -80,12 +85,32 @@ export const IntroSection = () => {
               className={`relative bg-gradient-to-r  from-yellow-500/10 to-yellow-600/10 border border-yellow-500/20 rounded-2xl p-5 sm:p-6 mb-6 backdrop-blur-sm transition-all duration-700 delay-500 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
             >
               <p className="text-gray-300 text-sm sm:text-base leading-relaxed text-justify">
-                Graduate in Computer Engineering, passionate about web
-                development and design. Specialized as a Front-End developer
-                with expertise in creating responsive, user-friendly interfaces.
-                I strive to contribute and gain experience to become a better
-                professional in this digital world.
+                Computer engineer by education, full-stack by conviction, in
+                love with solid architectures and artificial intelligence. I
+                trained myself to see the big picture without missing a single
+                detail: from API design to the last pixel of an interface,
+                through databases that quietly converse and patterns that can
+                bear the weight of the future. But what truly drives me is
+                building with empathy.{" "}
+                {/* That's why, more than ever, I know I want
+                to help, contribute everything I know, and become part of a
+                collective where shared talent multiplies individual impact. I'm
+                eager to join in, learn from every person, and do my bit for
+                something bigger than myself. In the end, I don't just deliver
+                software: I deliver solutions that look easy… because behind
+                them there's craftsmanship and care. */}
               </p>
+              {/* Ingeniero informático de formación, full‑stack de convicción, enamorado
+               de las buenas arquitecturas y la inteligencia artificial. Me formé para ver
+                el todo sin perder el detalle: desde el diseño de una API hasta el último píxel
+                 de una interfaz, pasando por bases de datos que conversan en silencio y patrones
+                  que sostienen el peso del futuro. Pero lo que realmente me apasiona es construir 
+                  con empatía.
+                   Por eso, hoy más que nunca, tengo claro que quiero ayudar, aportar todo 
+                  lo que sé y formar parte de un colectivo donde el talento compartido multiplique el impacto 
+                  individual. Estoy ansioso por sumar, aprender de cada persona y poner mi granito de arena en 
+                  algo más grande que yo. Al final, no entrego software: entrego soluciones que parecen fáciles… 
+                  porque detrás hay oficio y cariño. */}
               {/* Decorative corner accents */}
               <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-yellow-500/50 rounded-tl-lg" />
               <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-yellow-500/50 rounded-tr-lg" />
@@ -99,7 +124,7 @@ export const IntroSection = () => {
             >
               <Link
                 to="/"
-                onClick={(e) => handleClick(e, "about")}
+                onClick={(e) => handleClick(e, "lista2")}
                 className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-yellow-500 to-yellow-600 text-black font-bold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-yellow-500/30 text-sm sm:text-base"
               >
                 <span className="relative z-10 flex items-center gap-2">
@@ -111,7 +136,7 @@ export const IntroSection = () => {
 
               <Link
                 to="/"
-                onClick={(e) => handleClick(e, "portfolio")}
+                onClick={(e) => handleClick(e, "lista3")}
                 className="group px-6 sm:px-8 py-3 sm:py-4 border-2 border-white/30 text-white font-semibold rounded-full hover:border-yellow-500 hover:text-yellow-500 transition-all duration-300 hover:bg-yellow-500/10 text-sm sm:text-base"
               >
                 <span className="flex items-center gap-2">
