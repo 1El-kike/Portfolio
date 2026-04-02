@@ -23,6 +23,7 @@ import card4 from "../../assets/images/card4.jpg";
 import card5 from "../../assets/images/card5.jpg";
 import card6 from "../../assets/images/card6.jpg";
 import image from "../../assets/images/portafolio.jpg";
+import pdfFile from "../../assets/myCurricum/pdf_enriquegrass.pdf";
 
 // Animation hook
 import { useInView, getAnimationStyles } from "../../hooks/useInView";
@@ -158,6 +159,7 @@ const AnimatedSection = ({
 export const Firstsession = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [activeSection, setActiveSection] = useState("lista1");
+  const [isDownloadingCV, setIsDownloadingCV] = useState(false);
   const isScrolled = useScrollPosition(900);
   const isManualNavigation = useRef(false);
 
@@ -166,18 +168,22 @@ export const Firstsession = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleDownloadCV = () => {
+  const handleDownloadCV = async () => {
     try {
-      const pdfUrl = `${process.env.PUBLIC_URL}pdf_enriquegrass.pdf`;
+      setIsDownloadingCV(true);
       const link = document.createElement("a");
-      link.href = pdfUrl;
+      link.href = pdfFile;
       link.download = "CV_Enrique_Grass.pdf";
       link.rel = "noopener noreferrer";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
+      // Simular tiempo de descarga
+      await new Promise((resolve) => setTimeout(resolve, 1500));
     } catch (error) {
       console.error("Error downloading CV:", error);
+    } finally {
+      setIsDownloadingCV(false);
     }
   };
 
@@ -321,7 +327,10 @@ export const Firstsession = () => {
             {/* About Section Content */}
             <Section id="lista2">
               <AnimatedSection animation="fadeInUp" delay={200}>
-                <PersonalInfoSection onDownload={handleDownloadCV} />
+                <PersonalInfoSection
+                  onDownload={handleDownloadCV}
+                  isDownloadingCV={isDownloadingCV}
+                />
               </AnimatedSection>
             </Section>
 

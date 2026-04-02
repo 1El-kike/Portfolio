@@ -8,6 +8,7 @@ export const Button = ({
   href = "#",
   onClick,
   type = "button",
+  isLoading = false,
 }) => {
   // If this button is meant to submit a form or does not navigate, render a plain
   // <button> element instead of a react-router <Link>. Using Link for submit
@@ -17,10 +18,15 @@ export const Button = ({
   const shouldUseLink = !isSubmit && href && href !== "#";
 
   const content = (
-    <button className="fancy-btn" type={type} onClick={onClick}>
+    <button 
+      className={`fancy-btn ${isLoading ? "loading" : ""}`} 
+      type={type} 
+      onClick={onClick}
+      disabled={isLoading}
+    >
       <span className="label">{buttons}</span>
-      <span className="icon" aria-hidden="true">
-        <i className={`fas ${ico}`} />
+      <span className={`icon ${isLoading ? "spinner" : ""}`} aria-hidden="true">
+        <i className={`fas ${ico} ${isLoading ? "fa-spin" : ""}`} />
       </span>
     </button>
   );

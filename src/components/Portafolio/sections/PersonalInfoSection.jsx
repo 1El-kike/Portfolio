@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "../components/Button";
 import { Cuadro } from "../components/Cuadro";
 
-export const PersonalInfoSection = ({ onDownload }) => (
+export const PersonalInfoSection = ({ onDownload, isDownloadingCV }) => (
   <>
     <div className="flex flex-wrap justify-center w-full">
       <div className="w-full md:w-full lg:w-1/2 ">
@@ -51,8 +51,9 @@ export const PersonalInfoSection = ({ onDownload }) => (
           <div className=" mt-3">
             <Button
               onClick={onDownload}
-              buttons="DOWNLOAD CV"
-              ico="fa-download"
+              buttons={isDownloadingCV ? "DOWNLOADING..." : "DOWNLOAD CV"}
+              ico={isDownloadingCV ? "fa-spinner" : "fa-download"}
+              isLoading={isDownloadingCV}
             />
           </div>
         </div>

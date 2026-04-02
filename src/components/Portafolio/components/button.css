@@ -115,3 +115,34 @@
     padding: 12px 22px;
   }
 }
+
+/* Loading state styles */
+.fancy-btn:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+.fancy-btn.loading {
+  pointer-events: none;
+}
+
+.fancy-btn.loading:hover {
+  transform: translateZ(0);
+}
+
+.fancy-btn.loading:hover .icon {
+  transform: none;
+}
+
+.fancy-btn .icon.spinner i {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
