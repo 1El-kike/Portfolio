@@ -168,7 +168,7 @@ export const Firstsession = () => {
 
   const handleDownloadCV = () => {
     try {
-      const pdfUrl = "/pdf_enriquegrass.pdf";
+      const pdfUrl = `${process.env.PUBLIC_URL}pdf_enriquegrass.pdf`;
       const link = document.createElement("a");
       link.href = pdfUrl;
       link.download = "CV_Enrique_Grass.pdf";
