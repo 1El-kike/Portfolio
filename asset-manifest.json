@@ -1,13 +1,14 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.edf4b491.css",
-    "main.js": "/Portfolio/static/js/main.88317aef.js",
+    "main.js": "/Portfolio/static/js/main.86d61547.js",
     "static/js/453.a7d99afe.chunk.js": "/Portfolio/static/js/453.a7d99afe.chunk.js",
     "static/media/portafolio.jpg": "/Portfolio/static/media/portafolio.0f07d8292447b0473e66.jpg",
     "static/media/naysDreams.png": "/Portfolio/static/media/naysDreams.34504992e63728c26f19.png",
     "static/media/MarketXAdmin.png": "/Portfolio/static/media/MarketXAdmin.61853c59ffab733a2b14.png",
     "static/media/inmobiliaria.png": "/Portfolio/static/media/inmobiliaria.fa01d6cbcbb534a73006.png",
     "static/media/MarketX.png": "/Portfolio/static/media/MarketX.4bf115846d2b3b3b012e.png",
+    "static/media/izlaAzul.png": "/Portfolio/static/media/izlaAzul.bea040a4cefec1e8568d.png",
     "static/media/fa-solid-900.ttf": "/Portfolio/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
     "static/media/descargarApp.png": "/Portfolio/static/media/descargarApp.43e3a3219c485e7e5c32.png",
     "static/media/fa-brands-400.ttf": "/Portfolio/static/media/fa-brands-400.1815e00441357e01619e.ttf",
@@ -27,11 +28,11 @@
     "static/media/fa-v4compatibility.woff2": "/Portfolio/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
     "index.html": "/Portfolio/index.html",
     "main.edf4b491.css.map": "/Portfolio/static/css/main.edf4b491.css.map",
-    "main.88317aef.js.map": "/Portfolio/static/js/main.88317aef.js.map",
+    "main.86d61547.js.map": "/Portfolio/static/js/main.86d61547.js.map",
     "453.a7d99afe.chunk.js.map": "/Portfolio/static/js/453.a7d99afe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.edf4b491.css",
-    "static/js/main.88317aef.js"
+    "static/js/main.86d61547.js"
   ]
 }
