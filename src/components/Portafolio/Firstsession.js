@@ -11,11 +11,12 @@ import { ContactSection } from "./sections/ContactSection";
 import { BlogSection } from "./sections/BlogSection";
 
 // Import images directly
-import naysDreams from "../../assets/images/naysDreams.png";
-import MarketX from "../../assets/images/MarketX.png";
-import MarketXAdmin from "../../assets/images/MarketXAdmin.png";
-import descargarApp from "../../assets/images/descargarApp.png";
-import inmobiliaria from "../../assets/images/inmobiliaria.png";
+import naysDreams from "../../assets/images/project/naysDreams.png";
+import MarketX from "../../assets/images/project/MarketX.png";
+import MarketXAdmin from "../../assets/images/project/MarketXAdmin.png";
+import descargarApp from "../../assets/images/project/descargarApp.png";
+import inmobiliaria from "../../assets/images/project/inmobiliaria.png";
+import islAzul from "../../assets/images/project/izlaAzul.png";
 import card1 from "../../assets/images/card1.jpg";
 import card2 from "../../assets/images/card2.jpg";
 import card3 from "../../assets/images/card3.jpg";
@@ -36,9 +37,10 @@ const PORT_LINKS = Object.freeze([
   "https://naysdreams-production.up.railway.app/init",
   "https://1el-kike.github.io/myStore/",
   "https://1el-kike.github.io/myStore-Admin/auth",
-  "https://1el-kike.github.io/myStore-Admin/",
-  "https://1el-kike.github.io/formulario",
-  "https://1el-kike.github.io/blog",
+  "#",
+  "#",
+  "#",
+  "#",
 ]);
 const PORT_IMAGES = Object.freeze({
   ALL: [
@@ -62,13 +64,20 @@ const PORT_IMAGES = Object.freeze({
       foto: inmobiliaria,
       link: PORT_LINKS[4],
     },
+    {
+      foto: islAzul,
+      link: PORT_LINKS[5],
+    },
   ],
   SHOPPING: [
     { foto: naysDreams, link: PORT_LINKS[0] },
     { foto: descargarApp, link: PORT_LINKS[3] },
     { foto: MarketX, link: PORT_LINKS[1] },
   ],
-  MANAGER: [{ foto: MarketXAdmin, link: PORT_LINKS[2] }],
+  MANAGER: [
+    { foto: MarketXAdmin, link: PORT_LINKS[2] },
+    { foto: islAzul, link: PORT_LINKS[5] },
+  ],
   AGENCY: [{ foto: inmobiliaria, link: PORT_LINKS[4] }],
 });
 

@@ -10,9 +10,10 @@ const LANGUAGES = [
   ["REACT Native", 55, "f82c14"],
   ["Angular", 80, "f82c14"],
   ["TYPESCRIPT", 80, "f16428"],
-  ["NODE JS", 60, "fff"],
+  ["C#", 55, "fff"],
+  [".NET", 65, "fff"],
+  ["NODE JS", 80, "fff"],
   ["Next JS", 70, "fff"],
-  ["Rest API", 90, "fff"],
   ["MYSQL", 78, "ab24ec"],
   ["PostgreSQL", 75, "ab24ec"],
   ["MongoDb", 60, "ab24ec"],
@@ -33,12 +34,13 @@ const LOGOS = {
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
   TYPESCRIPT:
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+  "C#": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
+  ".NET":
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original-wordmark.svg",
   "NODE JS":
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
   "Next JS":
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-  "Rest API":
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", // Placeholder for Rest API
   MYSQL:
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
   PostgreSQL:
@@ -46,7 +48,7 @@ const LOGOS = {
   MongoDb:
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
   Railway:
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/railway/railway-original.svg", // Placeholder for Railway
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/railway/railway-original.svg",
 };
 
 // Individual animated skill card
